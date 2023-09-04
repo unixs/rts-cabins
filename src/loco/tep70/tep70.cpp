@@ -1,7 +1,8 @@
 //---------------------------------------------------------------------------
 
 #include <common.h>
-#include <ts.h>
+#include <model.h>
+#include <switches.h>
 
 #pragma argsused
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason,
@@ -14,15 +15,6 @@ extern "C" __export void Run(ElectricEngine *eng,
                              const ElectricLocomotive *loco,
                              unsigned long State, float time,
                              float AirTemperature) {
-  Cabin *cab = loco->Cab();
-
-  if (cab->Switch(13) || cab->Switch(113)) {
-    cab->SetDisplayState(20, 1);
-    cab->SetDisplayState(120, 1);
-  } else {
-    cab->SetDisplayState(20, 0);
-    cab->SetDisplayState(120, 0);
-  }
 }
 
 extern "C" __export bool CanSwitch(const ElectricLocomotive *loco,
@@ -33,7 +25,15 @@ extern "C" __export bool CanSwitch(const ElectricLocomotive *loco,
 
 extern "C" void __export Switched(const ElectricLocomotive *loco,
                                   ElectricEngine *eng, unsigned int SwitchID,
-                                  unsigned int PrevState) {}
+                                  unsigned int PrevState) {
+
+  switch (SwitchID) {
+    case SW_EDT_1:
+    case SW_EDT_2:
+      process_SW_EDT(SwitchID, PrevState, loco, eng);
+      break;
+  }
+}
 
 extern "C" bool __export Init(ElectricEngine *eng, ElectricLocomotive *loco,
                               unsigned long State, float time,

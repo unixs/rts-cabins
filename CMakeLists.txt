@@ -19,11 +19,11 @@ set(CMAKE_CXX_FLAGS "-pipe -fleading-underscore")
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
-set(CMAKE_C_FLAGS_DEBUG "-O0 -ggdb3 -Wall -Wextra -Wno-unused-parameter")
-set(CMAKE_C_FLAGS_RELEASE "-O3 -s -fomit-frame-pointer")
+set(CMAKE_C_FLAGS_DEBUG "-O0 -Wall -Wextra -Wno-unused-parameter")
+set(CMAKE_C_FLAGS_RELEASE "-O3 -s")
 
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -ggdb3 -Wall -Wextra -Wno-unused-parameter")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -s -fomit-frame-pointer")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -Wextra -Wno-unused-parameter")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -s")
 
 # Force -fPIC
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -35,4 +35,5 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 # set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
-add_subdirectory("src")
+add_subdirectory("src/api")
+add_subdirectory("src/loco")

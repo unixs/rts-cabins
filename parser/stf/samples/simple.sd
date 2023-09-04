@@ -1,0 +1,54 @@
+SIMISA@@@@@@@@@@JINX0t1t______
+
+shape ( vl10k-1641a.s
+	ESD_Detail_Level ( 0 )
+	ESD_Alternative_Texture ( 0 )
+	ESD_Bounding_Box ( -1.58 0.043 -7.95 1.58 5.197 7.95 )
+	ESD_CheckDetailsVisible ()
+	ESD_Interior (
+
+		Switches ( 139
+			Switch (
+				ID ( 0 )
+				Name ( C_394 )
+				Hint ( "Тормоз поезда " )
+				StateHints ( 6
+					"[отпуск]"
+					"[поездное]"
+					"[перекрыша без питания]"
+					"[перекрыша с питанием]"
+					"[торможение]"
+					"[экстренное торможение]"
+				)
+				Position ( 1.36 2.74 7.07 )
+				Radius ( 2.0 )
+				States ( 6 5 )
+				Flags ( CONTROLLERX )
+				AssignKey ( "'" ";" )
+				AnimTime ( 0.2 )
+			)
+			Skip ( Какое-то описание )
+      Switch (
+				ID ( 1 )
+				Name ( C_254 )
+				Hint ( "Тормоз локомотива " )
+				StateHints ( 6
+					"[отпуск]"
+					"[перекрыша]"
+					"[1]"
+					"[2]"
+					"[3]"
+					"[4]"
+				)
+				Position ( 1.43 2.68 6.80 )
+				Radius ( 2.0 )
+				States ( 6 5 )
+				Flags ( CONTROLLERX )
+				AssignKey ( "]" "[" )
+				AnimTime ( 0.1 )
+			)
+    )
+  )
+)
+
+shape2 ()

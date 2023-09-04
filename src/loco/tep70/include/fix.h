@@ -1,5 +1,3 @@
-#include <windows.h>
-
 #define Run _Run
 #define Switched _Switched
 #define InitRTSLibrary _InitRTSLibrary

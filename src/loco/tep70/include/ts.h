@@ -1,3 +1,5 @@
+#include <windows.h>
+
 #define TS_VERSION 104
 
 #define MAXSOUNDQUEUE 96
