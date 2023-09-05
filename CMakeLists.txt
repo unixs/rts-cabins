@@ -35,5 +35,9 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 # set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
+if(MINGW)
+  include_directories(/opt/homebrew/opt/mingw-w64/toolchain-i686/mingw/include)
+endif()
+
 add_subdirectory("src/api")
 add_subdirectory("src/loco")

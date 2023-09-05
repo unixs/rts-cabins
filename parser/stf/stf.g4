@@ -2,9 +2,11 @@ grammar stf;
 
 stf:
   heading
+  space?
   node
   space?
   node*
+  space?
   EOF;
 
 heading:
