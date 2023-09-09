@@ -3,13 +3,13 @@
 #include <common.h>
 #include <ts.h>
 #include <uv.h>
-// #include <main_loop.h>
+#include <main_loop.h>
 
 #define MAIN_LOOP_DELAY 0.3
 
 static uv_timer_t timer;
-// static MainLoop *main_loop;
-static uv_loop_t *main_loop ;
+static MainLoop *main_loop;
+// static uv_loop_t *main_loop ;
 
 static void
 switch_timer(uv_timer_t *timer) {
@@ -30,8 +30,8 @@ extern "C" __export void Run(ElectricEngine *eng,
                              unsigned long State, float time,
                              float AirTemperature) {
 
-  //main_loop->run(time);
-  uv_run(main_loop, UV_RUN_NOWAIT);
+  main_loop->run(time);
+  // uv_run(main_loop, UV_RUN_NOWAIT);
 }
 
 extern "C" __export bool CanSwitch(const ElectricLocomotive *loco,
@@ -50,7 +50,7 @@ extern "C" void __export Switched(const ElectricLocomotive *loco,
     cab->SetDisplayState(120, 1);
 
     if (!timer.loop) {
-      uv_timer_init(main_loop, &timer);
+      uv_timer_init(main_loop->get_loop(), &timer);
       timer.data = (void *) loco;
     }
 
@@ -71,9 +71,9 @@ extern "C" bool __export Init(ElectricEngine *eng, ElectricLocomotive *loco,
                               unsigned long State, float time,
                               float AirTemperature) {
 
-  //main_loop = new MainLoop(MAIN_LOOP_DELAY);
-  main_loop = (uv_loop_t *) malloc(sizeof(uv_loop_t));
-  uv_loop_init(main_loop);
+  main_loop = new MainLoop(MAIN_LOOP_DELAY);
+  // main_loop = (uv_loop_t *) malloc(sizeof(uv_loop_t));
+  // uv_loop_init(main_loop);
 
   return true;
 }
