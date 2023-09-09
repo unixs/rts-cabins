@@ -1,5 +1,6 @@
 #include <uv.h>
 
+typedef void (* timer_callback)(uv_timer_t *timer);
 
 /**
  * Содержит главный цикл событий кабины
@@ -56,4 +57,10 @@ public:
    */
   unsigned long
   cabin_time();
+
+  void
+  setInterval();
+
+  //void
+  //clearInterval();
 };

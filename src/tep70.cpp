@@ -54,7 +54,12 @@ extern "C" void __export Switched(const ElectricLocomotive *loco,
       timer.data = (void *) loco;
     }
 
-    uv_timer_start(&timer, switch_timer, 2000, 2000);
+    uv_timer_start(&timer, [](uv_timer_t *timer) {
+      DieselLocomotive *loco = (DieselLocomotive *) timer->data;
+
+      loco->PostTriggerCab(24);
+    }, 2000, 2000);
+
   } else {
     cab->SetDisplayState(20, 0);
     cab->SetDisplayState(120, 0);

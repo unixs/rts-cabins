@@ -16,11 +16,9 @@ timer_cb(uv_timer_t *handle) {
 }
 
 int main() {
-    loop = new MainLoop(10000);
-    // uv_loop_init(loop);
+    loop = new MainLoop(0.003);
 
     printf("Run empty loop 1.\n");
-    // uv_run(loop, UV_RUN_NOWAIT);
     loop->run(1.0);
 
     printf("Run empty loop 2.\n");
@@ -74,7 +72,6 @@ int main() {
 
     // uv_loop_close(loop);
     // free(loop);
-    delete loop;
 
     system("PAUSE");
 
