@@ -63,25 +63,33 @@ int main() {
     printf("Run timer+idle loop  after sleep 1500 9.\n");
     loop->run(1.0);
 
-    for (short i = 0; i < 10; i++) {
-      Sleep(700);
+    for (short i = 0; i < 100; i++) {
+      Sleep(200);
       printf("Cycle.\n");
       loop->run(1.0);
 
-      if (i == 5) {
-        loop->clearInterval(timer);
+      if (i == 50) {
+        loop->setIntervalRepeat(timer, 500);
       }
     }
+    loop->clearInterval(timer);
 
     Sleep(1000);
 
     printf("Set timeout function.\n");
 
-    loop->setTimeout(cb, 1000);
+    timer = loop->setTimeout(cb, 1000);
 
-    Sleep(1100);
+    Sleep(300);
 
-    loop->run(1.0);
+    // loop->setIntervalRepeat(timer, 200);
+
+    Sleep(700);
+
+    for (short i = 0; i < 20; i++) {
+      Sleep(100);
+      loop->run(1.0);
+    }
 
     uv_stop(loop->get_loop());
 

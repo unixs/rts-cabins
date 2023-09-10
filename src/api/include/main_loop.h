@@ -76,7 +76,7 @@ public:
   clearInterval(uv_timer_t *timer, int *libuv_res = NULL);
 
   /**
-   * Обновляет интервал времени через который происходит запуск
+   * Обновляет интервал времени через который происходит запуск ф-ции
    */
   void
   setIntervalRepeat(uv_timer_t *timer, uint64_t new_repeat);

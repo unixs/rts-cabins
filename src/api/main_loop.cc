@@ -54,6 +54,11 @@ MainLoop::setInterval(uv_timer_cb cb, uint64_t repeat, void *data, int *libuv_re
 }
 
 void
+MainLoop::setIntervalRepeat(uv_timer_t *timer, uint64_t repeat) {
+  uv_timer_set_repeat(timer, repeat);
+}
+
+void
 MainLoop::clearInterval(uv_timer_t* timer, int *libuv_res) {
   int internal_res = 0;
   int *res = libuv_res ? libuv_res : &internal_res;
