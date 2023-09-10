@@ -31,7 +31,6 @@ extern "C" __export void Run(ElectricEngine *eng,
                              float AirTemperature) {
 
   main_loop->run(time);
-  // uv_run(main_loop, UV_RUN_NOWAIT);
 }
 
 extern "C" __export bool CanSwitch(const ElectricLocomotive *loco,

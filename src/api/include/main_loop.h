@@ -1,7 +1,5 @@
 #include <uv.h>
 
-typedef void (* timer_callback)(uv_timer_t *timer);
-
 /**
  * Содержит главный цикл событий кабины
  */
@@ -58,9 +56,47 @@ public:
   unsigned long
   cabin_time();
 
-  void
-  setInterval();
+  /**
+   * Устанавливает ф-цию для периодического выполнения
+   *
+   * Память возвращаемого таймера выделяется в куче.
+   * Эта память должна быть освобождена вручную ЕСЛИ таймер был отменён ручным
+   * вызовом api LibUV.
+   */
+  uv_timer_t*
+  setInterval(uv_timer_cb cb, uint64_t interval, void *data = NULL, int *uv_res = NULL);
 
-  //void
-  //clearInterval();
+  /**
+   * Отменяет ф-цию выполняемую периодически
+   *
+   * Память переданного указателя освобождается
+   * Не забудь освободить память данных интервала!
+   */
+  void
+  clearInterval(uv_timer_t *timer, int *libuv_res = NULL);
+
+  /**
+   * Обновляет интервал времени через который происходит запуск
+   */
+  void
+  setIntervalRepeat(uv_timer_t *timer, uint64_t new_repeat);
+
+  /**
+   * Устанавливает ф-цию для выполнения с задержкой
+   *
+   * Память возвращаемого таймера выделяется в куче.
+   * Эта память должна быть освобождена вручную ЕСЛИ таймер был отменён ручным
+   * вызовом api LibUV.
+   */
+  uv_timer_t*
+  setTimeout(uv_timer_cb cb, uint64_t interval, void *data = NULL, int *uv_res = NULL);
+
+  /**
+   * Отменяет ф-цию запланированную к выполнению позднее
+   *
+   * Память переданного указателя освобождается
+   * Не забудь освободить память данных интервала!
+   */
+  void
+  clearTimeout(uv_timer_t *timer, int *libuv_res = NULL);
 };

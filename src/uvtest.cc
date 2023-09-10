@@ -2,7 +2,6 @@
 #include <uv.h>
 #include <main_loop.h>
 
-// static uv_loop_t *loop;
 static MainLoop *loop;
 
 static void
@@ -35,10 +34,13 @@ int main() {
     printf("Run idle loop 4.\n");
     loop->run(1.0);
 
-    uv_timer_t timer;
+    uv_timer_t *timer;
 
-    uv_timer_init(loop->get_loop(), &timer);
-    uv_timer_start(&timer, timer_cb, 0, 1000);
+    auto cb = [](uv_timer_t *timer) {
+      printf("Lambda timer.\n");
+    };
+
+    timer = loop->setInterval(cb, 1000);
 
     printf("Run timer+idle loop 5.\n");
     loop->run(1.0);
@@ -61,18 +63,29 @@ int main() {
     printf("Run timer+idle loop  after sleep 1500 9.\n");
     loop->run(1.0);
 
-    while (true) {
-      Sleep(300);
-
+    for (short i = 0; i < 10; i++) {
+      Sleep(700);
       printf("Cycle.\n");
       loop->run(1.0);
+
+      if (i == 5) {
+        loop->clearInterval(timer);
+      }
     }
+
+    Sleep(1000);
+
+    printf("Set timeout function.\n");
+
+    loop->setTimeout(cb, 1000);
+
+    Sleep(1100);
+
+    loop->run(1.0);
 
     uv_stop(loop->get_loop());
 
-    // uv_loop_close(loop);
-    // free(loop);
-
+    delete loop;
     system("PAUSE");
 
     return 0;
