@@ -1,10 +1,15 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.18)
 
 project(rts-cabins
 	LANGUAGES C CXX
 	VERSION 0.0.1)
 
+cmake_policy(SET CMP0028 NEW)
+
+include(CMakePrintHelpers)
+
 message(STATUS "CPU: ${CMAKE_HOST_SYSTEM_PROCESSOR}")
+cmake_print_variables(CMAKE_FIND_ROOT_PATH)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_EXTENSIONS OFF)
@@ -37,8 +42,14 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 # set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
-list(APPEND CMAKE_PREFIX_PATH "${CMAKE_CURRENT_LIST_DIR}/opt/uv")
+#list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR}/opt/uv)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
+
+# cmake_print_variables(CMAKE_MODULE_PATH)
+
+# set(Mruby_ROOT $ENV{HOME}/local/src/mruby-3.2.0)
 
 find_package(libuv CONFIG REQUIRED)
+find_package(Mruby MODULE REQUIRED)
 
 add_subdirectory("src")
