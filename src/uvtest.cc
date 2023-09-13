@@ -2,11 +2,36 @@
 #include <uv.h>
 #include <main_loop.h>
 
+#undef __APPLE__
+#define MRB_USE_ETEXT_RO_DATA_P
+#include <mruby.h>
+
+#include <cabin_context.h>
+
 static MainLoop *loop;
+
+
+static CabinContext_t *cab_ctxt;
+
 
 static void
 wait_for_a_while(uv_idle_t* handle) {
-  printf("Idling...\n");
+  printf("Call MRuby.\n");
+
+  if (!cab_ctxt->resp_to_switched) {
+    printf("\tswitched is not defined.\n");
+    return;
+  }
+
+  mrb_funcall_id(
+    cab_ctxt->mrb,
+    cab_ctxt->cabin_obj,
+    cab_ctxt->switched_method_sym,
+    1,
+    mrb_fixnum_value(10)
+  );
+
+  printf("/Call MRuby.\n");
 }
 
 static void
@@ -14,8 +39,25 @@ timer_cb(uv_timer_t *handle) {
   printf("Timer.\n");
 }
 
+void
+init_mruby_context() {
+  cab_ctxt = new CabinContext_t;
+
+  mrb_bool ok = init_cabin_env(cab_ctxt);
+
+  if (!ok) {
+    printf("MRUBY initialization failed. Sad day..");
+  } else {
+    load_cabin_script(cab_ctxt, "cabin.mrb");
+
+    load_cabin_class(cab_ctxt);
+  }
+}
+
 int main() {
     loop = new MainLoop(0.003);
+
+    init_mruby_context();
 
     printf("Run empty loop 1.\n");
     loop->run(1.0);
@@ -33,6 +75,8 @@ int main() {
 
     printf("Run idle loop 4.\n");
     loop->run(1.0);
+
+    system("PAUSE");
 
     uv_timer_t *timer;
 
