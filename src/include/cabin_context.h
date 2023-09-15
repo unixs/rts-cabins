@@ -1,9 +1,6 @@
 #pragma once
 
-#undef __APPLE__
-#define MRB_USE_ETEXT_RO_DATA_P
-
-#include <mruby.h>
+#include <mrb.h>
 
 #define CABIN_CLASS_NAME "Cabin"
 #define SWITCHED_METHOD_NAME "switched"
@@ -21,6 +18,11 @@ typedef struct CabinContext {
   mrb_value cabin_obj;
 
   mrb_bool resp_to_switched;
+
+  struct RClass *ts_mod;
+  struct RClass *ts_loco_mod;
+  struct RClass *ts_diesel_loco_mod;
+  struct RClass *ts_loco_cabin_class;
 } CabinContext_t;
 
 #ifdef __cplusplus
@@ -32,9 +34,6 @@ load_cabin_script(CabinContext_t *ctxt, const char *filename);
 
 mrb_bool
 init_cabin_env(CabinContext_t *ctxt);
-
-mrb_bool
-load_cabin_class(CabinContext_t *ctxt);
 
 #ifdef __cplusplus
   }
