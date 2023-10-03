@@ -1,5 +1,6 @@
 #include <cabin_context.h>
-#include <mrb_cabin_interface.h>
+#include <default_cabin.h>
+// #include <mrb_cabin_iface.h>
 
 #include <stdio.h>
 #include <mruby/dump.h>
@@ -79,8 +80,9 @@ init_cabin_env(CabinContext_t *ctxt) {
     mrb_str_new_lit(ctxt->mrb, SWITCHED_METHOD_NAME)
   );
 
-  define_cabin_interface(ctxt);
+  // define_cabin_interface(ctxt);
 
+  define_default_cabin_class(ctxt);
   load_cabin_class(ctxt);
 
   return TRUE;

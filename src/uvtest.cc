@@ -49,8 +49,6 @@ init_mruby_context() {
     printf("MRUBY initialization failed. Sad day..");
   } else {
     load_cabin_script(cab_ctxt, "cabin.mrb");
-
-    load_cabin_class(cab_ctxt);
   }
 }
 

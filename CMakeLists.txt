@@ -47,9 +47,8 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 # cmake_print_variables(CMAKE_MODULE_PATH)
 
-# set(Mruby_ROOT $ENV{HOME}/local/src/mruby-3.2.0)
-
 find_package(libuv CONFIG REQUIRED)
 find_package(Mruby MODULE REQUIRED)
+# find_package(jansson CONFIG REQUIRED)
 
 add_subdirectory("src")

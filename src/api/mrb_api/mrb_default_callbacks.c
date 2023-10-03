@@ -1,4 +1,4 @@
-#include <mrb_default_cb.h>
+#include <mrb_default_callbacks.h>
 
 mrb_value
 true_cb(struct mrb_state *mrb, mrb_value self) {

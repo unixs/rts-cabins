@@ -74,8 +74,8 @@ extern "C" void __export Switched(const ElectricLocomotive *loco,
 
   Cabin *cab = loco->Cab();
 
-  mrb_value r_switch_id = mrb_fixnum_value(switch_id);
-  mrb_value r_loco;
+  // mrb_value r_switch_id = mrb_fixnum_value(switch_id);
+  // mrb_value r_loco;
 
   call_cabin_switched(cab_ctxt, loco, engine, switch_id, prev_state);
 
@@ -115,8 +115,8 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
 
   main_loop = new MainLoop(MAIN_LOOP_DELAY);
 
-  init_mruby_context();
-
+  // init_mruby_context();
+//
   return true;
 }
 

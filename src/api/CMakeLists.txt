@@ -3,7 +3,10 @@ link_libraries(libuv::uv_a)
 
 add_library(main_loop OBJECT main_loop.cc)
 
-add_library(mrb_default_cb OBJECT mrb_default_cb.c)
+add_library(cabin_context OBJECT cabin_context.c)
+target_link_libraries(cabin_context
+	PUBLIC
+		mrb_ts)
 
 set(LIB_OBJECTS)
 list(APPEND LIB_OBJECTS

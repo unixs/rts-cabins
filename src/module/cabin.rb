@@ -3,14 +3,14 @@ class Cabin < DefaultCabin
     puts "Cabin is initialized."
   end
 
+  def can_switch(loco, engine, id, set_state)
+    true
+  end
+
   def switched(loco)
     puts "switched => #{loco}"
 
     nil
-  end
-
-  def can_switch(loco, engine, id, set_state)
-    true
   end
 
   def frame(engine, loco, state, time, air_t)

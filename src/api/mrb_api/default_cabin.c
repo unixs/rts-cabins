@@ -1,5 +1,5 @@
 #include <default_cabin.h>
-#include <mrb_default_cb.h>
+#include <mrb_default_callbacks.h>
 
 struct RClass*
 define_default_cabin_class(CabinContext_t *ctxt) {
