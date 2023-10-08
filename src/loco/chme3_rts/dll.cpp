@@ -3,10 +3,10 @@
 #define RTS_STACKSIZE 11
 #define RTS_ADAPTER_COMPLY
 
+#include <cab.hpp>
 #include <fix.h>
 #include <math.h>
 #include <ts.h>
-#include <cab.hpp>
 
 #define BRAKE_MR_RATIO 0.005
 #define BRAKE_PIPE_RATE_CHARGE 2.5
@@ -26,12 +26,14 @@ using namespace model;
 //---------------------------------------------------------------------------
 
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason,
-                         void *lpReserved) {
+                         void *lpReserved)
+{
   return 1;
 }
 //---------------------------------------------------------------------------
 
-void SwitchLights(const DieselLocomotive *loco, UINT State) {
+void SwitchLights(const DieselLocomotive *loco, UINT State)
+{
   Cabin *cab = loco->Cab();
   switch (State) {
   case 0:
@@ -206,7 +208,8 @@ void SwitchLights(const DieselLocomotive *loco, UINT State) {
 
 extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
                               unsigned long State, float time,
-                              float AirTemperature) {
+                              float AirTemperature)
+{
   Cabin *cab = loco->Cab();
 
   eng->DieselOn = 0;
@@ -235,7 +238,7 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
   eng->ALSNOn = 0;
   eng->Reverse = 0;
   eng->ThrottlePosition = 0;
-  cab->SetSwitch(5, 1, true);
+  cab->SetSwitch((UINT) sw::C_HANDBR_5, 1, true);
 
   switch (State & 0xFF) {
   case 0:
@@ -282,15 +285,16 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
     loco->TrainPipePressure = 5.2;
     eng->UR = 5.2;
     if (loco->Velocity >= 0.0) {
-      cab->SetSwitch(1, 3, false);
+      cab->SetSwitch((UINT) sw::C_REV_1, 3, false);
       eng->Reverse = 1;
-    } else {
-      cab->SetSwitch(1, 1, false);
+    }
+    else {
+      cab->SetSwitch((UINT) sw::C_REV_1, 1, false);
       eng->Reverse = -1;
     };
-    cab->SetSwitch(5, 0, true);
-    cab->SetSwitch(26, 1, true);
-    cab->SetSwitch(32, 0, true);
+    cab->SetSwitch((UINT) sw::C_HANDBR_5, 0, true);
+    cab->SetSwitch((UINT) sw::SW_STOP_26, 1, true);
+    cab->SetSwitch((UINT) sw::SW_ALSN_32, 0, true);
     break;
   };
 
@@ -298,66 +302,79 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
 };
 
 extern "C" void __export ChangeLoco(Locomotive *loco, const Locomotive *Prev,
-                                    unsigned long State) {
-  if (!Prev)
+                                    unsigned long State)
+{
+  if (!Prev) {
     loco->LocoFlags |= 1;
+  }
 };
 
 extern "C" bool __export CanWorkWith(const Locomotive *loco,
-                                     const wchar_t *Type) {
+                                     const wchar_t *Type)
+{
 
   if (!lstrcmpiW(Type, L"chme3") || !lstrcmpiW(Type, L"chme3boost") ||
-      !lstrcmpiW(Type, L"chme3t"))
+      !lstrcmpiW(Type, L"chme3t")) {
     return true;
+  }
 
   return false;
 };
 
 extern "C" bool __export CanSwitch(const DieselLocomotive *loco,
                                    const DieselEngine *eng,
-                                   unsigned int SwitchID,
-                                   unsigned int SetState) {
+                                   unsigned int SwitchID, unsigned int SetState)
+{
   Cabin *cab = loco->Cab();
   UINT Trig;
-  if (SwitchID == 45)
+  if (SwitchID == 45) {
     SwitchID = 6;
+  }
 
   switch (SwitchID) {
   case 0:
     loco->PostTriggerBoth(16);
     break;
   case 1:
-    if (cab->Switch(0))
+    if (cab->Switch(0)) {
       return false;
+    }
     loco->PostTriggerCab(15);
     break;
   case 4:
-    if (SetState < 4 && cab->Switch(4) >= 4)
+    if (SetState < 4 && cab->Switch(4) >= 4) {
       loco->PostTriggerCab(116);
+    }
     break;
   case 7:
-    if (SetState == 1)
+    if (SetState == 1) {
       Trig = 8;
-    else
+    }
+    else {
       Trig = 9;
+    }
     loco->PostTriggerBoth(Trig);
     break;
   case 6:
-    if (SetState == 1)
+    if (SetState == 1) {
       loco->PostTriggerBoth(10);
+    }
     break;
   };
 
   if (SwitchID == 2 || SwitchID == 3 || SwitchID == 4) {
     loco->PostTriggerCab(18);
-  } else if ((SwitchID >= 9 && SwitchID <= 14) || SwitchID == 17 ||
-             (SwitchID >= 19 && SwitchID <= 23) || SwitchID == 26) {
+  }
+  else if ((SwitchID >= 9 && SwitchID <= 14) || SwitchID == 17 ||
+           (SwitchID >= 19 && SwitchID <= 23) || SwitchID == 26) {
     loco->PostTriggerCab(102);
-  } else if (SwitchID == 15 || SwitchID == 16 || SwitchID == 18 ||
-             SwitchID == 24 || SwitchID == 25 ||
-             (SwitchID >= 27 && SwitchID <= 31)) {
+  }
+  else if (SwitchID == 15 || SwitchID == 16 || SwitchID == 18 ||
+           SwitchID == 24 || SwitchID == 25 ||
+           (SwitchID >= 27 && SwitchID <= 31)) {
     loco->PostTriggerCab(37);
-  } else if (SwitchID == 33) {
+  }
+  else if (SwitchID == 33) {
     loco->PostTriggerCab(105);
   };
 
@@ -366,25 +383,30 @@ extern "C" bool __export CanSwitch(const DieselLocomotive *loco,
 
 extern "C" void __export Switched(const DieselLocomotive *loco,
                                   DieselEngine *eng, unsigned int SwitchID,
-                                  unsigned int PrevState) {
+                                  unsigned int PrevState)
+{
   Cabin *cab = loco->Cab();
   FreeAnimation *anim;
-  ULONG &Flags = *(ULONG *)&eng->var[0];
+  ULONG &Flags = *(ULONG *) &eng->var[0];
   int n, n1;
 
-  if (SwitchID == 44)
-    SwitchID = 8;
-  if (SwitchID == 3)
-    SwitchID = 2;
+  if (SwitchID == (UINT) sw::SW_P_SAND_44) {
+    SwitchID = (UINT) sw::SW_SAND_8;
+  }
+
+  if (SwitchID == (UINT) sw::C396_3) {
+    SwitchID = (UINT) sw::C254_2;
+  }
 
   switch (SwitchID) {
   case 0:
-    eng->ThrottlePosition = cab->Switch(0);
+    eng->ThrottlePosition = cab->Switch((UINT) sw::C_MAIN_0);
     break;
   case 1:
-    if (!cab->Switch(1))
+    if (!cab->Switch((UINT) sw::C_REV_1)) {
       break;
-    eng->Reverse = cab->Switch(1) - 2;
+    }
+    eng->Reverse = cab->Switch((UINT) sw::C_REV_1) - 2;
     // if(eng->Reverse)
     // if(loco->Flags&1)
     // eng->Reverse=-eng->Reverse;
@@ -392,12 +414,15 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
   case 2:
     n = cab->Switch(2);
     n1 = cab->Switch(3);
-    if (n1 > n)
+    if (n1 > n) {
       n = n1;
-    if (n < 2)
+    }
+    if (n < 2) {
       eng->IndependentBrakeValue = 0.0;
-    else
+    }
+    else {
       eng->IndependentBrakeValue = 1.0 * (n - 1);
+    }
     break;
   case 4:
     switch (cab->Switch(4)) {
@@ -407,17 +432,20 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
     case 1:
       if (loco->BrakeCylinderPressure && PrevState != 0) {
         loco->PostTriggerCab(113);
-      } else {
+      }
+      else {
         loco->PostTriggerCab(114);
       };
       break;
     case 3:
-      if (PrevState == 4)
+      if (PrevState == 4) {
         loco->PostTriggerCab(114);
+      }
       break;
     case 4:
-      if (PrevState != 5)
+      if (PrevState != 5) {
         loco->PostTriggerCab(115);
+      }
       break;
     };
     break;
@@ -425,7 +453,8 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
     if (cab->Switch(8) || cab->Switch(44)) {
       eng->Sanding = 1;
       loco->PostTriggerBoth(111);
-    } else {
+    }
+    else {
       eng->Sanding = 0;
       loco->PostTriggerBoth(112);
     };
@@ -433,7 +462,8 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
   case 9:
     if (cab->Switch(9)) {
       loco->PostTriggerCab(100);
-    } else {
+    }
+    else {
       loco->PostTriggerCab(101);
     };
     break;
@@ -447,30 +477,38 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
     SwitchLights(loco, cab->Switch(14) + 4);
     break;
   case 15:
-    if (cab->Switch(16))
+    if (cab->Switch(16)) {
       break;
-    if (cab->Switch(15))
+    }
+    if (cab->Switch(15)) {
       SwitchLights(loco, 7);
-    else
+    }
+    else {
       SwitchLights(loco, 8);
+    }
     break;
   case 16:
-    if (cab->Switch(16))
+    if (cab->Switch(16)) {
       SwitchLights(loco, 9);
-    else
+    }
+    else {
       Switched(loco, eng, 15, 0);
+    }
     break;
   case 17:
-    if (eng->DieselOn == 1)
+    if (eng->DieselOn == 1) {
       break;
-    if (cab->Switch(17)) {
-      if (cab->Switch(26)) {
-        if (eng->var[9] > 95.0)
+    }
+    if (cab->Switch((UINT) sw::SW_START_17)) {
+      if (cab->Switch((UINT) sw::SW_STOP_26)) {
+        if (eng->var[9] > 95.0) {
           break;
+        }
         eng->DieselOn = 2;
         loco->PostTriggerBoth(103);
       };
-    } else {
+    }
+    else {
       /*eng->DieselOn=0;
       if(loco->sound)
        loco->sound->PostTrigger(104);
@@ -481,54 +519,71 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
   case 19:
     if (!PrevState) {
       anim = loco->FindAnim(L"wiper1");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = loco->FindAnim(L"wiper2");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = loco->FindAnim(L"wiper3");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = loco->FindAnim(L"wiper4");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = cab->FindAnim(L"wiper1");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = cab->FindAnim(L"wiper2");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = cab->FindAnim(L"wiper3");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
+      }
       anim = cab->FindAnim(L"wiper4");
-      if (anim)
+      if (anim) {
         anim->Flags |= 1;
-    } else if (!cab->Switch(19)) {
+      }
+    }
+    else if (!cab->Switch(19)) {
       anim = loco->FindAnim(L"wiper1");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = loco->FindAnim(L"wiper2");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = loco->FindAnim(L"wiper3");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = loco->FindAnim(L"wiper4");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = cab->FindAnim(L"wiper1");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = cab->FindAnim(L"wiper2");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = cab->FindAnim(L"wiper3");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
       anim = cab->FindAnim(L"wiper4");
-      if (anim)
+      if (anim) {
         anim->Flags &= ~1;
+      }
     };
     break;
   case 20:
@@ -544,18 +599,23 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
     SwitchLights(loco, cab->Switch(23) + 13);
     break;
   case 24:
-    if (cab->Switch(25))
+    if (cab->Switch(25)) {
       break;
-    if (cab->Switch(24))
+    }
+    if (cab->Switch(24)) {
       SwitchLights(loco, 16);
-    else
+    }
+    else {
       SwitchLights(loco, 17);
+    }
     break;
   case 25:
-    if (cab->Switch(25))
+    if (cab->Switch(25)) {
       SwitchLights(loco, 18);
-    else
+    }
+    else {
       Switched(loco, eng, 24, 0);
+    }
     break;
   case 26:
     if (!cab->Switch(26)) {
@@ -573,7 +633,8 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
         loco->LockCoupling(false, true);
         loco->DetachCoupling(false, true);
       };
-    } else {
+    }
+    else {
       loco->LockCoupling(false, false);
       loco->DetachCoupling(false, false);
     };
@@ -586,7 +647,8 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
         loco->LockCoupling(true, true);
         loco->DetachCoupling(true, true);
       };
-    } else {
+    }
+    else {
       loco->LockCoupling(true, false);
       loco->DetachCoupling(true, false);
     };
@@ -600,37 +662,45 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
 
 extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
                              unsigned long State, float time,
-                             float AirTemperature) {
+                             float AirTemperature)
+{
   Cabin *cab = loco->Cab();
-  ULONG &Flags = *(ULONG *)&eng->var[0];
+  ULONG &Flags = *(ULONG *) &eng->var[0];
   float InternalPowerUsage = 0.0;
   float Current = 0.0;
   FreeAnimation *anim;
 
   // Diesel power
   if (eng->DieselOn == 2) {
-    if (eng->Power < 159.0)
+    if (eng->Power < 159.0) {
       eng->Power += 30.0 * time;
+    }
     if (loco->FuelAmount < 0.1) {
       if (eng->Power > 100.0) {
         eng->DieselOn = 0.0;
         eng->Power = 100.0;
       };
     };
-  } else if (eng->DieselOn == 1) {
+  }
+  else if (eng->DieselOn == 1) {
     float SetPower = 463.4 + eng->ThrottlePosition * 66.25;
     if (SetPower > eng->Power) {
       eng->Power += 50.0 * time;
-      if (eng->Power > SetPower)
+      if (eng->Power > SetPower) {
         eng->Power = SetPower;
-    } else {
+      }
+    }
+    else {
       eng->Power -= 50.0 * time;
-      if (eng->Power < SetPower)
+      if (eng->Power < SetPower) {
         eng->Power = SetPower;
+      }
     };
-  } else if (!eng->DieselOn) {
-    if (eng->Power > 10.0)
+  }
+  else if (!eng->DieselOn) {
+    if (eng->Power > 10.0) {
       eng->Power -= eng->Power * 0.2 * time;
+    }
     else {
       eng->Power = 0.0;
     };
@@ -639,30 +709,38 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
   eng->FuelConsuming = 0.0;
   if (eng->DieselOn == 2) {
     eng->FuelConsuming = eng->Power / 159.0;
-    if (eng->FuelConsuming > 1.0)
+    if (eng->FuelConsuming > 1.0) {
       eng->FuelConsuming =
           (0.3 * eng->Power / 993.0) + 0.4 * (2.0 - eng->FuelConsuming);
-    else
+    }
+    else {
       eng->FuelConsuming = 0.4 * eng->FuelConsuming;
-  } else if (eng->DieselOn == 1) {
+    }
+  }
+  else if (eng->DieselOn == 1) {
     if (loco->FuelAmount < 0.1) {
       eng->DieselOn = 0;
       eng->Power = 0.0;
-    } else
+    }
+    else {
       eng->FuelConsuming = 0.3 * (eng->Power - 159.0) / 993.0;
+    }
   };
   // Water temperature
   float PowerToBalance = 8.575 * eng->var[9];
   float VelLeak = 1.0 + fabs(loco->Velocity) / 30.0;
-  if (!eng->DieselOn)
+  if (!eng->DieselOn) {
     VelLeak *= 0.2;
+  }
   if (eng->Power > PowerToBalance) {
     eng->var[9] += time * (eng->Power - PowerToBalance) / (2850.0 * VelLeak);
-  } else {
+  }
+  else {
     eng->var[9] += time * (eng->Power - PowerToBalance) / (1475.0 / VelLeak);
   };
-  if (eng->var[9] < 20.0)
+  if (eng->var[9] < 20.0) {
     eng->var[9] = 20.0;
+  }
   if (eng->var[9] > 110.0) {
     eng->DieselOn = 0;
     Flags |= 8;
@@ -672,19 +750,23 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
   eng->MainResRate = -0.001;
   if (eng->DieselOn == 1) {
     if (loco->MainResPressure < 6.0) {
-      if (loco->IsSMSTriggerOnEng(107) <= 0)
+      if (loco->IsSMSTriggerOnEng(107) <= 0) {
         loco->PostTriggerBoth(107);
+      }
       Flags |= 1;
-    } else if (loco->MainResPressure > 9.0) {
-      if (loco->IsSMSTriggerOnEng(107) == 1)
+    }
+    else if (loco->MainResPressure > 9.0) {
+      if (loco->IsSMSTriggerOnEng(107) == 1) {
         loco->PostTriggerBoth(108);
+      }
       Flags &= ~1;
     };
     if (Flags & 1) {
       eng->MainResRate = 0.025 * (11.0 - loco->MainResPressure);
       InternalPowerUsage += 30.0;
     };
-  } else if (Flags & 1) {
+  }
+  else if (Flags & 1) {
     loco->PostTriggerBoth(108);
     Flags &= ~1;
   };
@@ -693,7 +775,8 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
   eng->Force = 0.0;
   if (!eng->Reverse) {
     eng->RPM = eng->Power * 0.756;
-  } else {
+  }
+  else {
     if (eng->DieselOn && eng->ThrottlePosition) {
       float VelMin = -3.0 + eng->ThrottlePosition * 0.225,
             Vel = loco->Velocity * eng->Reverse;
@@ -703,38 +786,51 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
         ggc = q - 2.0 - eng->ThrottlePosition * 3.16;
         if (eng->ThrottlePosition == 4) {
           ggc -= 1.2;
-        } else if (eng->ThrottlePosition == 5) {
+        }
+        else if (eng->ThrottlePosition == 5) {
           ggc -= 2.3;
-        } else if (eng->ThrottlePosition == 6) {
+        }
+        else if (eng->ThrottlePosition == 6) {
           ggc -= 0.4;
         };
         if (ggc > 0.0) {
           ggc *= 0.6;
           ggc *= ggc;
-        } else
+        }
+        else {
           ggc = 0.0;
+        }
       };
       q *= 10.0;
-      if (q < 1.0)
+      if (q < 1.0) {
         q = 1.0;
-      if (eng->ThrottlePosition > 4)
+      }
+      if (eng->ThrottlePosition > 4) {
         q *= 0.92;
-      if (eng->ThrottlePosition > 5)
+      }
+      if (eng->ThrottlePosition > 5) {
         q *= 0.95;
-      if (eng->ThrottlePosition > 6)
+      }
+      if (eng->ThrottlePosition > 6) {
         q *= 0.93;
-      if (eng->ThrottlePosition > 7)
+      }
+      if (eng->ThrottlePosition > 7) {
         q *= 0.87;
+      }
 
       // ��
       if (Vel > 4.75) {
         Flags |= 32;
-        if (Vel > 9.50)
+        if (Vel > 9.50) {
           Flags |= 64;
-        else if (Vel < 8.05)
+        }
+        else if (Vel < 8.05) {
           Flags &= ~64;
-      } else if (Vel < 4.16)
+        }
+      }
+      else if (Vel < 4.16) {
         Flags &= ~96;
+      }
       if (Flags & 32) {
         ShuntQ1 = 0.95;
         ShuntQ = 1.15 + (8.0 - eng->ThrottlePosition) * 0.15;
@@ -746,43 +842,53 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
 
       Current = 0.207 * eng->Power * ShuntQ * eng->ThrottlePosition /
                 pow(q, 1.85 - eng->ThrottlePosition * 0.038 * ShuntQ1);
-      if (Current < ggc)
+      if (Current < ggc) {
         Current = 0.0;
-      else
+      }
+      else {
         Current -= ggc;
+      }
       eng->RPM =
           (eng->Power - InternalPowerUsage) * 0.756 * (1.0 - Current / 5.5);
-      if (eng->RPM < 0.0)
+      if (eng->RPM < 0.0) {
         eng->RPM = 0.0;
-      if (eng->RPM > eng->Power * 0.756)
+      }
+      if (eng->RPM > eng->Power * 0.756) {
         eng->RPM = eng->Power * 0.756;
+      }
       eng->Force = eng->Reverse * Current * 102000.0;
 
-      if (eng->RPM < 150.0)
+      if (eng->RPM < 150.0) {
         eng->DieselOn = 0;
-    } else {
+      }
+    }
+    else {
       eng->RPM = eng->Power * 0.756;
     };
   };
 
-  if (eng->DieselOn == 2)
+  if (eng->DieselOn == 2) {
     if (eng->RPM >= 120.0) {
       eng->DieselOn = 1;
       Flags |= 16;
       Flags &= ~8;
       eng->var[11] = 0.0;
     };
+  }
 
   // Smoke
   if (!eng->DieselOn) {
     Exhaust(loco, 0, 0.0, 0.0, 0.0, 0, 0);
-  } else if (Flags & 16) {
+  }
+  else if (Flags & 16) {
     eng->var[11] += time;
-    if (eng->var[11] > 12.0)
+    if (eng->var[11] > 12.0) {
       Flags &= ~16;
+    }
     Exhaust(loco, 0, 1.0, eng->FuelConsuming * 60, eng->FuelConsuming * 30.0,
             0xEE9090AA, 2.4);
-  } else {
+  }
+  else {
     Exhaust(loco, 0, 0.2 + eng->RPM / 400.0, eng->FuelConsuming * 8.0,
             eng->FuelConsuming * 10.0, 0xEE505050, 1.0);
   };
@@ -791,14 +897,18 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
   eng->HandbrakePercent = cab->GetSwitchFrame(5) * 100.0;
 
   // Loco brake
-  if (eng->IndependentBrakeValue > loco->MainResPressure)
+  if (eng->IndependentBrakeValue > loco->MainResPressure) {
     eng->IndependentBrakeValue = loco->MainResPressure;
-  if (eng->IndependentBrakeValue > loco->IndependentBrakePressure)
+  }
+  if (eng->IndependentBrakeValue > loco->IndependentBrakePressure) {
     eng->MainResRate -= 0.02;
+  }
   if (!cab->Switch(2)) {
-    if (loco->BrakeCylinderPressure > 0.0)
+    if (loco->BrakeCylinderPressure > 0.0) {
       eng->EngineFlags |= 1;
-  } else {
+    }
+  }
+  else {
     eng->EngineFlags &= ~1;
   };
 
@@ -808,82 +918,109 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
     switch (cab->Switch(4)) {
     case 0:
       if (eng->var[5] < 45.0) {
-        if (!cab->SwitchSet(4))
+        if (!cab->SwitchSet(4)) {
           eng->UR += BRAKE_UR_RATE_CHARGE * time;
-        if (eng->UR > loco->MainResPressure)
+        }
+        if (eng->UR > loco->MainResPressure) {
           eng->UR = loco->MainResPressure;
-        if (loco->TrainPipePressure < eng->UR)
+        }
+        if (loco->TrainPipePressure < eng->UR) {
           eng->TrainPipeRate =
               (eng->UR - loco->TrainPipePressure) / BRAKE_PIPE_RATE_CHARGE;
+        }
       };
       break;
     case 1:
       if (eng->var[5] < 45.0) {
         if (eng->UR < 5.2) {
           float rate = (loco->MainResPressure - eng->UR) * 2.0;
-          if (rate < 0.0)
+          if (rate < 0.0) {
             rate = 0.0;
-          if (rate > BRAKE_UR_RATE_CHARGE)
+          }
+          if (rate > BRAKE_UR_RATE_CHARGE) {
             rate = BRAKE_UR_RATE_CHARGE;
+          }
           eng->UR += rate * time;
-        } else if (loco->BrakeCylinderPressure > 0.0 &&
-                   (eng->UR - loco->TrainPipePressure) < 0.1)
+        }
+        else if (loco->BrakeCylinderPressure > 0.0 &&
+                 (eng->UR - loco->TrainPipePressure) < 0.1) {
           eng->UR += 0.15 * time;
-        if (eng->UR > loco->MainResPressure)
+        }
+        if (eng->UR > loco->MainResPressure) {
           eng->UR = loco->MainResPressure;
-        if (eng->UR > loco->TrainPipePressure)
+        }
+        if (eng->UR > loco->TrainPipePressure) {
           eng->UR -= 0.003 * time;
+        }
         if (loco->TrainPipePressure < eng->UR - 0.01) {
           eng->TrainPipeRate =
               (eng->UR - loco->TrainPipePressure) / BRAKE_PIPE_RATE_CHARGE;
-        } else if (loco->TrainPipePressure > eng->UR) {
+        }
+        else if (loco->TrainPipePressure > eng->UR) {
           eng->TrainPipeRate = (eng->UR - loco->TrainPipePressure);
-          if (eng->TrainPipeRate < -BRAKE_PIPE_RATE)
+          if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
             eng->TrainPipeRate = -BRAKE_PIPE_RATE;
+          }
         };
       };
       break;
     case 2:
-      if (eng->UR > loco->MainResPressure)
+      if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
-      if (loco->TrainPipePressure > eng->UR)
+      }
+      if (loco->TrainPipePressure > eng->UR) {
         eng->TrainPipeRate = eng->UR - loco->TrainPipePressure;
-      if (eng->TrainPipeRate < -BRAKE_PIPE_RATE)
+      }
+      if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
         eng->TrainPipeRate = -BRAKE_PIPE_RATE;
-      else if (eng->TrainPipeRate > PIPE_DISCHARGE_SLOW)
+      }
+      else if (eng->TrainPipeRate > PIPE_DISCHARGE_SLOW) {
         eng->TrainPipeRate = PIPE_DISCHARGE_SLOW;
+      }
       break;
     case 3:
-      if (eng->UR > loco->MainResPressure)
+      if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
-      if (loco->TrainPipePressure > eng->UR)
+      }
+      if (loco->TrainPipePressure > eng->UR) {
         eng->TrainPipeRate = eng->UR - loco->TrainPipePressure;
-      else if (eng->UR - loco->TrainPipePressure > 0.1)
+      }
+      else if (eng->UR - loco->TrainPipePressure > 0.1) {
         eng->TrainPipeRate = 0.05;
-      if (eng->TrainPipeRate < -BRAKE_PIPE_RATE)
+      }
+      if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
         eng->TrainPipeRate = -BRAKE_PIPE_RATE;
+      }
       break;
     case 4:
-      if (cab->SwitchSet(4) < 4)
+      if (cab->SwitchSet(4) < 4) {
         break;
+      }
       eng->UR += (BRAKE_TP_DISCHARGE_RATE * 1.2) * time;
-      if (eng->UR > loco->MainResPressure)
+      if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
-      if (eng->UR < 0)
+      }
+      if (eng->UR < 0) {
         eng->UR = 0;
+      }
       eng->TrainPipeRate = BRAKE_TP_DISCHARGE_RATE;
-      if (loco->TrainPipePressure < 0.4 && loco->IsSMSTriggerOnCab(115) != 0)
+      if (loco->TrainPipePressure < 0.4 && loco->IsSMSTriggerOnCab(115) != 0) {
         loco->PostTriggerCab(116);
+      }
       break;
     case 5:
       eng->UR += BRAKE_PIPE_EMERGENCY * 1.2 * time;
-      if (eng->UR > loco->MainResPressure)
+      if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
-      if (eng->UR < 0)
+      }
+      if (eng->UR < 0) {
         eng->UR = 0;
+      }
       eng->TrainPipeRate = BRAKE_PIPE_EMERGENCY;
-      if ((loco->TrainPipePressure < 0.4) && loco->IsSMSTriggerOnCab(115) != 0)
+      if ((loco->TrainPipePressure < 0.4) &&
+          loco->IsSMSTriggerOnCab(115) != 0) {
         loco->PostTriggerCab(116);
+      }
       break;
     };
 
@@ -894,25 +1031,32 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
       UINT Aspect = cab->Signal.Aspect[0];
       if (Aspect != unsigned(eng->var[8])) {
         if (Aspect < SIGASP_CLEAR_2 && Aspect < unsigned(eng->var[8])) {
-          if (Aspect == SIGASP_STOP_AND_PROCEED || Aspect == SIGASP_RESTRICTING)
+          if (Aspect == SIGASP_STOP_AND_PROCEED ||
+              Aspect == SIGASP_RESTRICTING) {
             eng->var[5] = 35.1;
-          else
+          }
+          else {
             eng->var[5] = 30.0;
+          }
           Flags |= 4;
-        } else {
+        }
+        else {
           loco->PostTriggerCab(117);
         };
       };
       if (cab->Signal.Aspect[0] < SIGASP_APPROACH_1) {
         Flags |= 4;
       };
-      if (Flags & 4)
+      if (Flags & 4) {
         eng->var[5] += time;
+      }
       if (eng->var[5] > 35.0) {
         Flags |= 2;
-        if (!SoundOn)
+        if (!SoundOn) {
           loco->PostTriggerCab(109);
-      } else if (SoundOn) {
+        }
+      }
+      else if (SoundOn) {
         loco->PostTriggerCab(110);
         Flags &= ~2;
         SoundOn = false;
@@ -921,7 +1065,8 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
         // eng->TrainPipeRate=BRAKE_PIPE_EMERGENCY;
       };
       eng->var[8] = cab->Signal.Aspect[0];
-    } else {
+    }
+    else {
       if (Flags & 6) {
         loco->PostTriggerCab(110);
         Flags &= ~6;
@@ -931,14 +1076,18 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
   };
 
   float DVol, DFreq;
-  if (eng->Power >= 463.4)
+  if (eng->Power >= 463.4) {
     DVol = 0.05 + (eng->Power - 463.4) / 490.0;
-  else
+  }
+  else {
     DVol = 0.05 * eng->Power / 463.4;
-  if (eng->RPM >= 350.0)
+  }
+  if (eng->RPM >= 350.0) {
     DFreq = 0.05 + (eng->RPM - 350.0) / 400.0;
-  else
+  }
+  else {
     DFreq = 0.05 * eng->RPM / 350.0;
+  }
   SMSObject *soundCab = loco->SoundCab(), *soundEng = loco->SoundEng();
   if (soundCab) {
     soundCab->Var1[0] = DFreq;
@@ -951,8 +1100,9 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
   };
   anim = loco->FindAnim(L"ROD");
   if (anim) {
-    if (eng->Power < 10.0)
+    if (eng->Power < 10.0) {
       anim->Flags &= ~1;
+    }
     else {
       anim->Flags |= 1;
       anim->Speed = 5.0 * eng->Power / 993.0;
@@ -997,9 +1147,11 @@ extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
     cab->SetDisplayState(16, eng->Wheelslip ? 1 : 0);
 
     eng->ALSNOn = 0;
-    if (!cab->Switch(32))
+    if (!cab->Switch(32)) {
       eng->ALSNOn = 1;
-    if (cab->Switch(28))
+    }
+    if (cab->Switch(28)) {
       eng->ALSNOn = 0xFFFF;
+    }
   };
 };
