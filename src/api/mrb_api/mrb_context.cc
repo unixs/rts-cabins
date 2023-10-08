@@ -1,13 +1,11 @@
-#include <cabin_context.h>
-#include <default_cabin.h>
-// #include <mrb_cabin_iface.h>
+#include <mrb_context.h>
+#include <mrb_default_cabin.h>
 
 #include <stdio.h>
 #include <mruby/dump.h>
 
-
 static mrb_bool
-load_cabin_class(CabinContext_t *ctxt) {
+init_cabin_class(MrbContext *ctxt) {
   // check Cabin class
   ctxt->cabin_defined = mrb_class_defined_id(
     ctxt->mrb,
@@ -45,8 +43,8 @@ load_cabin_class(CabinContext_t *ctxt) {
   return TRUE;
 }
 
-void
-load_cabin_script(CabinContext_t *ctxt, const char *filename) {
+static void
+load_cabin_script(MrbContext *ctxt, const char *filename) {
   FILE *fp = fopen(filename, "r");
 
   mrb_load_irep_file(ctxt->mrb, fp);
@@ -57,33 +55,30 @@ load_cabin_script(CabinContext_t *ctxt, const char *filename) {
   fclose(fp);
 }
 
-mrb_bool
-init_cabin_env(CabinContext_t *ctxt) {
-  ctxt->mrb = mrb_open();
+MrbContext::MrbContext() {
+  this->mrb = mrb_open();
 
-  if (!ctxt->mrb) {
-    return FALSE;
-  }
+  this->cabin_defined = FALSE;
+  this->cabin_class = NULL;
+  this->cabin_obj = mrb_nil_value();
+  this->resp_to_switched = FALSE;
 
-  ctxt->cabin_defined = FALSE;
-  ctxt->cabin_class = NULL;
-  ctxt->cabin_obj = mrb_nil_value();
-  ctxt->resp_to_switched = FALSE;
-
-  ctxt->cabin_class_sym = mrb_intern_str(
-    ctxt->mrb,
-    mrb_str_new_lit(ctxt->mrb, CABIN_CLASS_NAME)
+  this->cabin_class_sym = mrb_intern_str(
+    this->mrb,
+    mrb_str_new_lit(this->mrb, CABIN_CLASS_NAME)
   );
 
-  ctxt->switched_method_sym = mrb_intern_str(
-    ctxt->mrb,
-    mrb_str_new_lit(ctxt->mrb, SWITCHED_METHOD_NAME)
+  this->switched_method_sym = mrb_intern_str(
+    this->mrb,
+    mrb_str_new_lit(this->mrb, SWITCHED_METHOD_NAME)
   );
 
   // define_cabin_interface(ctxt);
 
-  define_default_cabin_class(ctxt);
-  load_cabin_class(ctxt);
+  define_default_cabin_class(this);
+  // init_cabin_class(ctxt);
+}
 
-  return TRUE;
+MrbContext::~MrbContext() {
+  printf("FREE MRB CONTEXT\n");
 }

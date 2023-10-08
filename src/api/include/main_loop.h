@@ -1,5 +1,7 @@
 #pragma once
 
+#define MAIN_LOOP_DEFAULT_DELAY 0.3
+
 #include <uv.h>
 
 /**

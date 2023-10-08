@@ -17,15 +17,6 @@ link_libraries(Mruby::Mruby)
 #		mrb_default_cb)
 
 
-add_library(tep70 MODULE tep70.cc)
-target_link_options(tep70 PRIVATE "-static")
-target_link_libraries(tep70
-	PRIVATE
-		cabin_api)
-		#default_cabin
-		#cabin_context)
-
-
 add_executable(uvtest uvtest.cc)
 target_link_options(uvtest PRIVATE "-static")
 target_link_libraries(uvtest
@@ -35,10 +26,11 @@ target_link_libraries(uvtest
 		default_cabin
 		cabin_context)
 
-# add_executable(parser_test parser_test.cc)
-# target_link_options(parser_test PRIVATE "-static")
-# target_link_libraries(parser_test
-# 	PRIVATE
-# 		cabin_api)
+add_executable(dlltest dlltest.cc)
+#target_link_options(parser_test PRIVATE "-static")
+#target_link_libraries(parser_test
+#	PRIVATE
+#		cabin_api)
 
 add_subdirectory(api)
+add_subdirectory(loco)

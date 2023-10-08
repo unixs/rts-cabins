@@ -1,8 +1,8 @@
-#include <default_cabin.h>
+#include <mrb_default_cabin.h>
 #include <mrb_default_callbacks.h>
 
-struct RClass*
-define_default_cabin_class(CabinContext_t *ctxt) {
+RClass_t*
+define_default_cabin_class(MrbContext *ctxt) {
   struct RClass* default_cabin = mrb_define_class(
     ctxt->mrb,
     DEFAULT_CABIN_CLASS_NAME,
