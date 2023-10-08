@@ -1,0 +1,2223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <header>SIMISA@@@@@@@@@@JINX0t1t______</header>
+   <shape type="section">
+      <word>cab.s</word>
+      <ESD_Detail_Level type="section">
+         <number type="int">0</number>
+      </ESD_Detail_Level>
+      <ESD_Alternative_Texture type="section">
+         <number type="int">0</number>
+      </ESD_Alternative_Texture>
+      <ESD_Bounding_Box type="section">
+         <number type="float">-1.52</number>
+         <number type="float">0.3</number>
+         <number type="float">-8.6</number>
+         <number type="float">1.52</number>
+         <number type="float">4.76</number>
+         <number type="float">8.6</number>
+      </ESD_Bounding_Box>
+      <ESD_CheckDetailsVisible type="section"/>
+      <ESD_Interior type="section">
+         <Switches type="section">
+            <number type="int">46</number>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">0</number>
+               </ID>
+               <Name type="section">
+                  <word>C_MAIN</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тяга</string>
+               </Hint>
+               <StateHints type="section">
+                  <number type="int">9</number>
+                  <string>[0]</string>
+                  <string>[1]</string>
+                  <string>[2]</string>
+                  <string>[3]</string>
+                  <string>[4]</string>
+                  <string>[5]</string>
+                  <string>[6]</string>
+                  <string>[7]</string>
+                  <string>[8]</string>
+               </StateHints>
+               <Position type="section">
+                  <number type="float">0.54</number>
+                  <number type="float">2.7</number>
+                  <number type="float">-4.13</number>
+               </Position>
+               <Radius type="section">
+                  <number type="int">2</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">9</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERY</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>D</string>
+                  <string>A</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.4</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">1</number>
+               </ID>
+               <Name type="section">
+                  <word>C_REV</word>
+               </Name>
+               <Hint type="section">
+                  <string>Реверс</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.54</number>
+                  <number type="float">2.77</number>
+                  <number type="float">-4.13</number>
+               </Position>
+               <Radius type="section">
+                  <number type="int">3</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>KEY</word>
+                  <word>CONTROLLERY</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>W</string>
+                  <string>S</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">2</number>
+               </ID>
+               <Name type="section">
+                  <word>C254</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тормоз локомотива</string>
+               </Hint>
+               <StateHints type="section">
+                  <number type="int">6</number>
+                  <string>[отпуск]</string>
+                  <string>[отпуск]</string>
+                  <string>[1]</string>
+                  <string>[2]</string>
+                  <string>[3]</string>
+                  <string>[4]</string>
+               </StateHints>
+               <Position type="section">
+                  <number type="float">1.45</number>
+                  <number type="float">3.12</number>
+                  <number type="float">-3.63</number>
+               </Position>
+               <Radius type="section">
+                  <number type="int">2</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">6</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERY</word>
+                  <word>CHECKDISTANCEONPRESS</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>]</string>
+                  <string>[</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">3</number>
+               </ID>
+               <Name type="section">
+                  <word>C396</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тормоз локомотива</string>
+               </Hint>
+               <StateHints type="section">
+                  <number type="int">6</number>
+                  <string>[отпуск]</string>
+                  <string>[отпуск]</string>
+                  <string>[1]</string>
+                  <string>[2]</string>
+                  <string>[3]</string>
+                  <string>[4]</string>
+               </StateHints>
+               <Position type="section">
+                  <number type="float">-1.47</number>
+                  <number type="float">2.86</number>
+                  <number type="float">-4.98</number>
+               </Position>
+               <Radius type="section">
+                  <number type="int">2</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">6</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERY</word>
+                  <word>CHECKDISTANCEONPRESS</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>]</string>
+                  <string>[</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">4</number>
+               </ID>
+               <Name type="section">
+                  <word>C395</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тормоз поезда</string>
+               </Hint>
+               <StateHints type="section">
+                  <number type="int">6</number>
+                  <string>[Отпуск]</string>
+                  <string>[Поездное]</string>
+                  <string>[Перекрыша без питания]</string>
+                  <string>[Перекрыша]</string>
+                  <string>[Торможение]</string>
+                  <string>[Экстренное]</string>
+               </StateHints>
+               <Position type="section">
+                  <number type="float">1.1</number>
+                  <number type="float">2.9</number>
+                  <number type="float">-3.43</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">6</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERY</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>'</string>
+                  <string>;</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">5</number>
+               </ID>
+               <Name type="section">
+                  <word>C_HANDBR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Ручной тормоз</string>
+               </Hint>
+               <StateHints type="section">
+                  <number type="int">2</number>
+                  <string>[отпущен]</string>
+                  <string>[закручен]</string>
+               </StateHints>
+               <Position type="section">
+                  <number type="float">-1.0</number>
+                  <number type="float">2.43</number>
+                  <number type="float">-4.94</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+                  <word>PRECISE</word>
+               </Flags>
+               <SwitchPrecision type="section">
+                  <number type="float">0.08</number>
+                  <number type="float">0.0</number>
+               </SwitchPrecision>
+               <AssignKey type="section"/>
+               <AnimTime type="section">
+                  <number type="float">3.0</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">6</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_SVIST</word>
+               </Name>
+               <Hint type="section">
+                  <string>Свисток</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">1.46</number>
+                  <number type="float">2.91</number>
+                  <number type="float">-4.1</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>B</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">7</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_TIFON</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тифон</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">1.28</number>
+                  <number type="float">2.0</number>
+                  <number type="float">-3.58</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>Space</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">8</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_SAND</word>
+               </Name>
+               <Hint type="section">
+                  <string>Песок</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.96</number>
+                  <number type="float">2.0</number>
+                  <number type="float">-3.58</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AssignKey type="section">
+                  <string>X</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">9</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_RADIO</word>
+               </Name>
+               <Hint type="section">
+                  <string>Радиостанция</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.24</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">10</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VTK</word>
+               </Name>
+               <Hint type="section">
+                  <string>Освещение тележек и капота</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.3</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">11</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VN</word>
+               </Name>
+               <Hint type="section">
+                  <string>Освещение номера тепловоза</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.375</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">12</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VRD</word>
+               </Name>
+               <Hint type="section">
+                  <string>Освещение расписания</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.444</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">13</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VBLP</word>
+               </Name>
+               <Hint type="section">
+                  <string>Передний левый буферный фонарь</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.515</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">14</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VBFP</word>
+               </Name>
+               <Hint type="section">
+                  <string>Передний правый буферный фонарь</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.585</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">15</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_PR1</word>
+               </Name>
+               <Hint type="section">
+                  <string>Передний прожектор: тускло</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.64</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">16</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_PR2</word>
+               </Name>
+               <Hint type="section">
+                  <string>Передний прожектор: ярко</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.67</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">17</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_START</word>
+               </Name>
+               <Hint type="section">
+                  <string>Пуск дизеля</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.73</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">18</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VMVO</word>
+               </Name>
+               <Hint type="section">
+                  <string>Вентилятор кабины машиниста</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.24</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">19</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VOK</word>
+               </Name>
+               <Hint type="section">
+                  <string>Калорифер</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.3</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">20</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_PVIP</word>
+               </Name>
+               <Hint type="section">
+                  <string>Освещение приборов</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.37</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">21</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VK</word>
+               </Name>
+               <Hint type="section">
+                  <string>Освещение кабины</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.444</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">22</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VBLZ</word>
+               </Name>
+               <Hint type="section">
+                  <string>Задний левый буферный фонарь</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.515</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">23</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_VBFZ</word>
+               </Name>
+               <Hint type="section">
+                  <string>Задний правый буферный фонарь</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.59</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">24</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_PR3</word>
+               </Name>
+               <Hint type="section">
+                  <string>Задний прожектор: тускло</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.64</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">25</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_PR4</word>
+               </Name>
+               <Hint type="section">
+                  <string>Задний прожектор: ярко</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.68</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">26</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_STOP</word>
+               </Name>
+               <Hint type="section">
+                  <string>Остановка дизеля</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.73</number>
+                  <number type="float">2.68</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERX</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.2</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">27</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_OOL</word>
+               </Name>
+               <Hint type="section">
+                  <string>Обслуживание одним лицом</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.77</number>
+                  <number type="float">2.61</number>
+                  <number type="float">-3.95</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">28</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_TESTLS</word>
+               </Name>
+               <Hint type="section">
+                  <string>Проверка АЛСН</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.77</number>
+                  <number type="float">2.61</number>
+                  <number type="float">-3.9</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">29</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_KNAS2</word>
+               </Name>
+               <Hint type="section">
+                  <string>КНАС2</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.77</number>
+                  <number type="float">2.61</number>
+                  <number type="float">-3.85</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">30</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_KNAS1</word>
+               </Name>
+               <Hint type="section">
+                  <string>КНАС1</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.77</number>
+                  <number type="float">2.61</number>
+                  <number type="float">-3.8</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">31</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_KNZS</word>
+               </Name>
+               <Hint type="section">
+                  <string>Проверка звукового сигнала</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.77</number>
+                  <number type="float">2.61</number>
+                  <number type="float">-3.75</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">32</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_ALSN</word>
+               </Name>
+               <Hint type="section">
+                  <string>Выключатель АЛСН</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">0.77</number>
+                  <number type="float">2.51</number>
+                  <number type="float">-3.82</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.5</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.4</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">33</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_RB</word>
+               </Name>
+               <Hint type="section">
+                  <string>РБ</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">1.5</number>
+                  <number type="float">2.87</number>
+                  <number type="float">-3.79</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AssignKey type="section">
+                  <string>Z</string>
+               </AssignKey>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">34</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_A1</word>
+               </Name>
+               <Position type="section">
+                  <number type="float">1.23</number>
+                  <number type="float">2.83</number>
+                  <number type="float">-3.35</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">35</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_A2</word>
+               </Name>
+               <Position type="section">
+                  <number type="float">1.345</number>
+                  <number type="float">2.83</number>
+                  <number type="float">-3.35</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">36</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_A3</word>
+               </Name>
+               <Position type="section">
+                  <number type="float">1.45</number>
+                  <number type="float">2.83</number>
+                  <number type="float">-3.35</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.3</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">37</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_KNAS2b</word>
+               </Name>
+               <Hint type="section">
+                  <string>КНАС2</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.3</number>
+                  <number type="float">2.85</number>
+                  <number type="float">-5.1</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">38</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_KNAS1b</word>
+               </Name>
+               <Hint type="section">
+                  <string>КНАС1</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.3</number>
+                  <number type="float">2.74</number>
+                  <number type="float">-5.0</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">39</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_THR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тяга больше/меньше</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.355</number>
+                  <number type="float">2.935</number>
+                  <number type="float">-5.16</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+                  <word>CONTROLLERY</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">40</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_BR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Торможение/отпуск</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.355</number>
+                  <number type="float">2.9</number>
+                  <number type="float">-5.14</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+                  <word>CONTROLLERY</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">41</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_REV</word>
+               </Name>
+               <Hint type="section">
+                  <string>Реверс вперёд/назад</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.355</number>
+                  <number type="float">2.87</number>
+                  <number type="float">-5.12</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">3</number>
+                  <number type="int">1</number>
+               </States>
+               <Flags type="section">
+                  <word>CONTROLLERY</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">42</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_SBR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Автоматический сброс</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.388</number>
+                  <number type="float">2.92</number>
+                  <number type="float">-5.15</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">43</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_STOP</word>
+               </Name>
+               <Hint type="section">
+                  <string>Стоп</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.388</number>
+                  <number type="float">2.95</number>
+                  <number type="float">-5.173</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">44</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_SAND</word>
+               </Name>
+               <Hint type="section">
+                  <string>Песок</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.388</number>
+                  <number type="float">2.89</number>
+                  <number type="float">-5.128</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section"/>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+            <Switch type="section">
+               <ID type="section">
+                  <number type="int">45</number>
+               </ID>
+               <Name type="section">
+                  <word>SW_P_SV</word>
+               </Name>
+               <Hint type="section">
+                  <string>Свисток</string>
+               </Hint>
+               <Position type="section">
+                  <number type="float">-1.388</number>
+                  <number type="float">2.853</number>
+                  <number type="float">-5.103</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">2.0</number>
+               </Radius>
+               <States type="section">
+                  <number type="int">2</number>
+                  <number type="int">0</number>
+               </States>
+               <Flags type="section">
+                  <word>NONFIXED</word>
+               </Flags>
+               <AnimTime type="section">
+                  <number type="float">0.1</number>
+               </AnimTime>
+            </Switch>
+         </Switches>
+         <Displays type="section">
+            <number type="int">20</number>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">0</number>
+               </ID>
+               <Name type="section">
+                  <word>D_SKOR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Скорость</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.67</number>
+                  <number type="float">3.2</number>
+                  <number type="float">-3.36</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">41.7</number>
+                  <number type="float">14.45</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.2</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">1</number>
+               </ID>
+               <Name type="section">
+                  <word>D_GR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Главный резервуар</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.52</number>
+                  <number type="float">2.93</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">5.0</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.1</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">2</number>
+               </ID>
+               <Name type="section">
+                  <word>D_TM</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тормозная магистраль</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.68</number>
+                  <number type="float">2.93</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">5.0</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.03</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">3</number>
+               </ID>
+               <Name type="section">
+                  <word>D_UR</word>
+               </Name>
+               <Hint type="section">
+                  <string>Уравнительный резервуар</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.52</number>
+                  <number type="float">2.78</number>
+                  <number type="float">-3.6</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">3.0</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.03</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>PRECISE</word>
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">4</number>
+               </ID>
+               <Name type="section">
+                  <word>D_BC</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тормозной цилиндр</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.68</number>
+                  <number type="float">2.78</number>
+                  <number type="float">-3.6</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">1.8</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.03</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>PRECISE</word>
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">5</number>
+               </ID>
+               <Name type="section">
+                  <word>D_GG</word>
+               </Name>
+               <Hint type="section">
+                  <string>Ток нагрузки ГГ</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.29</number>
+                  <number type="float">2.8</number>
+                  <number type="float">-3.59</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">4.0</number>
+                  <number type="float">4.0</number>
+                  <number type="float">0.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.05</number>
+               </Granularity>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">6</number>
+               </ID>
+               <Name type="section">
+                  <word>D_RPM</word>
+               </Name>
+               <Hint type="section">
+                  <string>Обороты дизеля</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.4</number>
+                  <number type="float">2.8</number>
+                  <number type="float">-3.59</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">800.0</number>
+                  <number type="float">800.0</number>
+                  <number type="float">6.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">5.0</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">7</number>
+               </ID>
+               <Name type="section">
+                  <word>D_BCb</word>
+               </Name>
+               <Hint type="section">
+                  <string>Тормозной цилиндр</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">-1.06</number>
+                  <number type="float">2.78</number>
+                  <number type="float">-5.04</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">1.8</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.03</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>PRECISE</word>
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">8</number>
+               </ID>
+               <Name type="section">
+                  <word>D_GGb</word>
+               </Name>
+               <Hint type="section">
+                  <string>Ток нагрузки ГГ</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">-1.22</number>
+                  <number type="float">2.82</number>
+                  <number type="float">-5.07</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">4.0</number>
+                  <number type="float">4.0</number>
+                  <number type="float">0.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.05</number>
+               </Granularity>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">9</number>
+               </ID>
+               <Name type="section">
+                  <word>D_POIL</word>
+               </Name>
+               <Hint type="section">
+                  <string>Давление масла</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">-0.9</number>
+                  <number type="float">2.93</number>
+                  <number type="float">-5.16</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">5.0</number>
+                  <number type="float">0.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.25</number>
+               </Granularity>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">10</number>
+               </ID>
+               <Name type="section">
+                  <word>D_PFUEL</word>
+               </Name>
+               <Hint type="section">
+                  <string>Давление топлива</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">-0.9</number>
+                  <number type="float">2.83</number>
+                  <number type="float">-5.08</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">15.0</number>
+                  <number type="float">5.0</number>
+                  <number type="float">0.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.25</number>
+               </Granularity>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">11</number>
+               </ID>
+               <Name type="section">
+                  <word>D_TWAT</word>
+               </Name>
+               <Hint type="section">
+                  <string>Температура воды</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">-0.9</number>
+                  <number type="float">2.74</number>
+                  <number type="float">-5.0</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">120.0</number>
+                  <number type="float">60.0</number>
+                  <number type="float">0.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">2.5</number>
+               </Granularity>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">12</number>
+               </ID>
+               <Name type="section">
+                  <word>L_EPK</word>
+               </Name>
+               <Hint type="section">
+                  <string>ПСС</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.88</number>
+                  <number type="float">3.4</number>
+                  <number type="float">-3.275</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">13</number>
+               </ID>
+               <Name type="section">
+                  <word>L_FIRE</word>
+               </Name>
+               <Hint type="section">
+                  <string>Пожар</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.85</number>
+                  <number type="float">3.0</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">14</number>
+               </ID>
+               <Name type="section">
+                  <word>L_DS1</word>
+               </Name>
+               <Hint type="section">
+                  <string>Неисправность первого дизеля</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.85</number>
+                  <number type="float">2.9</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">15</number>
+               </ID>
+               <Name type="section">
+                  <word>L_DS2</word>
+               </Name>
+               <Hint type="section">
+                  <string>Неисправность второго дизеля</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.85</number>
+                  <number type="float">2.85</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">16</number>
+               </ID>
+               <Name type="section">
+                  <word>L_WS</word>
+               </Name>
+               <Hint type="section">
+                  <string>Боксование</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.85</number>
+                  <number type="float">2.8</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">17</number>
+               </ID>
+               <Name type="section">
+                  <word>L_LAMP1</word>
+               </Name>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.85</number>
+                  <number type="float">2.75</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">18</number>
+               </ID>
+               <Name type="section">
+                  <word>L_LAMP2</word>
+               </Name>
+               <DisplayType type="section">
+                  <word>LAMP</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">0.85</number>
+                  <number type="float">2.7</number>
+                  <number type="float">-3.5</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <InitialState type="section">
+                  <number type="int">0</number>
+               </InitialState>
+               <Flags type="section"/>
+            </Display>
+            <Display type="section">
+               <ID type="section">
+                  <number type="int">19</number>
+               </ID>
+               <Name type="section">
+                  <word>D_SKOR1</word>
+               </Name>
+               <Hint type="section">
+                  <string>Скорость</string>
+               </Hint>
+               <DisplayType type="section">
+                  <word>ARROW</word>
+               </DisplayType>
+               <Position type="section">
+                  <number type="float">-0.68</number>
+                  <number type="float">3.2</number>
+                  <number type="float">-5.29</number>
+               </Position>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+               </Radius>
+               <ValuesRange type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">41.7</number>
+                  <number type="float">14.45</number>
+                  <number type="float">10.0</number>
+               </ValuesRange>
+               <Granularity type="section">
+                  <number type="float">0.2</number>
+               </Granularity>
+               <Flags type="section">
+                  <word>OVERSCALE</word>
+               </Flags>
+            </Display>
+         </Displays>
+         <LocomotiveSignalization type="section">
+            <BlockCheckAhead type="section">
+               <number type="int">1</number>
+            </BlockCheckAhead>
+            <SignalLights type="section">
+               <number type="int">5</number>
+               <Light type="section">
+                  <word>ALSN_w</word>
+               </Light>
+               <Light type="section">
+                  <word>ALSN_R</word>
+               </Light>
+               <Light type="section">
+                  <word>ALSN_RY</word>
+               </Light>
+               <Light type="section">
+                  <word>ALSN_Y</word>
+               </Light>
+               <Light type="section">
+                  <word>ALSN_G</word>
+               </Light>
+            </SignalLights>
+            <SignalizationScripted type="section">
+               <number type="int">0</number>
+            </SignalizationScripted>
+            <SignalAspects type="section">
+               <number type="int">9</number>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">1</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">2</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">3</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">3</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">3</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">4</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">4</number>
+               </Aspect>
+               <Aspect type="section">
+                  <number type="int">1</number>
+                  <number type="int">1</number>
+               </Aspect>
+            </SignalAspects>
+         </LocomotiveSignalization>
+         <Animations type="section">
+            <number type="int">4</number>
+            <AnimNode type="section">
+               <Name type="section">
+                  <string>WIPER1</string>
+               </Name>
+               <ChildNodes type="section">
+                  <number type="int">2</number>
+                  <word>WIPERARMLEFT1</word>
+                  <word>WIPERBLADELEFT1</word>
+               </ChildNodes>
+               <AnimTime type="section">
+                  <number type="float">1.5</number>
+               </AnimTime>
+               <Flags type="section">
+                  <word>CONTINUOUS</word>
+                  <word>LOOP</word>
+                  <word>RETURNS</word>
+               </Flags>
+               <NumKeyFrames type="section">
+                  <number type="int">3</number>
+               </NumKeyFrames>
+            </AnimNode>
+            <AnimNode type="section">
+               <Name type="section">
+                  <string>WIPER2</string>
+               </Name>
+               <ChildNodes type="section">
+                  <number type="int">2</number>
+                  <word>WIPERARMLEFT2</word>
+                  <word>WIPERBLADELEFT2</word>
+               </ChildNodes>
+               <AnimTime type="section">
+                  <number type="float">1.5</number>
+               </AnimTime>
+               <Flags type="section">
+                  <word>CONTINUOUS</word>
+                  <word>LOOP</word>
+                  <word>RETURNS</word>
+               </Flags>
+               <NumKeyFrames type="section">
+                  <number type="int">3</number>
+               </NumKeyFrames>
+            </AnimNode>
+            <AnimNode type="section">
+               <Name type="section">
+                  <string>WIPER3</string>
+               </Name>
+               <ChildNodes type="section">
+                  <number type="int">2</number>
+                  <word>WIPERARMRIGHT1</word>
+                  <word>WIPERBLADERIGHT1</word>
+               </ChildNodes>
+               <AnimTime type="section">
+                  <number type="float">1.5</number>
+               </AnimTime>
+               <Flags type="section">
+                  <word>CONTINUOUS</word>
+                  <word>LOOP</word>
+                  <word>RETURNS</word>
+               </Flags>
+               <NumKeyFrames type="section">
+                  <number type="int">3</number>
+               </NumKeyFrames>
+            </AnimNode>
+            <AnimNode type="section">
+               <Name type="section">
+                  <string>WIPER4</string>
+               </Name>
+               <ChildNodes type="section">
+                  <number type="int">2</number>
+                  <word>WIPERARMRIGHT2</word>
+                  <word>WIPERBLADERIGHT2</word>
+               </ChildNodes>
+               <AnimTime type="section">
+                  <number type="float">1.5</number>
+               </AnimTime>
+               <Flags type="section">
+                  <word>CONTINUOUS</word>
+                  <word>LOOP</word>
+                  <word>RETURNS</word>
+               </Flags>
+               <NumKeyFrames type="section">
+                  <number type="int">3</number>
+               </NumKeyFrames>
+            </AnimNode>
+         </Animations>
+         <LightSources type="section">
+            <number type="int">2</number>
+            <LightSource type="section">
+               <Name type="section"/>
+               <Position type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">4.4</number>
+                  <number type="float">-4.33</number>
+               </Position>
+               <PointsTo type="section">
+                  <number type="float">0.0</number>
+                  <number type="float">-1.0</number>
+                  <number type="float">-4.33</number>
+               </PointsTo>
+               <Radius type="section">
+                  <number type="float">3.0</number>
+                  <number type="float">3.0</number>
+               </Radius>
+               <SpotExponent type="section">
+                  <number type="float">0.2</number>
+               </SpotExponent>
+               <Colour type="section">
+                  <number type="int">80</number>
+               </Colour>
+            </LightSource>
+         </LightSources>
+      </ESD_Interior>
+      <LightFade type="section">
+         <number type="float">0.5</number>
+         <number type="float">0.0</number>
+      </LightFade>
+      <Flags type="section">
+         <word>LIGHT_SPHERE</word>
+      </Flags>
+   </shape>
+   <LightSource type="section">
+      <Name type="section"/>
+      <Position type="section">
+         <number type="float">0.5</number>
+         <number type="float">3.7</number>
+         <number type="float">-3.55</number>
+      </Position>
+      <PointsTo type="section">
+         <number type="float">0.5</number>
+         <number type="float">2.0</number>
+         <number type="float">-3.55</number>
+      </PointsTo>
+      <Radius type="section">
+         <number type="float">0.7</number>
+         <number type="float">0.9</number>
+      </Radius>
+      <SpotExponent type="section">
+         <number type="float">0.2</number>
+      </SpotExponent>
+      <Colour type="section">
+         <word>ffffeec0</word>
+      </Colour>
+      <LightFade type="section">
+         <number type="float">0.8</number>
+         <number type="float">0.0</number>
+      </LightFade>
+      <Flags type="section">
+         <word>LIGHT_CONE</word>
+         <word>POSITIONAL</word>
+      </Flags>
+   </LightSource>
+</root>

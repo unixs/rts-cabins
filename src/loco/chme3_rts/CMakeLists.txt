@@ -1,3 +1,5 @@
+include_directories(model)
+
 set(MOD_NAME chme3_rts_orig)
 
 add_library(${MOD_NAME} MODULE dll.cpp)

@@ -6,6 +6,7 @@
 #include <fix.h>
 #include <math.h>
 #include <ts.h>
+#include <cab.hpp>
 
 #define BRAKE_MR_RATIO 0.005
 #define BRAKE_PIPE_RATE_CHARGE 2.5
@@ -20,9 +21,10 @@
 
 //---------------------------------------------------------------------------
 
+using namespace model;
+
 //---------------------------------------------------------------------------
 
-#pragma argsused
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason,
                          void *lpReserved) {
   return 1;
