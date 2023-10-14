@@ -1,12 +1,14 @@
-include_directories(include)
+set(MOD_NAME tep70)
 
-add_library(tep70_common OBJECT tep70.cc)
+include_directories(include model)
 
-add_library(tep70 MODULE dll.cc)
-target_link_options(tep70 PRIVATE "-static")
-target_link_libraries(tep70
+add_library(${MOD_NAME} MODULE dll.cc)
+target_link_options(${MOD_NAME} PRIVATE "-static")
+target_link_libraries(${MOD_NAME}
 	PRIVATE
-		tep70_common
-		cabin_api)
-		#default_cabin
-		#cabin_context)
+	tep70_common
+	cabin_api)
+
+# default_cabin
+# cabin_context)
+add_library(${MOD_NAME}_common OBJECT tep70.cc)

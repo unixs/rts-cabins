@@ -25,14 +25,15 @@ using namespace model;
 
 //---------------------------------------------------------------------------
 
-int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason,
-                         void *lpReserved)
+int WINAPI
+DllEntryPoint(HINSTANCE hinst, unsigned long reason, void *lpReserved)
 {
   return 1;
 }
 //---------------------------------------------------------------------------
 
-void SwitchLights(const DieselLocomotive *loco, UINT State)
+void
+SwitchLights(const DieselLocomotive *loco, UINT State)
 {
   Cabin *cab = loco->Cab();
   switch (State) {
@@ -206,9 +207,9 @@ void SwitchLights(const DieselLocomotive *loco, UINT State)
 
 */
 
-extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
-                              unsigned long State, float time,
-                              float AirTemperature)
+extern "C" bool __export
+Init(DieselEngine *eng, DieselLocomotive *loco, unsigned long State, float time,
+     float AirTemperature)
 {
   Cabin *cab = loco->Cab();
 
@@ -248,10 +249,10 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
     loco->IndependentBrakePressure = 4.0;
     loco->BrakeCylinderPressure = 4.2;
     loco->TrainPipePressure = 0.0;
-    cab->SetSwitch(2, 5, true);
-    cab->SetSwitch(3, 5, true);
-    cab->SetSwitch(4, 5, true);
-    cab->SetSwitch(5, 1, true);
+    cab->SetSwitch((UINT) sw::C254_2, 5, true);
+    cab->SetSwitch((UINT) sw::C396_3, 5, true);
+    cab->SetSwitch((UINT) sw::C395_4, 5, true);
+    cab->SetSwitch((UINT) sw::C_HANDBR_5, 1, true);
     break;
   case 1:
     // loco is static, with wagons
@@ -265,10 +266,10 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
     loco->BrakeCylinderPressure = 0.0;
     loco->TrainPipePressure = 5.2;
     eng->UR = 5.2;
-    cab->SetSwitch(2, 5, true);
-    cab->SetSwitch(3, 5, true);
-    cab->SetSwitch(5, 0, true);
-    cab->SetSwitch(26, 1, true);
+    cab->SetSwitch((UINT) sw::C254_2, 5, true);
+    cab->SetSwitch((UINT) sw::C396_3, 5, true);
+    cab->SetSwitch((UINT) sw::C_HANDBR_5, 0, true);
+    cab->SetSwitch((UINT) sw::SW_STOP_26, 1, true);
     break;
   case 2:
   case 3:
@@ -301,16 +302,16 @@ extern "C" bool __export Init(DieselEngine *eng, DieselLocomotive *loco,
   return true;
 };
 
-extern "C" void __export ChangeLoco(Locomotive *loco, const Locomotive *Prev,
-                                    unsigned long State)
+extern "C" void __export
+ChangeLoco(Locomotive *loco, const Locomotive *Prev, unsigned long State)
 {
   if (!Prev) {
     loco->LocoFlags |= 1;
   }
 };
 
-extern "C" bool __export CanWorkWith(const Locomotive *loco,
-                                     const wchar_t *Type)
+extern "C" bool __export
+CanWorkWith(const Locomotive *loco, const wchar_t *Type)
 {
 
   if (!lstrcmpiW(Type, L"chme3") || !lstrcmpiW(Type, L"chme3boost") ||
@@ -321,9 +322,9 @@ extern "C" bool __export CanWorkWith(const Locomotive *loco,
   return false;
 };
 
-extern "C" bool __export CanSwitch(const DieselLocomotive *loco,
-                                   const DieselEngine *eng,
-                                   unsigned int SwitchID, unsigned int SetState)
+extern "C" bool __export
+CanSwitch(const DieselLocomotive *loco, const DieselEngine *eng,
+          unsigned int SwitchID, unsigned int SetState)
 {
   Cabin *cab = loco->Cab();
   UINT Trig;
@@ -381,9 +382,9 @@ extern "C" bool __export CanSwitch(const DieselLocomotive *loco,
   return true;
 };
 
-extern "C" void __export Switched(const DieselLocomotive *loco,
-                                  DieselEngine *eng, unsigned int SwitchID,
-                                  unsigned int PrevState)
+extern "C" void __export
+Switched(const DieselLocomotive *loco, DieselEngine *eng, unsigned int SwitchID,
+         unsigned int PrevState)
 {
   Cabin *cab = loco->Cab();
   FreeAnimation *anim;
@@ -660,9 +661,9 @@ extern "C" void __export Switched(const DieselLocomotive *loco,
   };
 };
 
-extern "C" void __export Run(DieselEngine *eng, const DieselLocomotive *loco,
-                             unsigned long State, float time,
-                             float AirTemperature)
+extern "C" void __export
+Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
+    float time, float AirTemperature)
 {
   Cabin *cab = loco->Cab();
   ULONG &Flags = *(ULONG *) &eng->var[0];

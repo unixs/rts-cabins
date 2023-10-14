@@ -9,9 +9,11 @@ add_library(mrb_rts_mod
 
 add_library(mrb_default_cabin
 	OBJECT mrb_default_cabin.cc)
+target_link_libraries(mrb_default_cabin
+	PUBLIC mrb_default_callbacks)
 
 add_library(mrb_default_callbacks
-	OBJECT mrb_default_callbacks.c)
+	OBJECT mrb_default_callbacks.cc)
 
 set(LIB_OBJECTS)
 list(APPEND LIB_OBJECTS

@@ -1,19 +1,22 @@
 #include <cmath>
 
-#include <main_loop.h>
+#include <main_loop.hpp>
 
-MainLoop::MainLoop(const float delay): delay(delay)  {
+MainLoop::MainLoop(const float delay) : delay(delay)
+{
   loop = new uv_loop_t;
   uv_loop_init(loop);
 }
 
-MainLoop::~MainLoop() {
+MainLoop::~MainLoop()
+{
   uv_loop_close(loop);
   delete loop;
 }
 
 void
-MainLoop::run(const float frame_time) {
+MainLoop::run(const float frame_time)
+{
   step_time += frame_time;
   time += frame_time;
 
@@ -24,22 +27,27 @@ MainLoop::run(const float frame_time) {
 }
 
 float
-MainLoop::cabin_time_raw() {
+MainLoop::cabin_time_raw()
+{
   return time;
 }
 
 unsigned long
-MainLoop::cabin_time() {
+MainLoop::cabin_time()
+{
   return lroundf(time);
 }
 
-uv_loop_t*
-MainLoop::get_loop() {
+uv_loop_t *
+MainLoop::get_loop()
+{
   return loop;
 }
 
-uv_timer_t*
-MainLoop::setInterval(uv_timer_cb cb, uint64_t repeat, void *data, int *libuv_res) {
+uv_timer_t *
+MainLoop::setInterval(uv_timer_cb cb, uint64_t repeat, void *data,
+                      int *libuv_res)
+{
   int internal_res = 0;
   int *res = libuv_res ? libuv_res : &internal_res;
 
@@ -54,12 +62,14 @@ MainLoop::setInterval(uv_timer_cb cb, uint64_t repeat, void *data, int *libuv_re
 }
 
 void
-MainLoop::setIntervalRepeat(uv_timer_t *timer, uint64_t repeat) {
+MainLoop::setIntervalRepeat(uv_timer_t *timer, uint64_t repeat)
+{
   uv_timer_set_repeat(timer, repeat);
 }
 
 void
-MainLoop::clearInterval(uv_timer_t* timer, int *libuv_res) {
+MainLoop::clearInterval(uv_timer_t *timer, int *libuv_res)
+{
   int internal_res = 0;
   int *res = libuv_res ? libuv_res : &internal_res;
 
@@ -68,8 +78,10 @@ MainLoop::clearInterval(uv_timer_t* timer, int *libuv_res) {
   delete timer;
 }
 
-uv_timer_t*
-MainLoop::setTimeout(uv_timer_cb cb, uint64_t timeout, void *data, int *libuv_res) {
+uv_timer_t *
+MainLoop::setTimeout(uv_timer_cb cb, uint64_t timeout, void *data,
+                     int *libuv_res)
+{
   int internal_res = 0;
   int *res = libuv_res ? libuv_res : &internal_res;
 
@@ -84,6 +96,7 @@ MainLoop::setTimeout(uv_timer_cb cb, uint64_t timeout, void *data, int *libuv_re
 }
 
 void
-MainLoop::clearTimeout(uv_timer_t* timer, int *libuv_res) {
+MainLoop::clearTimeout(uv_timer_t *timer, int *libuv_res)
+{
   clearInterval(timer, libuv_res);
 }

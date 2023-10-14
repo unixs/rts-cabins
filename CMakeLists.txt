@@ -26,10 +26,10 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
-set(CMAKE_C_FLAGS_DEBUG "-O0 -Wall -Wextra -Wno-unused-parameter")
+set(CMAKE_C_FLAGS_DEBUG "-O0 -g -Wall -Wextra -Wno-unused-parameter")
 set(CMAKE_C_FLAGS_RELEASE "-O3 -s")
 
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -Wextra -Wno-unused-parameter")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -Wall -Wextra -Wno-unused-parameter -Wno-cast-function-type")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -s")
 
 # Force -fPIC
@@ -38,17 +38,17 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE "Release")
 endif()
+
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 # set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
-#list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR}/opt/uv)
+# list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR}/opt/uv)
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 # cmake_print_variables(CMAKE_MODULE_PATH)
-
 find_package(libuv CONFIG REQUIRED)
 find_package(Mruby MODULE REQUIRED)
-# find_package(jansson CONFIG REQUIRED)
 
+# find_package(jansson CONFIG REQUIRED)
 add_subdirectory("src")

@@ -1,7 +1,9 @@
+
 #define TS_VERSION 104
 
 #define MAXSOUNDQUEUE 96
 #define MAXMSGQUEUE 16
+
 
 #define SIGASP_STOP 0
 #define SIGASP_STOP_AND_PROCEED 1
@@ -13,6 +15,7 @@
 #define SIGASP_CLEAR_2 7
 #define SIGASP_BLOCK_OBSTRUCTED 8
 #define SIGASP_FAILED 9
+
 
 #define GM_DOOR_OPEN 1
 #define GM_DOOR_CLOSE 2
@@ -42,6 +45,7 @@
 #define WCL_LOCOEL 1
 #define WCL_LOCODS 2
 #define WCL_LOCOST 3
+
 
 #define RTSOAL_LOCO 1
 #define RTSOAL_CABIN 2
@@ -75,6 +79,7 @@ typedef enum {
   RTSOT_Chair = 24,
   RTSOT_Seat = 25
 } RTSObjType;
+
 
 struct Wagon;
 struct Locomotive;
@@ -119,6 +124,7 @@ LPRTS_GETTRITEMS RTSGetTrackItems = NULL;
 LPRTS_GETNAMEDINT RTSGetNamedInteger = NULL;
 LPRTS_GETSNDTRON RTSIsSMSTriggerOn = NULL;
 void *DLLHandle = NULL;
+
 
 struct Object {
   USHORT UID;
@@ -180,6 +186,7 @@ struct EngineParam {
 
 wchar_t _RTS_ParamBuf[128];
 
+
 struct AuxLibrary : public DLLInterfaceObject {
   void *lib;
 #ifdef RTS_NODIRECTOBJLINKS
@@ -211,40 +218,50 @@ struct AuxLibrary : public DLLInterfaceObject {
   void *InitLoco, *Run;
   void *CanSwitch, *Switched;
 
-  inline float GetParameter(wchar_t *name, float Default) const {
-    EngineParam *p = (EngineParam *)RTSGetObjectByName(
+  inline float
+  GetParameter(wchar_t *name, float Default) const
+  {
+    EngineParam *p = (EngineParam *) RTSGetObjectByName(
         DLLHandle, this, RTSOAL_AUXLIB, RTSOT_EngExtParam, name, -1);
-    if (p)
+    if (p) {
       return p->Value;
+    }
     return Default;
   };
 
-  inline wchar_t *GetParameterAsString(wchar_t *name,
-                                       const wchar_t *Default) const {
-    EngineParam *p = (EngineParam *)RTSGetObjectByName(
+  inline wchar_t *
+  GetParameterAsString(wchar_t *name, const wchar_t *Default) const
+  {
+    EngineParam *p = (EngineParam *) RTSGetObjectByName(
         DLLHandle, this, RTSOAL_AUXLIB, RTSOT_EngExtParam, name, -1);
     if (p) {
-      if (p->str)
+      if (p->str) {
         return p->str;
+      }
 #ifdef __STDIO_H
       swprintf(_RTS_ParamBuf, L"%.03f", p->Value);
       return _RTS_ParamBuf;
 #endif
     };
-    return (wchar_t *)Default;
+    return (wchar_t *) Default;
   };
 
-  inline SMSObject *Sound() const {
-    return (SMSObject *)RTSGetObject(DLLHandle, this, RTSOAL_AUXLIB,
-                                     RTSOT_Sound, -1, -1);
+  inline SMSObject *
+  Sound() const
+  {
+    return (SMSObject *) RTSGetObject(DLLHandle, this, RTSOAL_AUXLIB,
+                                      RTSOT_Sound, -1, -1);
   };
 
-  inline const Locomotive *Loco() const {
-    return (Locomotive *)RTSGetObject(DLLHandle, this, RTSOAL_AUXLIB,
-                                      RTSOT_Loco, -1, -1);
+  inline const Locomotive *
+  Loco() const
+  {
+    return (Locomotive *) RTSGetObject(DLLHandle, this, RTSOAL_AUXLIB,
+                                       RTSOT_Loco, -1, -1);
   };
 
-  inline bool PostTrigger(USHORT TrigID) const;
+  inline bool
+  PostTrigger(USHORT TrigID) const;
 };
 
 #ifndef RTS_NODIRECTOBJLINKS
@@ -253,6 +270,7 @@ struct AuxLibStack {
   UINT NumLibraries;
 };
 #endif
+
 
 struct ActivatorObject {
   Wagon *Parent;
@@ -397,11 +415,15 @@ struct FreeAnimation {
   float AnimTime, *AnimScale, Speed, SpeedQ, MaxSpeed;
   wchar_t **nodeNames;
 
-  inline void Switch(bool On) {
-    if (On)
+  inline void
+  Switch(bool On)
+  {
+    if (On) {
       this->Flags |= 1;
-    else
+    }
+    else {
       this->Flags &= ~1;
+    }
   };
 };
 
@@ -511,6 +533,7 @@ struct InternalLight {
   UINT ArraySize;
 };
 
+
 struct Light {
   unsigned long Colour;
   float Duration;
@@ -522,10 +545,12 @@ struct Light {
   bool On;
 };
 
+
 struct ExhaustContr {
   float Rate, Magnitude, Dispertion, Mass;
   unsigned long Colour;
 };
+
 
 struct Wagon : public DLLInterfaceObject {
   unsigned char IsLocomotive, PantoRaised, Coupling;
@@ -651,302 +676,414 @@ struct Cabin : public DLLInterfaceObject {
 #endif
   Object obj;
 
-  inline int Switch(UINT ID) {
+  inline int
+  Switch(UINT ID)
+  {
     ActSwitch *sw =
-        (ActSwitch *)RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
-    if (!sw)
+        (ActSwitch *) RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
+    if (!sw) {
       return -1;
+    }
     return sw->State;
   };
 
-  inline int SwitchSet(UINT ID) {
+  inline int
+  SwitchSet(UINT ID)
+  {
     ActSwitch *sw =
-        (ActSwitch *)RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
-    if (!sw)
+        (ActSwitch *) RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
+    if (!sw) {
       return -1;
+    }
     return sw->SetState;
   };
 
-  int SwitchSub(UINT ID) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  int
+  SwitchSub(UINT ID)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ClsSub, ID, -1);
-    if (!sw)
+    if (!sw) {
       return -1;
+    }
     return sw->State;
   };
 
-  inline int SwitchSub(UINT sceneID, UINT objID) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline int
+  SwitchSub(UINT sceneID, UINT objID)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ClsSub, sceneID, objID);
-    if (!sw)
+    if (!sw) {
       return -1;
+    }
     return sw->State;
   };
 
-  inline void SetSwitch(UINT ID, UINT State, bool SetBoth) {
+  inline void
+  SetSwitch(UINT ID, UINT State, bool SetBoth)
+  {
     ActSwitch *sw =
-        (ActSwitch *)RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
+        (ActSwitch *) RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
     if (sw) {
       sw->SetState = State;
-      if (SetBoth)
+      if (SetBoth) {
         sw->State = State;
+      }
     };
   };
 
-  inline void SetSwitchFixedState(UINT ID, UINT FixedState, bool Set) {
+  inline void
+  SetSwitchFixedState(UINT ID, UINT FixedState, bool Set)
+  {
     ActSwitch *sw =
-        (ActSwitch *)RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
+        (ActSwitch *) RTSGetCabObject(DLLHandle, this, RTSOT_Switch, ID, -1);
     if (sw) {
       sw->FixedState = FixedState;
-      if (Set)
+      if (Set) {
         sw->SetState = FixedState;
+      }
     };
   };
 
-  inline void SetSwitch(UINT sceneID, UINT objID, float Value, bool SetBoth) {
-    CloseUpSubObject *o = (CloseUpSubObject *)RTSGetCabObject(
+
+  inline void
+  SetSwitch(UINT sceneID, UINT objID, float Value, bool SetBoth)
+  {
+    CloseUpSubObject *o = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ClsSub, sceneID, objID);
     if (o) {
       if (o->Type == 1) {
         o->Value = Value;
-      } else {
+      }
+      else {
         o->SetState = Value;
-        if (SetBoth)
+        if (SetBoth) {
           o->State = Value;
+        }
       };
     };
   };
 
-  inline float GetSwitchFrame(UINT SwitchID) {
-    ActSwitch *sw = (ActSwitch *)RTSGetCabObject(DLLHandle, this, RTSOT_Switch,
-                                                 SwitchID, -1);
+  inline float
+  GetSwitchFrame(UINT SwitchID)
+  {
+    ActSwitch *sw = (ActSwitch *) RTSGetCabObject(DLLHandle, this, RTSOT_Switch,
+                                                  SwitchID, -1);
     if (sw) {
-      if (sw->Flags & 64)
+      if (sw->Flags & 64) {
         return sw->CurrentFrame;
-      else
+      }
+      else {
         return sw->State;
+      }
     };
     return 0.0;
   };
 
-  inline void SetDisplayValue(UINT displayID, float Value) {
-    ActDisplay *dpl = (ActDisplay *)RTSGetCabObject(
+  inline void
+  SetDisplayValue(UINT displayID, float Value)
+  {
+    ActDisplay *dpl = (ActDisplay *) RTSGetCabObject(
         DLLHandle, this, RTSOT_Display, displayID, -1);
-    if (dpl)
+    if (dpl) {
       dpl->Value = Value;
+    }
   };
 
-  inline void SetDisplayState(UINT displayID, UINT State) {
-    ActDisplay *dpl = (ActDisplay *)RTSGetCabObject(
+  inline void
+  SetDisplayState(UINT displayID, UINT State)
+  {
+    ActDisplay *dpl = (ActDisplay *) RTSGetCabObject(
         DLLHandle, this, RTSOT_Display, displayID, -1);
-    if (dpl)
+    if (dpl) {
       dpl->State = State;
+    }
   };
 
-  inline float DisplayValue(UINT displayID) {
-    ActDisplay *dpl = (ActDisplay *)RTSGetCabObject(
+  inline float
+  DisplayValue(UINT displayID)
+  {
+    ActDisplay *dpl = (ActDisplay *) RTSGetCabObject(
         DLLHandle, this, RTSOT_Display, displayID, -1);
-    if (dpl)
+    if (dpl) {
       return dpl->Value;
+    }
     return 0.0;
   };
 
-  inline float DisplayState(UINT displayID) {
-    ActDisplay *dpl = (ActDisplay *)RTSGetCabObject(
+  inline float
+  DisplayState(UINT displayID)
+  {
+    ActDisplay *dpl = (ActDisplay *) RTSGetCabObject(
         DLLHandle, this, RTSOT_Display, displayID, -1);
-    if (dpl)
+    if (dpl) {
       return dpl->State;
+    }
     return 0;
   };
 
-  inline void SetHint(UINT displayID, int ID) {
-    ActDisplay *dpl = (ActDisplay *)RTSGetCabObject(
+  inline void
+  SetHint(UINT displayID, int ID)
+  {
+    ActDisplay *dpl = (ActDisplay *) RTSGetCabObject(
         DLLHandle, this, RTSOT_Display, displayID, -1);
-    if (dpl)
+    if (dpl) {
       dpl->ShowHint = ID;
+    }
   };
 
-  inline bool IsDoorOpened(UINT ID) {
+  inline bool
+  IsDoorOpened(UINT ID)
+  {
     ActDoor *door =
-        (ActDoor *)RTSGetCabObject(DLLHandle, this, RTSOT_Door, ID, -1);
-    if (door)
+        (ActDoor *) RTSGetCabObject(DLLHandle, this, RTSOT_Door, ID, -1);
+    if (door) {
       return door->State;
+    }
     return false;
   };
 
-  inline void SwitchLight(UINT ID, UINT On) {
-    InternalLight *lgt = (InternalLight *)RTSGetCabObject(
+  inline void
+  SwitchLight(UINT ID, UINT On)
+  {
+    InternalLight *lgt = (InternalLight *) RTSGetCabObject(
         DLLHandle, this, RTSOT_IntLight, ID, -1);
-    if (lgt)
+    if (lgt) {
       lgt->State = On;
+    }
   };
 
-  inline void SetLightColour(UINT ID, ULONG Colour) {
-    InternalLight *lgt = (InternalLight *)RTSGetCabObject(
+  inline void
+  SetLightColour(UINT ID, ULONG Colour)
+  {
+    InternalLight *lgt = (InternalLight *) RTSGetCabObject(
         DLLHandle, this, RTSOT_IntLight, ID, -1);
-    if (lgt)
+    if (lgt) {
       lgt->Colour = Colour;
+    }
   };
 
-  inline void SetLightState(UINT ID, UINT State, ULONG Colour, float SpotExp,
-                            float RadiusX = -1.0, float RadiusZ = -1.0) {
-    InternalLight *lgt = (InternalLight *)RTSGetCabObject(
+  inline void
+  SetLightState(UINT ID, UINT State, ULONG Colour, float SpotExp,
+                float RadiusX = -1.0, float RadiusZ = -1.0)
+  {
+    InternalLight *lgt = (InternalLight *) RTSGetCabObject(
         DLLHandle, this, RTSOT_IntLight, ID, -1);
     if (lgt) {
       lgt->State = State;
-      if (Colour)
+      if (Colour) {
         lgt->Colour = Colour;
-      if (SpotExp >= 0.0)
+      }
+      if (SpotExp >= 0.0) {
         lgt->SpotExp = SpotExp;
-      if (RadiusX > 0.0)
+      }
+      if (RadiusX > 0.0) {
         lgt->Radius[0] = RadiusX;
-      if (RadiusZ > 0.0)
+      }
+      if (RadiusZ > 0.0) {
         lgt->Radius[1] = RadiusZ;
+      }
     };
   };
 
-  inline unsigned int IsLightOn(UINT ID) {
-    InternalLight *lgt = (InternalLight *)RTSGetCabObject(
+  inline unsigned int
+  IsLightOn(UINT ID)
+  {
+    InternalLight *lgt = (InternalLight *) RTSGetCabObject(
         DLLHandle, this, RTSOT_IntLight, ID, -1);
-    if (lgt)
+    if (lgt) {
       return lgt->State;
+    }
     return 0;
   };
 
-  inline int ScreenState(UINT DisplayID, UINT SubID) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline int
+  ScreenState(UINT DisplayID, UINT SubID)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
-    if (sw)
+    if (sw) {
       return sw->State;
+    }
     return 0;
   };
 
-  inline void SetScreenState(UINT DisplayID, UINT SubID, int State) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline void
+  SetScreenState(UINT DisplayID, UINT SubID, int State)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
-    if (sw)
+    if (sw) {
       sw->SetState = State;
+    }
   };
 
-  inline void SetScreenLabel(UINT DisplayID, UINT SubID, wchar_t *text) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline void
+  SetScreenLabel(UINT DisplayID, UINT SubID, wchar_t *text)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
-    if (sw)
+    if (sw) {
       if (sw->Type == CT_LABEL && sw->hint) {
-        if (text)
+        if (text) {
           lstrcpynW(sw->hint, text, sw->Pt[1]);
-        else
+        }
+        else {
           sw->hint[0] = 0;
+        }
       };
+    }
   };
 
-  inline void SetScreenValue(UINT DisplayID, UINT SubID, float Value) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline void
+  SetScreenValue(UINT DisplayID, UINT SubID, float Value)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
-    if (sw)
+    if (sw) {
       sw->Value = Value;
+    }
   };
 
-  inline float ScreenValue(UINT DisplayID, UINT SubID) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline float
+  ScreenValue(UINT DisplayID, UINT SubID)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
-    if (sw)
+    if (sw) {
       return sw->Value;
+    }
     return -1.0;
   };
 
-  inline void SetScreenArea(UINT DisplayID, UINT SubID, float *area,
-                            UINT Flags) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline void
+  SetScreenArea(UINT DisplayID, UINT SubID, float *area, UINT Flags)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
     if (sw) {
-      if (Flags & 1)
+      if (Flags & 1) {
         sw->Area[0] = area[0];
-      if (Flags & 2)
+      }
+      if (Flags & 2) {
         sw->Area[1] = area[1];
-      if (Flags & 4)
+      }
+      if (Flags & 4) {
         sw->Area[2] = area[2];
-      if (Flags & 8)
+      }
+      if (Flags & 8) {
         sw->Area[3] = area[3];
+      }
     };
   };
 
-  inline void SetScreenGridState(UINT DisplayID, UINT SubID, int Row, int Col,
-                                 int State) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+  inline void
+  SetScreenGridState(UINT DisplayID, UINT SubID, int Row, int Col, int State)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
     if (sw) {
       if (sw->Type == CT_GRID) {
-        if (State > 0)
+        if (State > 0) {
           sw->SetState |= 1 << (Row * int(sw->Pt[2]) + Col);
-        else
+        }
+        else {
           sw->SetState &= ~(1 << (Row * int(sw->Pt[2]) + Col));
+        }
       };
     };
   };
 
-  inline void ChangeTexture(UINT TexChangeID, UINT State) {
-    TexChange *chng = (TexChange *)RTSGetCabObject(
+  inline void
+  ChangeTexture(UINT TexChangeID, UINT State)
+  {
+    TexChange *chng = (TexChange *) RTSGetCabObject(
         DLLHandle, this, RTSOT_TexChng, TexChangeID, -1);
-    if (chng)
+    if (chng) {
       chng->SetState = State;
+    }
   };
 
-  inline void SetScreenFade(UINT DisplayID, UINT SubID, float Fade,
-                            float Blink) {
-    CloseUpSubObject *sw = (CloseUpSubObject *)RTSGetCabObject(
+
+  inline void
+  SetScreenFade(UINT DisplayID, UINT SubID, float Fade, float Blink)
+  {
+    CloseUpSubObject *sw = (CloseUpSubObject *) RTSGetCabObject(
         DLLHandle, this, RTSOT_ScrSub, DisplayID, SubID);
     if (sw) {
-      if (Fade >= 0.0)
+      if (Fade >= 0.0) {
         sw->Fade[1] = Fade;
-      if (Blink >= 0.0)
+      }
+      if (Blink >= 0.0) {
         sw->Fade[2] = Blink;
+      }
     };
   };
 
-  inline void SetDisplayFade(UINT displayID, float Fade, float Blink) {
-    ActDisplay *dpl = (ActDisplay *)RTSGetCabObject(
+  inline void
+  SetDisplayFade(UINT displayID, float Fade, float Blink)
+  {
+    ActDisplay *dpl = (ActDisplay *) RTSGetCabObject(
         DLLHandle, this, RTSOT_Display, displayID, -1);
     if (dpl) {
-      if (Fade >= 0.0)
+      if (Fade >= 0.0) {
         dpl->Fade[1] = Fade;
-      if (Blink >= 0.0)
+      }
+      if (Blink >= 0.0) {
         dpl->Fade[2] = Blink;
+      }
     };
   };
 
-  inline FreeAnimation *FindAnim(wchar_t *name) const {
-    return (FreeAnimation *)RTSGetCabObjectByName(DLLHandle, this,
-                                                  RTSOT_FreeAnim, name, -1);
+  inline FreeAnimation *
+  FindAnim(wchar_t *name) const
+  {
+    return (FreeAnimation *) RTSGetCabObjectByName(DLLHandle, this,
+                                                   RTSOT_FreeAnim, name, -1);
   };
 
-  inline ActDoor *Door(UINT ID) const {
-    return (ActDoor *)RTSGetCabObject(DLLHandle, this, RTSOT_Door, ID, -1);
+  inline ActDoor *
+  Door(UINT ID) const
+  {
+    return (ActDoor *) RTSGetCabObject(DLLHandle, this, RTSOT_Door, ID, -1);
   };
 
-  inline TexChange *TextureChange(UINT TexChangeID) {
-    return (TexChange *)RTSGetCabObject(DLLHandle, this, RTSOT_TexChng,
-                                        TexChangeID, -1);
+  inline TexChange *
+  TextureChange(UINT TexChangeID)
+  {
+    return (TexChange *) RTSGetCabObject(DLLHandle, this, RTSOT_TexChng,
+                                         TexChangeID, -1);
   };
 
-  inline InternalLight *LightInt(UINT LightID) {
-    return (InternalLight *)RTSGetCabObject(DLLHandle, this, RTSOT_IntLight,
-                                            LightID, -1);
+  inline InternalLight *
+  LightInt(UINT LightID)
+  {
+    return (InternalLight *) RTSGetCabObject(DLLHandle, this, RTSOT_IntLight,
+                                             LightID, -1);
   };
 
-  inline ActChair *Chair(UINT ID) const {
-    return (ActChair *)RTSGetCabObject(DLLHandle, this, RTSOT_Chair, ID, -1);
+  inline ActChair *
+  Chair(UINT ID) const
+  {
+    return (ActChair *) RTSGetCabObject(DLLHandle, this, RTSOT_Chair, ID, -1);
   };
-  inline ActSeat *Seat(UINT ID) const {
-    return (ActSeat *)RTSGetCabObject(DLLHandle, this, RTSOT_Seat, ID, -1);
+  inline ActSeat *
+  Seat(UINT ID) const
+  {
+    return (ActSeat *) RTSGetCabObject(DLLHandle, this, RTSOT_Seat, ID, -1);
   };
-  inline ActChair *Chair(wchar_t *Name) const {
-    return (ActChair *)RTSGetCabObjectByName(DLLHandle, this, RTSOT_Chair, Name,
+  inline ActChair *
+  Chair(wchar_t *Name) const
+  {
+    return (ActChair *) RTSGetCabObjectByName(DLLHandle, this, RTSOT_Chair,
+                                              Name, -1);
+  };
+  inline ActSeat *
+  Seat(wchar_t *Name) const
+  {
+    return (ActSeat *) RTSGetCabObjectByName(DLLHandle, this, RTSOT_Seat, Name,
                                              -1);
-  };
-  inline ActSeat *Seat(wchar_t *Name) const {
-    return (ActSeat *)RTSGetCabObjectByName(DLLHandle, this, RTSOT_Seat, Name,
-                                            -1);
   };
 };
 
@@ -997,31 +1134,51 @@ struct Locomotive : public Wagon {
   AuxLibStack *AuxLibs;
 #endif
 
-  inline void SwitchLight(USHORT ID, bool TurnOn, float Radius = 0.0,
-                          unsigned long Colour = 0) const;
-  inline void ReverseLight(USHORT ID, bool Reversed);
-  inline bool IsLightOn(USHORT ID) const;
-  inline bool PostTriggerBoth(USHORT N) const;
-  inline bool PostTriggerCab(USHORT N) const;
-  inline bool PostTriggerEng(USHORT N) const;
-  inline void LockCoupling(bool Front, bool Locked) const;
-  inline void DetachCoupling(bool Front, bool Detached) const;
+  inline void
+  SwitchLight(USHORT ID, bool TurnOn, float Radius = 0.0,
+              unsigned long Colour = 0) const;
+  inline void
+  ReverseLight(USHORT ID, bool Reversed);
+  inline bool
+  IsLightOn(USHORT ID) const;
+  inline bool
+  PostTriggerBoth(USHORT N) const;
+  inline bool
+  PostTriggerCab(USHORT N) const;
+  inline bool
+  PostTriggerEng(USHORT N) const;
+  inline void
+  LockCoupling(bool Front, bool Locked) const;
+  inline void
+  DetachCoupling(bool Front, bool Detached) const;
 
-  inline float GetParameter(wchar_t *name, float Default = 0.0) const;
-  inline wchar_t *GetParameterAsString(wchar_t *name,
-                                       const wchar_t *Default) const;
-  inline FreeAnimation *FindAnim(wchar_t *name) const;
-  inline SMSObject *SoundEng() const;
-  inline SMSObject *SoundCab() const;
-  inline Cabin *Cab() const;
-  inline Engine *Eng() const;
-  inline Locomotive *SlaveLoco(UINT N) const;
-  inline ActDoor *Door(UINT ID) const;
-  inline int GetTrackItems(UINT Code, float Distance, TrackItemsItem *&res,
-                           UINT &Count) const;
-  inline AuxLibrary *GetAuxLibrary(wchar_t *Name) const;
-  inline int IsSMSTriggerOnEng(USHORT Code) const;
-  inline int IsSMSTriggerOnCab(USHORT Code) const;
+  inline float
+  GetParameter(wchar_t *name, float Default = 0.0) const;
+  inline wchar_t *
+  GetParameterAsString(wchar_t *name, const wchar_t *Default) const;
+  inline FreeAnimation *
+  FindAnim(wchar_t *name) const;
+  inline SMSObject *
+  SoundEng() const;
+  inline SMSObject *
+  SoundCab() const;
+  inline Cabin *
+  Cab() const;
+  inline Engine *
+  Eng() const;
+  inline Locomotive *
+  SlaveLoco(UINT N) const;
+  inline ActDoor *
+  Door(UINT ID) const;
+  inline int
+  GetTrackItems(UINT Code, float Distance, TrackItemsItem *&res,
+                UINT &Count) const;
+  inline AuxLibrary *
+  GetAuxLibrary(wchar_t *Name) const;
+  inline int
+  IsSMSTriggerOnEng(USHORT Code) const;
+  inline int
+  IsSMSTriggerOnCab(USHORT Code) const;
 };
 
 struct ElectricLocomotive : public Locomotive {
@@ -1053,6 +1210,7 @@ struct DieselLocomotive : public Locomotive {
   USHORT NumEx;
   void *Ex;
 };
+
 
 struct Engine : public DLLInterfaceObject {
 #ifdef RTS_NODIRECTOBJLINKS
@@ -1094,29 +1252,38 @@ struct Engine : public DLLInterfaceObject {
   float CurrentMilepost;
   unsigned short GlobalMsg[MAXMSGQUEUE * 2];
 
-  bool PostGlobalMessage(short Action, short ID) {
+  bool
+  PostGlobalMessage(short Action, short ID)
+  {
     short i = 0;
-    while (i < MAXMSGQUEUE && this->GlobalMsg[i * 2])
+    while (i < MAXMSGQUEUE && this->GlobalMsg[i * 2]) {
       i++;
-    if (i == MAXMSGQUEUE)
+    }
+    if (i == MAXMSGQUEUE) {
       return false;
+    }
     i *= 2;
     this->GlobalMsg[i] = Action;
     this->GlobalMsg[++i] = ID;
     return true;
   };
 
-  bool ShowMessage(short Type, wchar_t *text) {
-    if (!text || Type < 1 || Type > 3)
+  bool
+  ShowMessage(short Type, wchar_t *text)
+  {
+    if (!text || Type < 1 || Type > 3) {
       return false;
+    }
     short i = 0;
-    while (i < MAXMSGQUEUE && this->GlobalMsg[i * 2])
+    while (i < MAXMSGQUEUE && this->GlobalMsg[i * 2]) {
       i++;
+    }
     // Possible issue with over-64 bit addressation
-    if (i >= MAXMSGQUEUE - 3)
+    if (i >= MAXMSGQUEUE - 3) {
       return false;
+    }
     i *= 2;
-    wchar_t *&m = *(wchar_t **)(&this->GlobalMsg[i + 2]);
+    wchar_t *&m = *(wchar_t **) (&this->GlobalMsg[i + 2]);
     this->GlobalMsg[i] = GM_MSG_POST;
     this->GlobalMsg[++i] = Type;
     m = text;
@@ -1135,6 +1302,7 @@ struct DieselEngine : public Engine {
   void *Ex;
 };
 
+
 #define TIT_UNK 0
 #define TIT_SIG 1
 #define TIT_SPEED 2
@@ -1144,6 +1312,7 @@ struct DieselEngine : public Engine {
 #define TIT_CROSS 6
 #define TIT_PICKUP 7
 #define TIT_CARSPWN 8
+
 
 struct TrackItem {
   UINT Type, ID;
@@ -1200,121 +1369,169 @@ struct PickupItem : public TrackItem {
   void *at;
 };
 
+
 struct TrackItemsItem {
   float Distance, Z;
   USHORT Pos;
   TrackItem *obj;
 };
 
-inline void Exhaust(const DieselLocomotive *loco, USHORT ID, float Rate,
-                    float Magnitude, float Dispertion, ULONG Colour,
-                    float Mass) {
+
+inline void
+Exhaust(const DieselLocomotive *loco, USHORT ID, float Rate, float Magnitude,
+        float Dispertion, ULONG Colour, float Mass)
+{
   ExhaustContr *exh =
-      (ExhaustContr *)RTSGetLocoObject(DLLHandle, loco, RTSOT_Exhaust, ID, -1);
+      (ExhaustContr *) RTSGetLocoObject(DLLHandle, loco, RTSOT_Exhaust, ID, -1);
   if (exh) {
-    if (Rate >= 0.0)
+    if (Rate >= 0.0) {
       exh->Rate = Rate;
-    if (Magnitude >= 0.0)
+    }
+    if (Magnitude >= 0.0) {
       exh->Magnitude = Magnitude;
-    if (Dispertion >= 0.0)
+    }
+    if (Dispertion >= 0.0) {
       exh->Dispertion = Dispertion;
-    if (Colour)
+    }
+    if (Colour) {
       exh->Colour = Colour;
-    if (Mass > 0.0)
+    }
+    if (Mass > 0.0) {
       exh->Mass = Mass;
+    }
   };
 };
 
-inline void Locomotive::SwitchLight(USHORT ID, bool TurnOn, float Radius,
-                                    unsigned long Colour) const {
+inline void
+Locomotive::SwitchLight(USHORT ID, bool TurnOn, float Radius,
+                        unsigned long Colour) const
+{
   LightObj *lgt =
-      (LightObj *)RTSGetLocoObject(DLLHandle, this, RTSOT_Light, ID, -1);
+      (LightObj *) RTSGetLocoObject(DLLHandle, this, RTSOT_Light, ID, -1);
   if (lgt) {
-    if (TurnOn)
+    if (TurnOn) {
       lgt->Flags |= 8;
-    else
+    }
+    else {
       lgt->Flags &= ~8;
-    if (Radius > 0.0)
+    }
+    if (Radius > 0.0) {
       lgt->Radius = Radius;
-    if (Colour)
+    }
+    if (Colour) {
       lgt->Colour = Colour;
+    }
     // this->lights[ID].Colour=(Colour&0xFF00FF00)|((Colour&0xFF0000)>>16)|((Colour&0xFF)<<16);
   };
 };
 
-inline void Locomotive::ReverseLight(USHORT ID, bool Reversed) {
+
+inline void
+Locomotive::ReverseLight(USHORT ID, bool Reversed)
+{
   LightObj *lgt =
-      (LightObj *)RTSGetLocoObject(DLLHandle, this, RTSOT_Light, ID, -1);
+      (LightObj *) RTSGetLocoObject(DLLHandle, this, RTSOT_Light, ID, -1);
   if (lgt) {
-    if (Reversed)
+    if (Reversed) {
       lgt->Flags |= 16;
-    else
+    }
+    else {
       lgt->Flags &= ~16;
+    }
   };
 };
 
-inline bool Locomotive::IsLightOn(USHORT ID) const {
+
+inline bool
+Locomotive::IsLightOn(USHORT ID) const
+{
   LightObj *lgt =
-      (LightObj *)RTSGetLocoObject(DLLHandle, this, RTSOT_Light, ID, -1);
-  if (lgt)
+      (LightObj *) RTSGetLocoObject(DLLHandle, this, RTSOT_Light, ID, -1);
+  if (lgt) {
     return lgt->Flags & 8;
+  }
   return false;
 };
 
-inline void Locomotive::LockCoupling(bool Front, bool Locked) const {
-  unsigned char b, *coupl = (unsigned char *)&this->Coupling;
-  if (Front)
+inline void
+Locomotive::LockCoupling(bool Front, bool Locked) const
+{
+  unsigned char b, *coupl = (unsigned char *) &this->Coupling;
+  if (Front) {
     b = 1;
-  else
+  }
+  else {
     b = 2;
-  if (Locked)
+  }
+  if (Locked) {
     *coupl |= b;
-  else
+  }
+  else {
     *coupl &= ~b;
+  }
 };
 
-inline void Locomotive::DetachCoupling(bool Front, bool Detached) const {
-  unsigned char b, *coupl = (unsigned char *)&this->Coupling;
-  if (Front)
+inline void
+Locomotive::DetachCoupling(bool Front, bool Detached) const
+{
+  unsigned char b, *coupl = (unsigned char *) &this->Coupling;
+  if (Front) {
     b = 4;
-  else
+  }
+  else {
     b = 8;
-  if (Detached)
+  }
+  if (Detached) {
     *coupl |= b;
-  else
+  }
+  else {
     *coupl &= ~b;
+  }
 };
 
-inline Cabin *Locomotive::Cab() const {
-  return (Cabin *)RTSGetLocoObject(DLLHandle, this, RTSOT_Cabin, 0, -1);
+inline Cabin *
+Locomotive::Cab() const
+{
+  return (Cabin *) RTSGetLocoObject(DLLHandle, this, RTSOT_Cabin, 0, -1);
 };
 
-inline Engine *Locomotive::Eng() const {
-  return (Engine *)RTSGetLocoObject(DLLHandle, this, RTSOT_Engine, 0, -1);
+inline Engine *
+Locomotive::Eng() const
+{
+  return (Engine *) RTSGetLocoObject(DLLHandle, this, RTSOT_Engine, 0, -1);
 };
 
-inline Locomotive *Locomotive::SlaveLoco(UINT N) const {
-  return (Locomotive *)RTSGetLocoObject(DLLHandle, this, RTSOT_SlaveLoco, N,
-                                        -1);
+inline Locomotive *
+Locomotive::SlaveLoco(UINT N) const
+{
+  return (Locomotive *) RTSGetLocoObject(DLLHandle, this, RTSOT_SlaveLoco, N,
+                                         -1);
 };
 
-inline ActDoor *Locomotive::Door(UINT ID) const {
-  return (ActDoor *)RTSGetLocoObject(DLLHandle, this, RTSOT_Door, ID, -1);
+inline ActDoor *
+Locomotive::Door(UINT ID) const
+{
+  return (ActDoor *) RTSGetLocoObject(DLLHandle, this, RTSOT_Door, ID, -1);
 };
 
-inline int Locomotive::GetTrackItems(UINT Code, float Distance,
-                                     TrackItemsItem *&items,
-                                     UINT &Count) const {
-  if (RTSGetTrackItems)
+inline int
+Locomotive::GetTrackItems(UINT Code, float Distance, TrackItemsItem *&items,
+                          UINT &Count) const
+{
+  if (RTSGetTrackItems) {
     return RTSGetTrackItems(DLLHandle, this, Code, Distance, items, Count);
+  }
   Count = 0;
   return 0;
 };
 
-inline AuxLibrary *Locomotive::GetAuxLibrary(wchar_t *Name) const {
-  return (AuxLibrary *)RTSGetLocoObjectByName(DLLHandle, this, RTSOT_AuxLib,
-                                              Name, -1);
+inline AuxLibrary *
+Locomotive::GetAuxLibrary(wchar_t *Name) const
+{
+  return (AuxLibrary *) RTSGetLocoObjectByName(DLLHandle, this, RTSOT_AuxLib,
+                                               Name, -1);
 };
+
 
 struct SMSObject {
   void *sms;
@@ -1332,9 +1549,12 @@ struct SMSObject {
   unsigned long LocoFlags, TriggersProcessed, StepCount;
   void *PairedFlags;
 
-  bool PostTrigger(UINT TriggerID) {
-    if (!TriggerID)
+  bool
+  PostTrigger(UINT TriggerID)
+  {
+    if (!TriggerID) {
       return false;
+    }
     USHORT idx = this->QueuePos;
     while (idx < MAXSOUNDQUEUE) {
       if (!this->Queue[idx]) {
@@ -1356,112 +1576,156 @@ struct SMSObject {
     return false;
   };
 
-  inline unsigned short GetNamedTrigger(wchar_t *Name) const;
-  inline int IsTriggerOn(unsigned short Code) const;
+  inline unsigned short
+  GetNamedTrigger(wchar_t *Name) const;
+  inline int
+  IsTriggerOn(unsigned short Code) const;
 };
 
-inline bool Locomotive::PostTriggerBoth(USHORT N) const {
+inline bool
+Locomotive::PostTriggerBoth(USHORT N) const
+{
   bool res = true;
   SMSObject *soundExt, *soundCab;
-  soundExt = (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
-  soundCab = (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
-  if (soundExt)
+  soundExt =
+      (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
+  soundCab =
+      (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
+  if (soundExt) {
     res = soundExt->PostTrigger(N);
-  if (soundCab)
+  }
+  if (soundCab) {
     res = soundCab->PostTrigger(N) && res;
+  }
   return res;
 };
 
-inline bool Locomotive::PostTriggerCab(USHORT N) const {
+inline bool
+Locomotive::PostTriggerCab(USHORT N) const
+{
   SMSObject *soundCab =
-      (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
-  if (soundCab)
+      (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
+  if (soundCab) {
     return soundCab->PostTrigger(N);
+  }
   return true;
 };
 
-inline bool Locomotive::PostTriggerEng(USHORT N) const {
+inline bool
+Locomotive::PostTriggerEng(USHORT N) const
+{
   bool res = true;
   SMSObject *soundExt =
-      (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
-  if (soundExt)
+      (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
+  if (soundExt) {
     res = soundExt->PostTrigger(N);
+  }
   return res;
 };
 
-inline SMSObject *Locomotive::SoundEng() const {
-  return (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
+inline SMSObject *
+Locomotive::SoundEng() const
+{
+  return (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
 };
 
-inline SMSObject *Locomotive::SoundCab() const {
-  return (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
+inline SMSObject *
+Locomotive::SoundCab() const
+{
+  return (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
 };
 
-inline int Locomotive::IsSMSTriggerOnEng(USHORT Code) const {
+inline int
+Locomotive::IsSMSTriggerOnEng(USHORT Code) const
+{
   SMSObject *soundObj =
-      (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
-  if (soundObj)
+      (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 0, -1);
+  if (soundObj) {
     return soundObj->IsTriggerOn(Code);
-  else
+  }
+  else {
     return -5;
+  }
 };
 
-inline int Locomotive::IsSMSTriggerOnCab(USHORT Code) const {
+inline int
+Locomotive::IsSMSTriggerOnCab(USHORT Code) const
+{
   SMSObject *soundObj =
-      (SMSObject *)RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
-  if (soundObj)
+      (SMSObject *) RTSGetLocoObject(DLLHandle, this, RTSOT_Sound, 1, -1);
+  if (soundObj) {
     return soundObj->IsTriggerOn(Code);
-  else
+  }
+  else {
     return -5;
+  }
 };
 
-inline FreeAnimation *Locomotive::FindAnim(wchar_t *name) const {
-  return (FreeAnimation *)RTSGetLocoObjectByName(DLLHandle, this,
-                                                 RTSOT_FreeAnim, name, -1);
+inline FreeAnimation *
+Locomotive::FindAnim(wchar_t *name) const
+{
+  return (FreeAnimation *) RTSGetLocoObjectByName(DLLHandle, this,
+                                                  RTSOT_FreeAnim, name, -1);
 };
 
-inline float Locomotive::GetParameter(wchar_t *name, float Default) const {
-  EngineParam *p = (EngineParam *)RTSGetLocoObjectByName(
+inline float
+Locomotive::GetParameter(wchar_t *name, float Default) const
+{
+  EngineParam *p = (EngineParam *) RTSGetLocoObjectByName(
       DLLHandle, this, RTSOT_EngExtParam, name, -1);
-  if (p)
+  if (p) {
     return p->Value;
+  }
   return Default;
 };
 
-inline wchar_t *Locomotive::GetParameterAsString(wchar_t *name,
-                                                 const wchar_t *Default) const {
-  EngineParam *p = (EngineParam *)RTSGetLocoObjectByName(
+inline wchar_t *
+Locomotive::GetParameterAsString(wchar_t *name, const wchar_t *Default) const
+{
+  EngineParam *p = (EngineParam *) RTSGetLocoObjectByName(
       DLLHandle, this, RTSOT_EngExtParam, name, -1);
   if (p) {
-    if (p->str)
+    if (p->str) {
       return p->str;
+    }
 #ifdef __STDIO_H
     swprintf(_RTS_ParamBuf, L"%.03f", p->Value);
     return _RTS_ParamBuf;
 #endif
   };
-  return (wchar_t *)Default;
+  return (wchar_t *) Default;
 };
 
-inline bool AuxLibrary::PostTrigger(USHORT TrigID) const {
-  if (this->sound)
+
+inline bool
+AuxLibrary::PostTrigger(USHORT TrigID) const
+{
+  if (this->sound) {
     return this->sound->PostTrigger(TrigID);
+  }
   return true;
 };
+
 
 struct SpeedLimitDescr {
   float Limit, NextLimit, Distance;
 };
 
-float GetLimit(float &l1, float &l2, float l3 = -1.0) {
+
+float
+GetLimit(float &l1, float &l2, float l3 = -1.0)
+{
   float l;
   l = l1;
-  if (l < 0.0 || (l2 < l && l2 >= 0.0))
+  if (l < 0.0 || (l2 < l && l2 >= 0.0)) {
     l = l2;
-  if (l < 0.0 || (l3 < l && l3 >= 0.0))
+  }
+  if (l < 0.0 || (l3 < l && l3 >= 0.0)) {
     l = l3;
+  }
   return l;
 };
+
 
 #define DLLV_VERSION 1
 #define DLLV_SWITCH 2
@@ -1498,49 +1762,61 @@ float GetLimit(float &l1, float &l2, float l3 = -1.0) {
 #define RTSE_BEHIND 1
 
 #ifdef RTS_ADAPTER_COMPLY
-#define RTS_ADAPTER_COMPLIANCE 39
+#  define RTS_ADAPTER_COMPLIANCE 39
 #endif
 #ifdef RTS_ADAPTER_COMPLIANCE039
-#define RTS_ADAPTER_COMPLIANCE 39
+#  define RTS_ADAPTER_COMPLIANCE 39
 #endif
 
-inline unsigned short SMSObject::GetNamedTrigger(wchar_t *Name) const {
+
+inline unsigned short
+SMSObject::GetNamedTrigger(wchar_t *Name) const
+{
   return RTSGetNamedInteger(this->sms, RTS_TRIGGERID, Name);
 };
-inline int SMSObject::IsTriggerOn(unsigned short Code) const {
-  if (!this || !this->PairedFlags || !RTSIsSMSTriggerOn)
+inline int
+SMSObject::IsTriggerOn(unsigned short Code) const
+{
+  if (!this || !this->PairedFlags || !RTSIsSMSTriggerOn) {
     return -5;
+  }
   return RTSIsSMSTriggerOn(this, Code);
 };
 
-extern "C" bool __export InitRTSLibrary(HINSTANCE Module, void *DLL) {
+extern "C" bool __export
+InitRTSLibrary(HINSTANCE Module, void *DLL)
+{
   DLLHandle = DLL;
-  RTSGetInteger = (LPRTS_GETINT)GetProcAddress(Module, "_RTSGetInteger");
-  RTSSetIntegerG = (LPRTS_GETINT)GetProcAddress(Module, "_RTSSetIntegerG");
-  RTSGetObject = (LPRTS_GETOBJ)GetProcAddress(Module, "_RTSGetObject");
+  RTSGetInteger = (LPRTS_GETINT) GetProcAddress(Module, "_RTSGetInteger");
+  RTSSetIntegerG = (LPRTS_GETINT) GetProcAddress(Module, "_RTSSetIntegerG");
+  RTSGetObject = (LPRTS_GETOBJ) GetProcAddress(Module, "_RTSGetObject");
   RTSGetObjectByName =
-      (LPRTS_GETOBJBYNAME)GetProcAddress(Module, "_RTSGetObjectByName");
+      (LPRTS_GETOBJBYNAME) GetProcAddress(Module, "_RTSGetObjectByName");
   RTSGetLocoObject =
-      (LPRTS_GETOBJLOCO)GetProcAddress(Module, "_RTSGetLocoObject");
-  RTSGetLocoObjectByName =
-      (LPRTS_GETOBJBYNAMELOCO)GetProcAddress(Module, "_RTSGetLocoObjectByName");
-  RTSGetCabObject = (LPRTS_GETOBJCAB)GetProcAddress(Module, "_RTSGetCabObject");
+      (LPRTS_GETOBJLOCO) GetProcAddress(Module, "_RTSGetLocoObject");
+  RTSGetLocoObjectByName = (LPRTS_GETOBJBYNAMELOCO) GetProcAddress(
+      Module, "_RTSGetLocoObjectByName");
+  RTSGetCabObject =
+      (LPRTS_GETOBJCAB) GetProcAddress(Module, "_RTSGetCabObject");
   RTSGetCabObjectByName =
-      (LPRTS_GETOBJBYNAMECAB)GetProcAddress(Module, "_RTSGetCabObjectByName");
+      (LPRTS_GETOBJBYNAMECAB) GetProcAddress(Module, "_RTSGetCabObjectByName");
   RTSGetTrackItems =
-      (LPRTS_GETTRITEMS)GetProcAddress(Module, "_RTSGetTrackItems");
+      (LPRTS_GETTRITEMS) GetProcAddress(Module, "_RTSGetTrackItems");
   RTSGetNamedInteger =
-      (LPRTS_GETNAMEDINT)GetProcAddress(Module, "_RTSGetNamedInteger");
+      (LPRTS_GETNAMEDINT) GetProcAddress(Module, "_RTSGetNamedInteger");
   RTSIsSMSTriggerOn =
-      (LPRTS_GETSNDTRON)GetProcAddress(Module, "_RTSIsSMSTriggerOn");
+      (LPRTS_GETSNDTRON) GetProcAddress(Module, "_RTSIsSMSTriggerOn");
   if (!RTSGetInteger || !RTSGetObject || !RTSGetObjectByName ||
       !RTSGetLocoObject || !RTSGetLocoObjectByName || !RTSGetCabObject ||
-      !RTSGetCabObjectByName || !RTSSetIntegerG)
+      !RTSGetCabObjectByName || !RTSSetIntegerG) {
     return false;
+  }
   return true;
 };
 
-extern "C" unsigned long __export DLLVersion(unsigned int Parameter) {
+extern "C" unsigned long __export
+DLLVersion(unsigned int Parameter)
+{
   switch (Parameter) {
   case DLLV_VERSION:
     return TS_VERSION;

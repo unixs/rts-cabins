@@ -4,19 +4,19 @@
  **/
 namespace model {
 
-  
-    /**
-    ## Переключатели.
-    **/
-    enum class sw : unsigned short {
-    
+
+  /**
+  ## Переключатели.
+  **/
+  enum class sw : unsigned short {
+
     /**
     ### Тяга
     Type: Мультипереключатель
     Name: C_MAIN
     Flags: CONTROLLERY
     **/
-      C_MAIN_0 = 0,
+    C_MAIN_0 = 0,
 
     /**
     ### Реверс
@@ -24,7 +24,7 @@ namespace model {
     Name: C_REV
     Flags: KEY, CONTROLLERY
     **/
-      C_REV_1 = 1,
+    C_REV_1 = 1,
 
     /**
     ### Тормоз локомотива
@@ -32,7 +32,7 @@ namespace model {
     Name: C254
     Flags: CONTROLLERY, CHECKDISTANCEONPRESS
     **/
-      C254_2 = 2,
+    C254_2 = 2,
 
     /**
     ### Тормоз локомотива
@@ -40,7 +40,7 @@ namespace model {
     Name: C396
     Flags: CONTROLLERY, CHECKDISTANCEONPRESS
     **/
-      C396_3 = 3,
+    C396_3 = 3,
 
     /**
     ### Тормоз поезда
@@ -48,7 +48,7 @@ namespace model {
     Name: C395
     Flags: CONTROLLERY
     **/
-      C395_4 = 4,
+    C395_4 = 4,
 
     /**
     ### Ручной тормоз
@@ -56,7 +56,7 @@ namespace model {
     Name: C_HANDBR
     Flags: CONTROLLERX, PRECISE
     **/
-      C_HANDBR_5 = 5,
+    C_HANDBR_5 = 5,
 
     /**
     ### Свисток
@@ -64,7 +64,7 @@ namespace model {
     Name: SW_SVIST
     Flags: NONFIXED
     **/
-      SW_SVIST_6 = 6,
+    SW_SVIST_6 = 6,
 
     /**
     ### Тифон
@@ -72,47 +72,47 @@ namespace model {
     Name: SW_TIFON
     Flags: NONFIXED
     **/
-      SW_TIFON_7 = 7,
+    SW_TIFON_7 = 7,
 
     /**
     ### Песок
     Type: Выключатель/тумблер
     Name: SW_SAND
-    Flags: 
+    Flags:
     **/
-      SW_SAND_8 = 8,
+    SW_SAND_8 = 8,
 
     /**
     ### Радиостанция
     Type: Выключатель/тумблер
     Name: SW_RADIO
-    Flags: 
+    Flags:
     **/
-      SW_RADIO_9 = 9,
+    SW_RADIO_9 = 9,
 
     /**
     ### Освещение тележек и капота
     Type: Выключатель/тумблер
     Name: SW_VTK
-    Flags: 
+    Flags:
     **/
-      SW_VTK_10 = 10,
+    SW_VTK_10 = 10,
 
     /**
     ### Освещение номера тепловоза
     Type: Выключатель/тумблер
     Name: SW_VN
-    Flags: 
+    Flags:
     **/
-      SW_VN_11 = 11,
+    SW_VN_11 = 11,
 
     /**
     ### Освещение расписания
     Type: Выключатель/тумблер
     Name: SW_VRD
-    Flags: 
+    Flags:
     **/
-      SW_VRD_12 = 12,
+    SW_VRD_12 = 12,
 
     /**
     ### Передний левый буферный фонарь
@@ -120,7 +120,7 @@ namespace model {
     Name: SW_VBLP
     Flags: CONTROLLERX
     **/
-      SW_VBLP_13 = 13,
+    SW_VBLP_13 = 13,
 
     /**
     ### Передний правый буферный фонарь
@@ -128,23 +128,23 @@ namespace model {
     Name: SW_VBFP
     Flags: CONTROLLERX
     **/
-      SW_VBFP_14 = 14,
+    SW_VBFP_14 = 14,
 
     /**
     ### Передний прожектор: тускло
     Type: Выключатель/тумблер
     Name: SW_PR1
-    Flags: 
+    Flags:
     **/
-      SW_PR1_15 = 15,
+    SW_PR1_15 = 15,
 
     /**
     ### Передний прожектор: ярко
     Type: Выключатель/тумблер
     Name: SW_PR2
-    Flags: 
+    Flags:
     **/
-      SW_PR2_16 = 16,
+    SW_PR2_16 = 16,
 
     /**
     ### Пуск дизеля
@@ -152,23 +152,23 @@ namespace model {
     Name: SW_START
     Flags: NONFIXED
     **/
-      SW_START_17 = 17,
+    SW_START_17 = 17,
 
     /**
     ### Вентилятор кабины машиниста
     Type: Выключатель/тумблер
     Name: SW_VMVO
-    Flags: 
+    Flags:
     **/
-      SW_VMVO_18 = 18,
+    SW_VMVO_18 = 18,
 
     /**
     ### Калорифер
     Type: Мультипереключатель
     Name: SW_VOK
-    Flags: 
+    Flags:
     **/
-      SW_VOK_19 = 19,
+    SW_VOK_19 = 19,
 
     /**
     ### Освещение приборов
@@ -176,15 +176,15 @@ namespace model {
     Name: SW_PVIP
     Flags: CONTROLLERX
     **/
-      SW_PVIP_20 = 20,
+    SW_PVIP_20 = 20,
 
     /**
     ### Освещение кабины
     Type: Выключатель/тумблер
     Name: SW_VK
-    Flags: 
+    Flags:
     **/
-      SW_VK_21 = 21,
+    SW_VK_21 = 21,
 
     /**
     ### Задний левый буферный фонарь
@@ -192,7 +192,7 @@ namespace model {
     Name: SW_VBLZ
     Flags: CONTROLLERX
     **/
-      SW_VBLZ_22 = 22,
+    SW_VBLZ_22 = 22,
 
     /**
     ### Задний правый буферный фонарь
@@ -200,23 +200,23 @@ namespace model {
     Name: SW_VBFZ
     Flags: CONTROLLERX
     **/
-      SW_VBFZ_23 = 23,
+    SW_VBFZ_23 = 23,
 
     /**
     ### Задний прожектор: тускло
     Type: Выключатель/тумблер
     Name: SW_PR3
-    Flags: 
+    Flags:
     **/
-      SW_PR3_24 = 24,
+    SW_PR3_24 = 24,
 
     /**
     ### Задний прожектор: ярко
     Type: Выключатель/тумблер
     Name: SW_PR4
-    Flags: 
+    Flags:
     **/
-      SW_PR4_25 = 25,
+    SW_PR4_25 = 25,
 
     /**
     ### Остановка дизеля
@@ -224,55 +224,55 @@ namespace model {
     Name: SW_STOP
     Flags: CONTROLLERX
     **/
-      SW_STOP_26 = 26,
+    SW_STOP_26 = 26,
 
     /**
     ### Обслуживание одним лицом
     Type: Выключатель/тумблер
     Name: SW_OOL
-    Flags: 
+    Flags:
     **/
-      SW_OOL_27 = 27,
+    SW_OOL_27 = 27,
 
     /**
     ### Проверка АЛСН
     Type: Выключатель/тумблер
     Name: SW_TESTLS
-    Flags: 
+    Flags:
     **/
-      SW_TESTLS_28 = 28,
+    SW_TESTLS_28 = 28,
 
     /**
     ### КНАС2
     Type: Выключатель/тумблер
     Name: SW_KNAS2
-    Flags: 
+    Flags:
     **/
-      SW_KNAS2_29 = 29,
+    SW_KNAS2_29 = 29,
 
     /**
     ### КНАС1
     Type: Выключатель/тумблер
     Name: SW_KNAS1
-    Flags: 
+    Flags:
     **/
-      SW_KNAS1_30 = 30,
+    SW_KNAS1_30 = 30,
 
     /**
     ### Проверка звукового сигнала
     Type: Выключатель/тумблер
     Name: SW_KNZS
-    Flags: 
+    Flags:
     **/
-      SW_KNZS_31 = 31,
+    SW_KNZS_31 = 31,
 
     /**
     ### Выключатель АЛСН
     Type: Выключатель/тумблер
     Name: SW_ALSN
-    Flags: 
+    Flags:
     **/
-      SW_ALSN_32 = 32,
+    SW_ALSN_32 = 32,
 
     /**
     ### РБ
@@ -280,31 +280,31 @@ namespace model {
     Name: SW_RB
     Flags: NONFIXED
     **/
-      SW_RB_33 = 33,
+    SW_RB_33 = 33,
 
     /**
     ### UNNAMED
     Type: Выключатель/тумблер
     Name: SW_A1
-    Flags: 
+    Flags:
     **/
-      SW_A1_34 = 34,
+    SW_A1_34 = 34,
 
     /**
     ### UNNAMED
     Type: Выключатель/тумблер
     Name: SW_A2
-    Flags: 
+    Flags:
     **/
-      SW_A2_35 = 35,
+    SW_A2_35 = 35,
 
     /**
     ### UNNAMED
     Type: Выключатель/тумблер
     Name: SW_A3
-    Flags: 
+    Flags:
     **/
-      SW_A3_36 = 36,
+    SW_A3_36 = 36,
 
     /**
     ### КНАС2
@@ -312,7 +312,7 @@ namespace model {
     Name: SW_KNAS2b
     Flags: NONFIXED
     **/
-      SW_KNAS2b_37 = 37,
+    SW_KNAS2b_37 = 37,
 
     /**
     ### КНАС1
@@ -320,7 +320,7 @@ namespace model {
     Name: SW_KNAS1b
     Flags: NONFIXED
     **/
-      SW_KNAS1b_38 = 38,
+    SW_KNAS1b_38 = 38,
 
     /**
     ### Тяга больше/меньше
@@ -328,7 +328,7 @@ namespace model {
     Name: SW_P_THR
     Flags: NONFIXED, CONTROLLERY
     **/
-      SW_P_THR_39 = 39,
+    SW_P_THR_39 = 39,
 
     /**
     ### Торможение/отпуск
@@ -336,7 +336,7 @@ namespace model {
     Name: SW_P_BR
     Flags: NONFIXED, CONTROLLERY
     **/
-      SW_P_BR_40 = 40,
+    SW_P_BR_40 = 40,
 
     /**
     ### Реверс вперёд/назад
@@ -344,7 +344,7 @@ namespace model {
     Name: SW_P_REV
     Flags: CONTROLLERY
     **/
-      SW_P_REV_41 = 41,
+    SW_P_REV_41 = 41,
 
     /**
     ### Автоматический сброс
@@ -352,23 +352,23 @@ namespace model {
     Name: SW_P_SBR
     Flags: NONFIXED
     **/
-      SW_P_SBR_42 = 42,
+    SW_P_SBR_42 = 42,
 
     /**
     ### Стоп
     Type: Выключатель/тумблер
     Name: SW_P_STOP
-    Flags: 
+    Flags:
     **/
-      SW_P_STOP_43 = 43,
+    SW_P_STOP_43 = 43,
 
     /**
     ### Песок
     Type: Выключатель/тумблер
     Name: SW_P_SAND
-    Flags: 
+    Flags:
     **/
-      SW_P_SAND_44 = 44,
+    SW_P_SAND_44 = 44,
 
     /**
     ### Свисток
@@ -376,235 +376,235 @@ namespace model {
     Name: SW_P_SV
     Flags: NONFIXED
     **/
-      SW_P_SV_45 = 45,
+    SW_P_SV_45 = 45,
 
-    };
-  
-    /**
-    ## Указатели.
-    **/
-    enum class disp : unsigned short {
-    
+  };
+
+  /**
+  ## Указатели.
+  **/
+  enum class disp : unsigned short {
+
     /**
     ### Скорость
     Type: ARROW
     Name: `D_SKOR`
-        #### Values:
-        MIN: `0.0`
-        MAX: `41.7`
-        ZERO: `14.45`
+    #### Values:
+    MIN: `0.0`
+    MAX: `41.7`
+    ZERO: `14.45`
     **/
-      D_SKOR_0 = 0,
+    D_SKOR_0 = 0,
 
     /**
     ### Главный резервуар
     Type: ARROW
     Name: `D_GR`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `5.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `5.0`
     **/
-      D_GR_1 = 1,
+    D_GR_1 = 1,
 
     /**
     ### Тормозная магистраль
     Type: ARROW
     Name: `D_TM`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `5.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `5.0`
     **/
-      D_TM_2 = 2,
+    D_TM_2 = 2,
 
     /**
     ### Уравнительный резервуар
     Type: ARROW
     Name: `D_UR`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `3.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `3.0`
     **/
-      D_UR_3 = 3,
+    D_UR_3 = 3,
 
     /**
     ### Тормозной цилиндр
     Type: ARROW
     Name: `D_BC`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `1.8`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `1.8`
     **/
-      D_BC_4 = 4,
+    D_BC_4 = 4,
 
     /**
     ### Ток нагрузки ГГ
     Type: ARROW
     Name: `D_GG`
-        #### Values:
-        MIN: `0.0`
-        MAX: `4.0`
-        ZERO: `4.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `4.0`
+    ZERO: `4.0`
     **/
-      D_GG_5 = 5,
+    D_GG_5 = 5,
 
     /**
     ### Обороты дизеля
     Type: ARROW
     Name: `D_RPM`
-        #### Values:
-        MIN: `0.0`
-        MAX: `800.0`
-        ZERO: `800.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `800.0`
+    ZERO: `800.0`
     **/
-      D_RPM_6 = 6,
+    D_RPM_6 = 6,
 
     /**
     ### Тормозной цилиндр
     Type: ARROW
     Name: `D_BCb`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `1.8`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `1.8`
     **/
-      D_BCb_7 = 7,
+    D_BCb_7 = 7,
 
     /**
     ### Ток нагрузки ГГ
     Type: ARROW
     Name: `D_GGb`
-        #### Values:
-        MIN: `0.0`
-        MAX: `4.0`
-        ZERO: `4.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `4.0`
+    ZERO: `4.0`
     **/
-      D_GGb_8 = 8,
+    D_GGb_8 = 8,
 
     /**
     ### Давление масла
     Type: ARROW
     Name: `D_POIL`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `5.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `5.0`
     **/
-      D_POIL_9 = 9,
+    D_POIL_9 = 9,
 
     /**
     ### Давление топлива
     Type: ARROW
     Name: `D_PFUEL`
-        #### Values:
-        MIN: `0.0`
-        MAX: `15.0`
-        ZERO: `5.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `15.0`
+    ZERO: `5.0`
     **/
-      D_PFUEL_10 = 10,
+    D_PFUEL_10 = 10,
 
     /**
     ### Температура воды
     Type: ARROW
     Name: `D_TWAT`
-        #### Values:
-        MIN: `0.0`
-        MAX: `120.0`
-        ZERO: `60.0`
+    #### Values:
+    MIN: `0.0`
+    MAX: `120.0`
+    ZERO: `60.0`
     **/
-      D_TWAT_11 = 11,
+    D_TWAT_11 = 11,
 
     /**
     ### ПСС
     Type: LAMP
     Name: `L_EPK`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_EPK_12 = 12,
+    L_EPK_12 = 12,
 
     /**
     ### Пожар
     Type: LAMP
     Name: `L_FIRE`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_FIRE_13 = 13,
+    L_FIRE_13 = 13,
 
     /**
     ### Неисправность первого дизеля
     Type: LAMP
     Name: `L_DS1`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_DS1_14 = 14,
+    L_DS1_14 = 14,
 
     /**
     ### Неисправность второго дизеля
     Type: LAMP
     Name: `L_DS2`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_DS2_15 = 15,
+    L_DS2_15 = 15,
 
     /**
     ### Боксование
     Type: LAMP
     Name: `L_WS`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_WS_16 = 16,
+    L_WS_16 = 16,
 
     /**
     ### UNNAMED
     Type: LAMP
     Name: `L_LAMP1`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_LAMP1_17 = 17,
+    L_LAMP1_17 = 17,
 
     /**
     ### UNNAMED
     Type: LAMP
     Name: `L_LAMP2`
-        #### Values:
-        `0` - OFF
-        `1` - ON
+    #### Values:
+    `0` - OFF
+    `1` - ON
     **/
-      L_LAMP2_18 = 18,
+    L_LAMP2_18 = 18,
 
     /**
     ### Скорость
     Type: ARROW
     Name: `D_SKOR1`
-        #### Values:
-        MIN: `0.0`
-        MAX: `41.7`
-        ZERO: `14.45`
+    #### Values:
+    MIN: `0.0`
+    MAX: `41.7`
+    ZERO: `14.45`
     **/
-      D_SKOR1_19 = 19,
+    D_SKOR1_19 = 19,
 
-    };
-  
-    /**
-    ## Состояния приборов
-    **/
-    namespace st {
-    
+  };
+
+  /**
+  ## Состояния приборов
+  **/
+  namespace st {
+
     /**
     #### Состояния переключателя
     ### Тяга
@@ -622,11 +622,11 @@ namespace model {
     - `8` - [8]
     **/
     enum class C_MAIN : unsigned short {
-    /**
-    #### Тяга
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Тяга
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Тяга
@@ -682,7 +682,7 @@ namespace model {
       **/
       ST_8 = 8,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Реверс
@@ -694,11 +694,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class C_REV : unsigned short {
-    /**
-    #### Реверс
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Реверс
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Реверс
@@ -718,7 +718,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Тормоз локомотива
@@ -733,11 +733,11 @@ namespace model {
     - `5` - [4]
     **/
     enum class C254 : unsigned short {
-    /**
-    #### Тормоз локомотива
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Тормоз локомотива
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Тормоз локомотива
@@ -775,7 +775,7 @@ namespace model {
       **/
       ST_5 = 5,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Тормоз локомотива
@@ -790,11 +790,11 @@ namespace model {
     - `5` - [4]
     **/
     enum class C396 : unsigned short {
-    /**
-    #### Тормоз локомотива
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Тормоз локомотива
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Тормоз локомотива
@@ -832,7 +832,7 @@ namespace model {
       **/
       ST_5 = 5,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Тормоз поезда
@@ -847,11 +847,11 @@ namespace model {
     - `5` - [Экстренное]
     **/
     enum class C395 : unsigned short {
-    /**
-    #### Тормоз поезда
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Тормоз поезда
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Тормоз поезда
@@ -889,7 +889,7 @@ namespace model {
       **/
       ST_5 = 5,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Ручной тормоз
@@ -900,11 +900,11 @@ namespace model {
     - `1` - [закручен]
     **/
     enum class C_HANDBR : unsigned short {
-    /**
-    #### Ручной тормоз
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Ручной тормоз
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Ручной тормоз
@@ -918,7 +918,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Свисток
@@ -929,11 +929,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_SVIST : unsigned short {
-    /**
-    #### Свисток
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Свисток
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Свисток
@@ -947,7 +947,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Тифон
@@ -958,11 +958,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_TIFON : unsigned short {
-    /**
-    #### Тифон
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Тифон
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Тифон
@@ -976,7 +976,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Песок
@@ -987,11 +987,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_SAND : unsigned short {
-    /**
-    #### Песок
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Песок
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Песок
@@ -1005,7 +1005,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Радиостанция
@@ -1016,11 +1016,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_RADIO : unsigned short {
-    /**
-    #### Радиостанция
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Радиостанция
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Радиостанция
@@ -1034,7 +1034,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Освещение тележек и капота
@@ -1045,11 +1045,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_VTK : unsigned short {
-    /**
-    #### Освещение тележек и капота
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Освещение тележек и капота
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Освещение тележек и капота
@@ -1063,7 +1063,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Освещение номера тепловоза
@@ -1074,11 +1074,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_VN : unsigned short {
-    /**
-    #### Освещение номера тепловоза
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Освещение номера тепловоза
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Освещение номера тепловоза
@@ -1092,7 +1092,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Освещение расписания
@@ -1103,11 +1103,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_VRD : unsigned short {
-    /**
-    #### Освещение расписания
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Освещение расписания
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Освещение расписания
@@ -1121,7 +1121,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Передний левый буферный фонарь
@@ -1133,11 +1133,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_VBLP : unsigned short {
-    /**
-    #### Передний левый буферный фонарь
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Передний левый буферный фонарь
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Передний левый буферный фонарь
@@ -1157,7 +1157,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Передний правый буферный фонарь
@@ -1169,11 +1169,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_VBFP : unsigned short {
-    /**
-    #### Передний правый буферный фонарь
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Передний правый буферный фонарь
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Передний правый буферный фонарь
@@ -1193,7 +1193,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Передний прожектор: тускло
@@ -1204,11 +1204,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_PR1 : unsigned short {
-    /**
-    #### Передний прожектор: тускло
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Передний прожектор: тускло
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Передний прожектор: тускло
@@ -1222,7 +1222,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Передний прожектор: ярко
@@ -1233,11 +1233,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_PR2 : unsigned short {
-    /**
-    #### Передний прожектор: ярко
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Передний прожектор: ярко
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Передний прожектор: ярко
@@ -1251,7 +1251,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Пуск дизеля
@@ -1262,11 +1262,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_START : unsigned short {
-    /**
-    #### Пуск дизеля
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Пуск дизеля
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Пуск дизеля
@@ -1280,7 +1280,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Вентилятор кабины машиниста
@@ -1291,11 +1291,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_VMVO : unsigned short {
-    /**
-    #### Вентилятор кабины машиниста
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Вентилятор кабины машиниста
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Вентилятор кабины машиниста
@@ -1309,7 +1309,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Калорифер
@@ -1321,11 +1321,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_VOK : unsigned short {
-    /**
-    #### Калорифер
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Калорифер
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Калорифер
@@ -1345,7 +1345,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Освещение приборов
@@ -1357,11 +1357,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_PVIP : unsigned short {
-    /**
-    #### Освещение приборов
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Освещение приборов
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Освещение приборов
@@ -1381,7 +1381,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Освещение кабины
@@ -1392,11 +1392,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_VK : unsigned short {
-    /**
-    #### Освещение кабины
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Освещение кабины
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Освещение кабины
@@ -1410,7 +1410,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Задний левый буферный фонарь
@@ -1422,11 +1422,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_VBLZ : unsigned short {
-    /**
-    #### Задний левый буферный фонарь
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Задний левый буферный фонарь
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Задний левый буферный фонарь
@@ -1446,7 +1446,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Задний правый буферный фонарь
@@ -1458,11 +1458,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_VBFZ : unsigned short {
-    /**
-    #### Задний правый буферный фонарь
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Задний правый буферный фонарь
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Задний правый буферный фонарь
@@ -1482,7 +1482,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Задний прожектор: тускло
@@ -1493,11 +1493,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_PR3 : unsigned short {
-    /**
-    #### Задний прожектор: тускло
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Задний прожектор: тускло
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Задний прожектор: тускло
@@ -1511,7 +1511,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Задний прожектор: ярко
@@ -1522,11 +1522,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_PR4 : unsigned short {
-    /**
-    #### Задний прожектор: ярко
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Задний прожектор: ярко
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Задний прожектор: ярко
@@ -1540,7 +1540,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Остановка дизеля
@@ -1551,11 +1551,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_STOP : unsigned short {
-    /**
-    #### Остановка дизеля
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Остановка дизеля
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Остановка дизеля
@@ -1569,7 +1569,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Обслуживание одним лицом
@@ -1580,11 +1580,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_OOL : unsigned short {
-    /**
-    #### Обслуживание одним лицом
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Обслуживание одним лицом
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Обслуживание одним лицом
@@ -1598,7 +1598,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Проверка АЛСН
@@ -1609,11 +1609,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_TESTLS : unsigned short {
-    /**
-    #### Проверка АЛСН
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Проверка АЛСН
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Проверка АЛСН
@@ -1627,7 +1627,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### КНАС2
@@ -1638,11 +1638,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_KNAS2 : unsigned short {
-    /**
-    #### КНАС2
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### КНАС2
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### КНАС2
@@ -1656,7 +1656,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### КНАС1
@@ -1667,11 +1667,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_KNAS1 : unsigned short {
-    /**
-    #### КНАС1
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### КНАС1
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### КНАС1
@@ -1685,7 +1685,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Проверка звукового сигнала
@@ -1696,11 +1696,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_KNZS : unsigned short {
-    /**
-    #### Проверка звукового сигнала
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Проверка звукового сигнала
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Проверка звукового сигнала
@@ -1714,7 +1714,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Выключатель АЛСН
@@ -1725,11 +1725,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_ALSN : unsigned short {
-    /**
-    #### Выключатель АЛСН
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Выключатель АЛСН
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Выключатель АЛСН
@@ -1743,7 +1743,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### РБ
@@ -1754,11 +1754,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_RB : unsigned short {
-    /**
-    #### РБ
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### РБ
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### РБ
@@ -1772,7 +1772,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### UNNAMED
@@ -1783,11 +1783,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_A1 : unsigned short {
-    /**
-    #### UNNAMED
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### UNNAMED
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### UNNAMED
@@ -1801,7 +1801,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### UNNAMED
@@ -1812,11 +1812,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_A2 : unsigned short {
-    /**
-    #### UNNAMED
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### UNNAMED
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### UNNAMED
@@ -1830,7 +1830,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### UNNAMED
@@ -1841,11 +1841,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_A3 : unsigned short {
-    /**
-    #### UNNAMED
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### UNNAMED
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### UNNAMED
@@ -1859,7 +1859,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### КНАС2
@@ -1870,11 +1870,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_KNAS2b : unsigned short {
-    /**
-    #### КНАС2
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### КНАС2
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### КНАС2
@@ -1888,7 +1888,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### КНАС1
@@ -1899,11 +1899,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_KNAS1b : unsigned short {
-    /**
-    #### КНАС1
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### КНАС1
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### КНАС1
@@ -1917,7 +1917,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Тяга больше/меньше
@@ -1929,11 +1929,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_P_THR : unsigned short {
-    /**
-    #### Тяга больше/меньше
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Тяга больше/меньше
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Тяга больше/меньше
@@ -1953,7 +1953,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Торможение/отпуск
@@ -1965,11 +1965,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_P_BR : unsigned short {
-    /**
-    #### Торможение/отпуск
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Торможение/отпуск
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Торможение/отпуск
@@ -1989,7 +1989,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Реверс вперёд/назад
@@ -2001,11 +2001,11 @@ namespace model {
     - `2` - UNNAMED
     **/
     enum class SW_P_REV : unsigned short {
-    /**
-    #### Реверс вперёд/назад
-    ### Исходное состояние
-    **/
-    DEFAULT = 1,
+      /**
+      #### Реверс вперёд/назад
+      ### Исходное состояние
+      **/
+      DEFAULT = 1,
 
       /**
       #### Реверс вперёд/назад
@@ -2025,7 +2025,7 @@ namespace model {
       **/
       ST_2 = 2,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Автоматический сброс
@@ -2036,11 +2036,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_P_SBR : unsigned short {
-    /**
-    #### Автоматический сброс
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Автоматический сброс
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Автоматический сброс
@@ -2054,7 +2054,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Стоп
@@ -2065,11 +2065,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_P_STOP : unsigned short {
-    /**
-    #### Стоп
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Стоп
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Стоп
@@ -2083,7 +2083,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Песок
@@ -2094,11 +2094,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_P_SAND : unsigned short {
-    /**
-    #### Песок
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Песок
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Песок
@@ -2112,7 +2112,7 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
+
     /**
     #### Состояния переключателя
     ### Свисток
@@ -2123,11 +2123,11 @@ namespace model {
     - `1` - UNNAMED
     **/
     enum class SW_P_SV : unsigned short {
-    /**
-    #### Свисток
-    ### Исходное состояние
-    **/
-    DEFAULT = 0,
+      /**
+      #### Свисток
+      ### Исходное состояние
+      **/
+      DEFAULT = 0,
 
       /**
       #### Свисток
@@ -2141,22 +2141,20 @@ namespace model {
       **/
       ST_1 = 1,
     };
-  
-    };
-  
 
+  }; // namespace st
 
 
   /**
     ## Источники света
    **/
   enum class lights : unsigned short {
-    
-      /**
-      #### Источник света
-      ### UNNAMED
-      **/
-      _0 = 0,
+
+    /**
+    #### Источник света
+    ### UNNAMED
+    **/
+    _0 = 0,
 
   };
 
@@ -2164,32 +2162,30 @@ namespace model {
     ## Анимации
    **/
   enum class anims : unsigned short {
-  
-      /**
-      #### Анимация
-      ### WIPER1
-      **/
-      WIPER1_0 = 0,
 
-      /**
-      #### Анимация
-      ### WIPER2
-      **/
-      WIPER2_1 = 1,
+    /**
+    #### Анимация
+    ### WIPER1
+    **/
+    WIPER1_0 = 0,
 
-      /**
-      #### Анимация
-      ### WIPER3
-      **/
-      WIPER3_2 = 2,
+    /**
+    #### Анимация
+    ### WIPER2
+    **/
+    WIPER2_1 = 1,
 
-      /**
-      #### Анимация
-      ### WIPER4
-      **/
-      WIPER4_3 = 3,
+    /**
+    #### Анимация
+    ### WIPER3
+    **/
+    WIPER3_2 = 2,
+
+    /**
+    #### Анимация
+    ### WIPER4
+    **/
+    WIPER4_3 = 3,
 
   };
-};
-
-  
+}; // namespace model

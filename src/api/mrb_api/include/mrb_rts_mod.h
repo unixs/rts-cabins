@@ -1,4 +1,4 @@
-#include <mrb_context.h>
+#include <mrb_context.hpp>
 
 #define RTS_MOD_NAME "RTS"
 

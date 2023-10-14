@@ -1,4 +1,4 @@
-#include <mrb_context.h>
+#include <mrb_context.hpp>
 
 #define DEFAULT_CABIN_CLASS_NAME "DefaultCabin"
 
