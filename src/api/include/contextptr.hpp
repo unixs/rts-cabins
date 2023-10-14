@@ -13,5 +13,5 @@ save_context_ptr(Context **ctxt_ptr, float dst[], const size_t arr_size);
 /**
  * #### Восстанавливает указатель контекста из "стека" переменных модели
  */
-api_status
-restore_context_ptr(const float src[], Context **ptr_to_data_ptr);
+Context *
+restore_context_ptr(const float src[]);

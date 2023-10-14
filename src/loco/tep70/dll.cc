@@ -30,7 +30,7 @@ Init(DieselEngine *eng, DieselLocomotive *loco, unsigned long State, float time,
 {
   auto ctxt = init_context();
 
-  save_context_ptr(&ctxt, eng->var, 5);
+  save_context_ptr(&ctxt, &eng->var[50], 5);
 
   return true;
 }
@@ -39,6 +39,14 @@ extern "C" __export void
 Run(ElectricEngine *eng, const ElectricLocomotive *loco, unsigned long State,
     float time, float AirTemperature)
 {
+  Context *ctxt = restore_context_ptr(&eng->var[50]);
+
+  if (ctxt) {
+    ctxt->run(time);
+  }
+  else {
+    // TODO: some debug output
+  }
 }
 
 extern "C" __export bool
@@ -53,17 +61,6 @@ Switched(const ElectricLocomotive *loco, ElectricEngine *eng,
          unsigned int switch_id, unsigned int prev_state)
 {
   CABIN;
-
-  Context *ctxt;
-
-  api_status error = restore_context_ptr(eng->var, &ctxt);
-
-  if (!error) {
-    // ctxt->run(time);
-  }
-  else {
-    // TODO: some debug output
-  }
 
   if (SW(sw::AZV51_13)) {
     DI_ON(disp::LAMP011_20);

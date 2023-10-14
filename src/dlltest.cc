@@ -1,8 +1,8 @@
-#include <windows.h>
-#include <cstdio>
-#include <cstring>
+#include <tep70.hpp>
 
 #define DLL_NAME "libtep70.dll"
+
+static float var[10];
 
 int
 main(int argc, char *argv[])
@@ -27,18 +27,46 @@ main(int argc, char *argv[])
   // FreeLibrary(tep70);
   //}
 
-  char str[] = "some string.";
-  char *str_ptr;
-  float arr[] = {.1, .2, .3};
+  init_pool();
 
-  printf("direct\n");
-  memcpy(arr, &str, sizeof(void *));
-  printf("back\n");
-  memcpy(&str_ptr, arr, sizeof(void *));
+  auto ctxt = init_context();
 
-  printf("%s\n", str_ptr);
+  uv_sleep(3000);
 
+  void **ptra = (void **) var;
+  for (size_t i = 0; i < 7; i++) {
+    printf("PTRA: %p - %p\n", ptra, *ptra);
+    ptra++;
+  }
+
+  printf("SAVE\n");
+  printf("Address: %p\n", (void *) ctxt);
+  uv_sleep(1000);
+
+  save_context_ptr(&ctxt, var, 5);
+
+  ptra = (void **) var;
+  for (size_t i = 0; i < 7; i++) {
+    printf("PTRA: %p - %p\n", ptra, *ptra);
+    ptra++;
+  }
+
+  uv_sleep(1000);
+
+  printf("RESTORE\n");
+  uv_sleep(1000);
+
+  Context *ctxt2 = restore_context_ptr(var);
+
+  printf("Restored address: %p\n", (void *) ctxt2);
+  uv_sleep(1000);
+
+  printf("RUN\n");
+  uv_sleep(1000);
+
+  ctxt->run(0.05);
+
+  printf("EXIT\n");
   system("PAUSE");
-
   return 0;
 }

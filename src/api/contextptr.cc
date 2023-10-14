@@ -31,21 +31,24 @@ prepare_float_arr(float dst[], const size_t arr_size)
 api_status
 save_context_ptr(Context **ctxt_ptr, float dst[], const size_t arr_size)
 {
-  if (!prepare_float_arr(dst, arr_size)) {
+  api_status fail = prepare_float_arr(dst, arr_size);
+
+  if (fail) {
     return api_invalid_arg;
   }
 
-  save_ptr_to_float_arr(&dst[1], reinterpret_cast<void **>(ctxt_ptr));
+  save_ptr_to_float_arr(dst, reinterpret_cast<void **>(ctxt_ptr));
 
   return api_ok;
 }
 
-api_status
-restore_context_ptr(const float src[], Context **ctxt_ptr)
+Context *
+restore_context_ptr(const float src[])
 {
+  void *ctxt = NULL;
   // TODO: check NaN's around pointer here
 
-  restore_ptr_from_float_arr(&src[1], reinterpret_cast<void **>(ctxt_ptr));
+  restore_ptr_from_float_arr(src, &ctxt);
 
-  return api_ok;
+  return reinterpret_cast<Context *>(ctxt);
 }

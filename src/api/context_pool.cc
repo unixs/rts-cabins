@@ -24,7 +24,7 @@ static uv_thread_t pool_thrd_id;
 static uv_mutex_t pool_lock;
 
 /**
- * Структра данных для хранения всех распределённых контекстов
+ * Структра данных для хранения всех выделенных контекстов
  */
 static list<Context *> pool;
 
