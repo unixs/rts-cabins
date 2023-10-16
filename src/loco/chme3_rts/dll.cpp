@@ -3,7 +3,7 @@
 #define RTS_STACKSIZE 11
 #define RTS_ADAPTER_COMPLY
 
-#include <cab.hpp>
+#include <cab_.hpp>
 #include <fix.h>
 #include <math.h>
 #include <ts.h>
@@ -685,12 +685,14 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
   }
   else if (eng->DieselOn == 1) {
     float SetPower = 463.4 + eng->ThrottlePosition * 66.25;
+    // больше дури
     if (SetPower > eng->Power) {
       eng->Power += 50.0 * time;
       if (eng->Power > SetPower) {
         eng->Power = SetPower;
       }
     }
+    // меньше дури
     else {
       eng->Power -= 50.0 * time;
       if (eng->Power < SetPower) {
@@ -901,9 +903,11 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
   if (eng->IndependentBrakeValue > loco->MainResPressure) {
     eng->IndependentBrakeValue = loco->MainResPressure;
   }
+
   if (eng->IndependentBrakeValue > loco->IndependentBrakePressure) {
     eng->MainResRate -= 0.02;
   }
+
   if (!cab->Switch(2)) {
     if (loco->BrakeCylinderPressure > 0.0) {
       eng->EngineFlags |= 1;
@@ -1111,41 +1115,41 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
   };
 
   if ((State >> 8) & 1) {
-    cab->SetDisplayValue(0,
+    cab->SetDisplayValue((UINT) disp::D_SKOR_0,
                          loco->Velocity > 0 ? loco->Velocity : -loco->Velocity);
-    cab->SetDisplayValue(19,
+    cab->SetDisplayValue((UINT) disp::D_SKOR1_19,
                          loco->Velocity > 0 ? loco->Velocity : -loco->Velocity);
-    cab->SetDisplayValue(1, loco->MainResPressure);
-    cab->SetDisplayValue(2, loco->TrainPipePressure);
-    cab->SetDisplayValue(3, eng->UR);
+    cab->SetDisplayValue((UINT) disp::D_GR_1, loco->MainResPressure);
+    cab->SetDisplayValue((UINT) disp::D_TM_2, loco->TrainPipePressure);
+    cab->SetDisplayValue((UINT) disp::D_UR_3, eng->UR);
     float BC = loco->BrakeCylinderPressure > loco->IndependentBrakePressure
                    ? loco->BrakeCylinderPressure
                    : loco->IndependentBrakePressure;
-    cab->SetDisplayValue(4, BC);
-    cab->SetDisplayValue(5, Current);
-    cab->SetDisplayValue(6, eng->RPM);
-    cab->SetDisplayValue(7, BC);
-    cab->SetDisplayValue(8, Current);
+    cab->SetDisplayValue((UINT) disp::D_BC_4, BC);
+    cab->SetDisplayValue((UINT) disp::D_GG_5, Current);
+    cab->SetDisplayValue((UINT) disp::D_RPM_6, eng->RPM);
+    cab->SetDisplayValue((UINT) disp::D_BCb_7, BC);
+    cab->SetDisplayValue((UINT) disp::D_GGb_8, Current);
     switch (eng->DieselOn) {
     case 1:
-      cab->SetDisplayValue(9, 10.0);
-      cab->SetDisplayValue(10, 10.0);
+      cab->SetDisplayValue((UINT) disp::D_POIL_9, 10.0);
+      cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 10.0);
       break;
     case 2:
-      cab->SetDisplayValue(9, 10.0 * eng->RPM / 120.0);
-      cab->SetDisplayValue(10, 10.0 * eng->Power / 159.0);
+      cab->SetDisplayValue((UINT) disp::D_POIL_9, 10.0 * eng->RPM / 120.0);
+      cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 10.0 * eng->Power / 159.0);
       break;
     default:
-      cab->SetDisplayValue(9, 0.0);
-      cab->SetDisplayValue(10, 0.0);
+      cab->SetDisplayValue((UINT) disp::D_POIL_9, 0.0);
+      cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 0.0);
       break;
     };
-    cab->SetDisplayValue(11, eng->var[9]);
-    cab->SetDisplayState(12, eng->var[5] > 30.0 ? 1 : 0);
-    cab->SetDisplayState(13, eng->var[9] > 100.0 ? 1 : 0);
-    cab->SetDisplayState(14, (Flags & 8) ? 1 : 0);
+    cab->SetDisplayValue((UINT) disp::D_TWAT_11, eng->var[9]);
+    cab->SetDisplayState((UINT) disp::L_EPK_12, eng->var[5] > 30.0 ? 1 : 0);
+    cab->SetDisplayState((UINT) disp::L_FIRE_13, eng->var[9] > 100.0 ? 1 : 0);
+    cab->SetDisplayState((UINT) disp::L_DS1_14, (Flags & 8) ? 1 : 0);
 
-    cab->SetDisplayState(16, eng->Wheelslip ? 1 : 0);
+    cab->SetDisplayState((UINT) disp::L_WS_16, eng->Wheelslip ? 1 : 0);
 
     eng->ALSNOn = 0;
     if (!cab->Switch(32)) {

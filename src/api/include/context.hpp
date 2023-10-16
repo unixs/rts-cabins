@@ -3,13 +3,28 @@
 #include <main_loop.hpp>
 #include <mrb_context.hpp>
 
+class State {};
+
 class Context {
   MrbContext *mrb_ctxt;
   MainLoop *main_loop;
 
 public:
   Context(MrbContext *mrb_ctxt, MainLoop *main_loop);
+  Context();
   ~Context();
+
+  /**
+   * #### Возвращает структуру состояния кабины
+   */
+  State *
+  state();
+
+  /**
+   * #### Возвращает главный цикл кабины
+   */
+  MainLoop *
+  loop();
 
   /**
    * Запускает итерацию главного цикла

@@ -9,6 +9,12 @@ Context::Context(MrbContext *mrb_ctxt, MainLoop *main_loop)
 {
 }
 
+Context::Context()
+{
+  this->main_loop = new MainLoop(MAIN_LOOP_DEFAULT_DELAY);
+  this->mrb_ctxt = new MrbContext();
+}
+
 Context::~Context()
 {
   // BUG: mem leek
@@ -20,6 +26,12 @@ void
 Context::run(const float frame_time)
 {
   this->main_loop->run(frame_time);
+}
+
+MainLoop *
+Context::loop()
+{
+  return this->main_loop;
 }
 
 

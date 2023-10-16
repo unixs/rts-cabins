@@ -1,4 +1,4 @@
-#include <context_pool.h>
+#include <context_pool.hpp>
 #include <context.hpp>
 
 #include <cstdio>
@@ -83,16 +83,14 @@ init_pool()
 void
 free_pool()
 {
-  // BUG: mem leek
+  // BUG: mem leak
 }
 
 
 Context *
-create_context()
+create_context(Context *context)
 {
   uv_mutex_lock(&pool_lock);
-
-  Context *context = init_context();
 
   pool.push_back(context);
 
