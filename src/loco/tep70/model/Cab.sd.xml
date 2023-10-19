@@ -29,17 +29,17 @@
                   <word>R3951</word>
                </Name>
                <Hint type="section">
-                  <string>Тормоз поезда</string>
+                  <string>РўРѕСЂРјРѕР· РїРѕРµР·РґР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">7</number>
-                  <string>[VI экстренное торм.]</string>
-                  <string>[V торможение]</string>
-                  <string>[Vэ торможение ЭПТ]</string>
-                  <string>[IV перекрыша с пит.]</string>
-                  <string>[III перекрыша без пит.]</string>
-                  <string>[II поездное]</string>
-                  <string>[I отпуск и зарядка]</string>
+                  <string>[VI СЌРєСЃС‚СЂРµРЅРЅРѕРµ С‚РѕСЂРј.]</string>
+                  <string>[V С‚РѕСЂРјРѕР¶РµРЅРёРµ]</string>
+                  <string>[VСЌ С‚РѕСЂРјРѕР¶РµРЅРёРµ Р­РџРў]</string>
+                  <string>[IV РїРµСЂРµРєСЂС‹С€Р° СЃ РїРёС‚.]</string>
+                  <string>[III РїРµСЂРµРєСЂС‹С€Р° Р±РµР· РїРёС‚.]</string>
+                  <string>[II РїРѕРµР·РґРЅРѕРµ]</string>
+                  <string>[I РѕС‚РїСѓСЃРє Рё Р·Р°СЂСЏРґРєР°]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.341</number>
@@ -73,16 +73,16 @@
                   <word>R2541</word>
                </Name>
                <Hint type="section">
-                  <string>Тормоз локомотива</string>
+                  <string>РўРѕСЂРјРѕР· Р»РѕРєРѕРјРѕС‚РёРІР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">6</number>
-                  <string>[Торможение 4]</string>
-                  <string>[Торможение 3]</string>
-                  <string>[Торможение 2]</string>
-                  <string>[Торможение 1]</string>
-                  <string>[Поездное]</string>
-                  <string>[Буфер]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 4]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 3]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 2]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 1]</string>
+                  <string>[РџРѕРµР·РґРЅРѕРµ]</string>
+                  <string>[Р‘СѓС„РµСЂ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.346</number>
@@ -116,13 +116,13 @@
                   <word>REV1</word>
                </Name>
                <Hint type="section">
-                  <string>Реверс</string>
+                  <string>Р РµРІРµСЂСЃ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Назад]</string>
-                  <string>[Нейтральный]</string>
-                  <string>[Вперёд]</string>
+                  <string>[РќР°Р·Р°Рґ]</string>
+                  <string>[РќРµР№С‚СЂР°Р»СЊРЅС‹Р№]</string>
+                  <string>[Р’РїРµСЂС‘Рґ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.791</number>
@@ -157,17 +157,17 @@
                   <word>KONT1</word>
                </Name>
                <Hint type="section">
-                  <string>Контроллер</string>
+                  <string>РљРѕРЅС‚СЂРѕР»Р»РµСЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">23</number>
-                  <word>[торм.6]</word>
-                  <word>[торм.5]</word>
-                  <word>[торм.4]</word>
-                  <word>[торм.3]</word>
-                  <word>[торм.2]</word>
-                  <word>[торм.1]</word>
-                  <word>[П]</word>
+                  <word>[С‚РѕСЂРј.6]</word>
+                  <word>[С‚РѕСЂРј.5]</word>
+                  <word>[С‚РѕСЂРј.4]</word>
+                  <word>[С‚РѕСЂРј.3]</word>
+                  <word>[С‚РѕСЂРј.2]</word>
+                  <word>[С‚РѕСЂРј.1]</word>
+                  <word>[Рџ]</word>
                   <word>[0]</word>
                   <word>[1]</word>
                   <word>[2]</word>
@@ -217,7 +217,7 @@
                   <word>ZAD1</word>
                </Name>
                <Hint type="section">
-                  <string>Задатчик тормозного усилия ЭДТ</string>
+                  <string>Р—Р°РґР°С‚С‡РёРє С‚РѕСЂРјРѕР·РЅРѕРіРѕ СѓСЃРёР»РёСЏ Р­Р”Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.633</number>
@@ -251,12 +251,12 @@
                   <word>R3671</word>
                </Name>
                <Hint type="section">
-                  <string>Блокировка тормозов усл. 367</string>
+                  <string>Р‘Р»РѕРєРёСЂРѕРІРєР° С‚РѕСЂРјРѕР·РѕРІ СѓСЃР». 367</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.288</number>
@@ -289,7 +289,7 @@
                   <word>RED1</word>
                </Name>
                <Hint type="section">
-                  <string>Редуктор зарядного давления</string>
+                  <string>Р РµРґСѓРєС‚РѕСЂ Р·Р°СЂСЏРґРЅРѕРіРѕ РґР°РІР»РµРЅРёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">20</number>
@@ -346,12 +346,12 @@
                   <word>EPK1</word>
                </Name>
                <Hint type="section">
-                  <string>Ключ ЭПК</string>
+                  <string>РљР»СЋС‡ Р­РџРљ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.66</number>
@@ -383,12 +383,12 @@
                   <word>AZV11</word>
                </Name>
                <Hint type="section">
-                  <string>Прожектор яркий</string>
+                  <string>РџСЂРѕР¶РµРєС‚РѕСЂ СЏСЂРєРёР№</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.11</number>
@@ -420,12 +420,12 @@
                   <word>AZV21</word>
                </Name>
                <Hint type="section">
-                  <string>Прожектор тускло</string>
+                  <string>РџСЂРѕР¶РµРєС‚РѕСЂ С‚СѓСЃРєР»Рѕ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.082</number>
@@ -457,12 +457,12 @@
                   <word>AZV31</word>
                </Name>
                <Hint type="section">
-                  <string>Питание ЭПТ</string>
+                  <string>РџРёС‚Р°РЅРёРµ Р­РџРў</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.04</number>
@@ -494,12 +494,12 @@
                   <word>AZV41</word>
                </Name>
                <Hint type="section">
-                  <string>ЭПТ</string>
+                  <string>Р­РџРў</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.012</number>
@@ -531,12 +531,12 @@
                   <word>AZV51</word>
                </Name>
                <Hint type="section">
-                  <string>Электрический тормоз</string>
+                  <string>Р­Р»РµРєС‚СЂРёС‡РµСЃРєРёР№ С‚РѕСЂРјРѕР·</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.983</number>
@@ -568,12 +568,12 @@
                   <word>AZV61</word>
                </Name>
                <Hint type="section">
-                  <string>Топливный насос ведомого тепловоза</string>
+                  <string>РўРѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ РІРµРґРѕРјРѕРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.526</number>
@@ -605,12 +605,12 @@
                   <word>AZV71</word>
                </Name>
                <Hint type="section">
-                  <string>Топливный насос ведущего тепловоза</string>
+                  <string>РўРѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ РІРµРґСѓС‰РµРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.497</number>
@@ -642,12 +642,12 @@
                   <word>AZV81</word>
                </Name>
                <Hint type="section">
-                  <string>Управление тепловозом</string>
+                  <string>РЈРїСЂР°РІР»РµРЅРёРµ С‚РµРїР»РѕРІРѕР·РѕРј</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.455</number>
@@ -679,12 +679,12 @@
                   <word>AZV91</word>
                </Name>
                <Hint type="section">
-                  <string>Управление общее</string>
+                  <string>РЈРїСЂР°РІР»РµРЅРёРµ РѕР±С‰РµРµ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.427</number>
@@ -716,12 +716,12 @@
                   <word>AZV101</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение пульта</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РїСѓР»СЊС‚Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.398</number>
@@ -750,12 +750,12 @@
                   <word>AZV111</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение кабины</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РєР°Р±РёРЅС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.37</number>
@@ -784,12 +784,12 @@
                   <word>AZV121</word>
                </Name>
                <Hint type="section">
-                  <string>Вентиляция</string>
+                  <string>Р’РµРЅС‚РёР»СЏС†РёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.341</number>
@@ -821,12 +821,12 @@
                   <word>TB11</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи масло</string>
+                  <string>Р–Р°Р»СЋР·Рё РјР°СЃР»Рѕ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.839</number>
@@ -858,12 +858,12 @@
                   <word>TB21</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи вода</string>
+                  <string>Р–Р°Р»СЋР·Рё РІРѕРґР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.804</number>
@@ -895,12 +895,12 @@
                   <word>TB31</word>
                </Name>
                <Hint type="section">
-                  <string>ОП II ступень</string>
+                  <string>РћРџ II СЃС‚СѓРїРµРЅСЊ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.768</number>
@@ -932,12 +932,12 @@
                   <word>TB41</word>
                </Name>
                <Hint type="section">
-                  <string>ОП I ступень</string>
+                  <string>РћРџ I СЃС‚СѓРїРµРЅСЊ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.733</number>
@@ -969,12 +969,12 @@
                   <word>TB51</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение приборов</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РїСЂРёР±РѕСЂРѕРІ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.423</number>
@@ -1006,12 +1006,12 @@
                   <word>TB61</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение кабины</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РєР°Р±РёРЅС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.388</number>
@@ -1043,12 +1043,12 @@
                   <word>TB71</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение расписания</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ СЂР°СЃРїРёСЃР°РЅРёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.347</number>
@@ -1080,12 +1080,12 @@
                   <word>TB81</word>
                </Name>
                <Hint type="section">
-                  <string>Электрикалорифер</string>
+                  <string>Р­Р»РµРєС‚СЂРёРєР°Р»РѕСЂРёС„РµСЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.296</number>
@@ -1117,12 +1117,12 @@
                   <word>TB101</word>
                </Name>
                <Hint type="section">
-                  <string>Радиостанция</string>
+                  <string>Р Р°РґРёРѕСЃС‚Р°РЅС†РёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.154</number>
@@ -1154,12 +1154,12 @@
                   <word>TB111</word>
                </Name>
                <Hint type="section">
-                  <string>Манометры и термометры</string>
+                  <string>РњР°РЅРѕРјРµС‚СЂС‹ Рё С‚РµСЂРјРѕРјРµС‚СЂС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.169</number>
@@ -1188,12 +1188,12 @@
                   <word>TB121</word>
                </Name>
                <Hint type="section">
-                  <string>АЛСН</string>
+                  <string>РђР›РЎРќ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Без АЛС]</string>
-                  <string>[АЛС]</string>
+                  <string>[Р‘РµР· РђР›РЎ]</string>
+                  <string>[РђР›РЎ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.247</number>
@@ -1222,12 +1222,12 @@
                   <word>TB131</word>
                </Name>
                <Hint type="section">
-                  <string>Частота АСЛН</string>
+                  <string>Р§Р°СЃС‚РѕС‚Р° РђРЎР›Рќ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[25 Гц]</string>
-                  <string>[50 Гц]</string>
+                  <string>[25 Р“С†]</string>
+                  <string>[50 Р“С†]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.261</number>
@@ -1256,12 +1256,12 @@
                   <word>TB141</word>
                </Name>
                <Hint type="section">
-                  <string>Омыв окон</string>
+                  <string>РћРјС‹РІ РѕРєРѕРЅ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.012</number>
@@ -1293,12 +1293,12 @@
                   <word>TB151</word>
                </Name>
                <Hint type="section">
-                  <string>Стеклоочиститель</string>
+                  <string>РЎС‚РµРєР»РѕРѕС‡РёСЃС‚РёС‚РµР»СЊ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.06</number>
@@ -1327,7 +1327,7 @@
                   <word>BTN41</word>
                </Name>
                <Hint type="section">
-                  <string>Вызов помощника</string>
+                  <string>Р’С‹Р·РѕРІ РїРѕРјРѕС‰РЅРёРєР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.884</number>
@@ -1357,7 +1357,7 @@
                   <word>BTN51</word>
                </Name>
                <Hint type="section">
-                  <string>Отпуск тормозов локомотива</string>
+                  <string>РћС‚РїСѓСЃРє С‚РѕСЂРјРѕР·РѕРІ Р»РѕРєРѕРјРѕС‚РёРІР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.694</number>
@@ -1390,7 +1390,7 @@
                   <word>BTN11</word>
                </Name>
                <Hint type="section">
-                  <string>Свисток</string>
+                  <string>РЎРІРёСЃС‚РѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.114</number>
@@ -1423,7 +1423,7 @@
                   <word>BTN21</word>
                </Name>
                <Hint type="section">
-                  <string>Тифон</string>
+                  <string>РўРёС„РѕРЅ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.056</number>
@@ -1456,7 +1456,7 @@
                   <word>BTN31</word>
                </Name>
                <Hint type="section">
-                  <string>Песок</string>
+                  <string>РџРµСЃРѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.995</number>
@@ -1489,7 +1489,7 @@
                   <word>RB1</word>
                </Name>
                <Hint type="section">
-                  <string>Рукоятка бдительности</string>
+                  <string>Р СѓРєРѕСЏС‚РєР° Р±РґРёС‚РµР»СЊРЅРѕСЃС‚Рё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.52</number>
@@ -1522,7 +1522,7 @@
                   <word>BTN81</word>
                </Name>
                <Hint type="section">
-                  <string>Пуск дизеля ведущего тепловоза</string>
+                  <string>РџСѓСЃРє РґРёР·РµР»СЏ РІРµРґСѓС‰РµРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.465</number>
@@ -1552,7 +1552,7 @@
                   <word>BTN71</word>
                </Name>
                <Hint type="section">
-                  <string>Пуск дизеля ведомого тепловоза</string>
+                  <string>РџСѓСЃРє РґРёР·РµР»СЏ РІРµРґРѕРјРѕРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.51</number>
@@ -1582,7 +1582,7 @@
                   <word>BTN91</word>
                </Name>
                <Hint type="section">
-                  <string>Проверка ЭТ</string>
+                  <string>РџСЂРѕРІРµСЂРєР° Р­Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.188</number>
@@ -1612,7 +1612,7 @@
                   <word>BTN101</word>
                </Name>
                <Hint type="section">
-                  <string>ВК</string>
+                  <string>Р’Рљ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.209</number>
@@ -1642,7 +1642,7 @@
                   <word>BTN111</word>
                </Name>
                <Hint type="section">
-                  <string>Проверка АЛСН</string>
+                  <string>РџСЂРѕРІРµСЂРєР° РђР›РЎРќ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.231</number>
@@ -1672,13 +1672,13 @@
                   <word>TBP71</word>
                </Name>
                <Hint type="section">
-                  <string>Левый БФ</string>
+                  <string>Р›РµРІС‹Р№ Р‘Р¤</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Красный]</string>
-                  <string>[Выкл.]</string>
-                  <string>[Белый]</string>
+                  <string>[РљСЂР°СЃРЅС‹Р№]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р‘РµР»С‹Р№]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.099</number>
@@ -1708,13 +1708,13 @@
                   <word>TBP61</word>
                </Name>
                <Hint type="section">
-                  <string>Правый БФ</string>
+                  <string>РџСЂР°РІС‹Р№ Р‘Р¤</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Красный]</string>
-                  <string>[Выкл.]</string>
-                  <string>[Белый]</string>
+                  <string>[РљСЂР°СЃРЅС‹Р№]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р‘РµР»С‹Р№]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.057</number>
@@ -1744,12 +1744,12 @@
                   <word>TBP51</word>
                </Name>
                <Hint type="section">
-                  <string>Номерные знаки</string>
+                  <string>РќРѕРјРµСЂРЅС‹Рµ Р·РЅР°РєРё</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.019</number>
@@ -1778,12 +1778,12 @@
                   <word>TBP41</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение пульта</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РїСѓР»СЊС‚Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.977</number>
@@ -1812,12 +1812,12 @@
                   <word>TBP31</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение резервное</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ СЂРµР·РµСЂРІРЅРѕРµ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.943</number>
@@ -1846,12 +1846,12 @@
                   <word>TBP21</word>
                </Name>
                <Hint type="section">
-                  <string>Калориферы</string>
+                  <string>РљР°Р»РѕСЂРёС„РµСЂС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.9</number>
@@ -1880,12 +1880,12 @@
                   <word>TBP11</word>
                </Name>
                <Hint type="section">
-                  <string>Вентиляторы</string>
+                  <string>Р’РµРЅС‚РёР»СЏС‚РѕСЂС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.862</number>
@@ -1914,12 +1914,12 @@
                   <word>TBP81</word>
                </Name>
                <Hint type="section">
-                  <string>Вольтметр</string>
+                  <string>Р’РѕР»СЊС‚РјРµС‚СЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[ЭПТ]</string>
-                  <string>[Батарея]</string>
+                  <string>[Р­РџРў]</string>
+                  <string>[Р‘Р°С‚Р°СЂРµСЏ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.224</number>
@@ -1948,7 +1948,7 @@
                   <word>BTNP21</word>
                </Name>
                <Hint type="section">
-                  <string>Тифон</string>
+                  <string>РўРёС„РѕРЅ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.192</number>
@@ -1978,7 +1978,7 @@
                   <word>BTNP11</word>
                </Name>
                <Hint type="section">
-                  <string>Свисток</string>
+                  <string>РЎРІРёСЃС‚РѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.287</number>
@@ -2008,13 +2008,13 @@
                   <word>KK1</word>
                </Name>
                <Hint type="section">
-                  <string>Комбинированный кран усл. 103</string>
+                  <string>РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РєСЂР°РЅ СѓСЃР». 103</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Двойная тяга]</string>
-                  <string>[Нормальное]</string>
-                  <string>[Экстренное]</string>
+                  <string>[Р”РІРѕР№РЅР°СЏ С‚СЏРіР°]</string>
+                  <string>[РќРѕСЂРјР°Р»СЊРЅРѕРµ]</string>
+                  <string>[Р­РєСЃС‚СЂРµРЅРЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.312</number>
@@ -2043,7 +2043,7 @@
                   <word>BTN121</word>
                </Name>
                <Hint type="section">
-                  <string>Маневры</string>
+                  <string>РњР°РЅРµРІСЂС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.465</number>
@@ -2076,7 +2076,7 @@
                   <word>BTN131</word>
                </Name>
                <Hint type="section">
-                  <string>Свисток</string>
+                  <string>РЎРІРёСЃС‚РѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.466</number>
@@ -2106,7 +2106,7 @@
                   <word>RBS1</word>
                </Name>
                <Hint type="section">
-                  <string>РБС</string>
+                  <string>Р Р‘РЎ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.474</number>
@@ -2139,7 +2139,7 @@
                   <word>RBP1</word>
                </Name>
                <Hint type="section">
-                  <string>РБП</string>
+                  <string>Р Р‘Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.475</number>
@@ -2169,7 +2169,7 @@
                   <word>DSP1</word>
                </Name>
                <Hint type="section">
-                  <string>Вызов ДСП</string>
+                  <string>Р’С‹Р·РѕРІ Р”РЎРџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.076</number>
@@ -2199,7 +2199,7 @@
                   <word>DNC1</word>
                </Name>
                <Hint type="section">
-                  <string>Вызов ДНЦ</string>
+                  <string>Р’С‹Р·РѕРІ Р”РќР¦</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.076</number>
@@ -2229,7 +2229,7 @@
                   <word>PODSV1</word>
                </Name>
                <Hint type="section">
-                  <string>Подсветка</string>
+                  <string>РџРѕРґСЃРІРµС‚РєР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.174</number>
@@ -2259,7 +2259,7 @@
                   <word>PIT1</word>
                </Name>
                <Hint type="section">
-                  <string>Питание радиостанции</string>
+                  <string>РџРёС‚Р°РЅРёРµ СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.187</number>
@@ -2289,15 +2289,15 @@
                   <word>RT1</word>
                </Name>
                <Hint type="section">
-                  <string>Ручной тормоз</string>
+                  <string>Р СѓС‡РЅРѕР№ С‚РѕСЂРјРѕР·</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">5</number>
-                  <string>[Закручен]</string>
+                  <string>[Р—Р°РєСЂСѓС‡РµРЅ]</string>
                   <string>[75%]</string>
                   <string>[50%]</string>
                   <string>[25%]</string>
-                  <string>[Откручен]</string>
+                  <string>[РћС‚РєСЂСѓС‡РµРЅ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.714</number>
@@ -2336,7 +2336,7 @@
                   <word>SLZAVOD1</word>
                </Name>
                <Hint type="section">
-                  <string>Завод часов</string>
+                  <string>Р—Р°РІРѕРґ С‡Р°СЃРѕРІ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.353</number>
@@ -2357,8 +2357,8 @@
                   <number type="float">0.45</number>
                </AnimTime>
             </Switch>
-            <!-- ~~~~~~~~~~~~~~~~~~~~   Кабина 2 ~~~~~~~~~~~~~~~~~~~~~~ -->
-            <comment>--------------------   Кабина 2 ----------------------</comment>
+            <!-- ~~~~~~~~~~~~~~~~~~~~   РљР°Р±РёРЅР° 2 ~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>--------------------   РљР°Р±РёРЅР° 2 ----------------------</comment>
             <Switch type="section">
                <ID type="section">
                   <number type="int">100</number>
@@ -2367,17 +2367,17 @@
                   <word>R395</word>
                </Name>
                <Hint type="section">
-                  <string>Тормоз поезда</string>
+                  <string>РўРѕСЂРјРѕР· РїРѕРµР·РґР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">7</number>
-                  <string>[VI экстренное торм.]</string>
-                  <string>[V торможение]</string>
-                  <string>[Vэ торможение ЭПТ]</string>
-                  <string>[IV перекрыша с пит.]</string>
-                  <string>[III перекрыша без пит.]</string>
-                  <string>[II поездное]</string>
-                  <string>[I отпуск и зарядка]</string>
+                  <string>[VI СЌРєСЃС‚СЂРµРЅРЅРѕРµ С‚РѕСЂРј.]</string>
+                  <string>[V С‚РѕСЂРјРѕР¶РµРЅРёРµ]</string>
+                  <string>[VСЌ С‚РѕСЂРјРѕР¶РµРЅРёРµ Р­РџРў]</string>
+                  <string>[IV РїРµСЂРµРєСЂС‹С€Р° СЃ РїРёС‚.]</string>
+                  <string>[III РїРµСЂРµРєСЂС‹С€Р° Р±РµР· РїРёС‚.]</string>
+                  <string>[II РїРѕРµР·РґРЅРѕРµ]</string>
+                  <string>[I РѕС‚РїСѓСЃРє Рё Р·Р°СЂСЏРґРєР°]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.341</number>
@@ -2411,16 +2411,16 @@
                   <word>R254</word>
                </Name>
                <Hint type="section">
-                  <string>Тормоз локомотива</string>
+                  <string>РўРѕСЂРјРѕР· Р»РѕРєРѕРјРѕС‚РёРІР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">6</number>
-                  <string>[Торможение 4]</string>
-                  <string>[Торможение 3]</string>
-                  <string>[Торможение 2]</string>
-                  <string>[Торможение 1]</string>
-                  <string>[Поездное]</string>
-                  <string>[Буфер]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 4]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 3]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 2]</string>
+                  <string>[РўРѕСЂРјРѕР¶РµРЅРёРµ 1]</string>
+                  <string>[РџРѕРµР·РґРЅРѕРµ]</string>
+                  <string>[Р‘СѓС„РµСЂ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.346</number>
@@ -2454,13 +2454,13 @@
                   <word>REV</word>
                </Name>
                <Hint type="section">
-                  <string>Реверс</string>
+                  <string>Р РµРІРµСЂСЃ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">7</number>
-                  <string>[Назад]</string>
-                  <string>[Нейтральный]</string>
-                  <string>[Вперёд]</string>
+                  <string>[РќР°Р·Р°Рґ]</string>
+                  <string>[РќРµР№С‚СЂР°Р»СЊРЅС‹Р№]</string>
+                  <string>[Р’РїРµСЂС‘Рґ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.791</number>
@@ -2495,17 +2495,17 @@
                   <word>KONT</word>
                </Name>
                <Hint type="section">
-                  <string>Контроллер</string>
+                  <string>РљРѕРЅС‚СЂРѕР»Р»РµСЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">23</number>
-                  <word>[торм.6]</word>
-                  <word>[торм.5]</word>
-                  <word>[торм.4]</word>
-                  <word>[торм.3]</word>
-                  <word>[торм.2]</word>
-                  <word>[торм.1]</word>
-                  <word>[П]</word>
+                  <word>[С‚РѕСЂРј.6]</word>
+                  <word>[С‚РѕСЂРј.5]</word>
+                  <word>[С‚РѕСЂРј.4]</word>
+                  <word>[С‚РѕСЂРј.3]</word>
+                  <word>[С‚РѕСЂРј.2]</word>
+                  <word>[С‚РѕСЂРј.1]</word>
+                  <word>[Рџ]</word>
                   <word>[0]</word>
                   <word>[1]</word>
                   <word>[2]</word>
@@ -2555,7 +2555,7 @@
                   <word>ZAD</word>
                </Name>
                <Hint type="section">
-                  <string>Задатчик тормозного усилия ЭДТ</string>
+                  <string>Р—Р°РґР°С‚С‡РёРє С‚РѕСЂРјРѕР·РЅРѕРіРѕ СѓСЃРёР»РёСЏ Р­Р”Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.633</number>
@@ -2589,12 +2589,12 @@
                   <word>R367</word>
                </Name>
                <Hint type="section">
-                  <string>Блокировка тормозов усл. 367</string>
+                  <string>Р‘Р»РѕРєРёСЂРѕРІРєР° С‚РѕСЂРјРѕР·РѕРІ СѓСЃР». 367</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.288</number>
@@ -2627,7 +2627,7 @@
                   <word>RED</word>
                </Name>
                <Hint type="section">
-                  <string>Редуктор зарядного давления</string>
+                  <string>Р РµРґСѓРєС‚РѕСЂ Р·Р°СЂСЏРґРЅРѕРіРѕ РґР°РІР»РµРЅРёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">20</number>
@@ -2684,12 +2684,12 @@
                   <word>EPK</word>
                </Name>
                <Hint type="section">
-                  <string>Ключ ЭПК</string>
+                  <string>РљР»СЋС‡ Р­РџРљ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.66</number>
@@ -2721,12 +2721,12 @@
                   <word>AZV1</word>
                </Name>
                <Hint type="section">
-                  <string>Прожектор яркий</string>
+                  <string>РџСЂРѕР¶РµРєС‚РѕСЂ СЏСЂРєРёР№</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.11</number>
@@ -2758,12 +2758,12 @@
                   <word>AZV2</word>
                </Name>
                <Hint type="section">
-                  <string>Прожектор тускло</string>
+                  <string>РџСЂРѕР¶РµРєС‚РѕСЂ С‚СѓСЃРєР»Рѕ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.082</number>
@@ -2795,12 +2795,12 @@
                   <word>AZV3</word>
                </Name>
                <Hint type="section">
-                  <string>Питание ЭПТ</string>
+                  <string>РџРёС‚Р°РЅРёРµ Р­РџРў</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.04</number>
@@ -2832,12 +2832,12 @@
                   <word>AZV4</word>
                </Name>
                <Hint type="section">
-                  <string>ЭПТ</string>
+                  <string>Р­РџРў</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.012</number>
@@ -2869,12 +2869,12 @@
                   <word>AZV5</word>
                </Name>
                <Hint type="section">
-                  <string>Электрический тормоз</string>
+                  <string>Р­Р»РµРєС‚СЂРёС‡РµСЃРєРёР№ С‚РѕСЂРјРѕР·</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.983</number>
@@ -2906,12 +2906,12 @@
                   <word>AZV6</word>
                </Name>
                <Hint type="section">
-                  <string>Топливный насос ведомого тепловоза</string>
+                  <string>РўРѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ РІРµРґРѕРјРѕРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.526</number>
@@ -2943,12 +2943,12 @@
                   <word>AZV7</word>
                </Name>
                <Hint type="section">
-                  <string>Топливный насос ведущего тепловоза</string>
+                  <string>РўРѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ РІРµРґСѓС‰РµРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.497</number>
@@ -2980,12 +2980,12 @@
                   <word>AZV8</word>
                </Name>
                <Hint type="section">
-                  <string>Управление тепловозом</string>
+                  <string>РЈРїСЂР°РІР»РµРЅРёРµ С‚РµРїР»РѕРІРѕР·РѕРј</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.455</number>
@@ -3017,12 +3017,12 @@
                   <word>AZV9</word>
                </Name>
                <Hint type="section">
-                  <string>Управление общее</string>
+                  <string>РЈРїСЂР°РІР»РµРЅРёРµ РѕР±С‰РµРµ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.427</number>
@@ -3054,12 +3054,12 @@
                   <word>AZV10</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение пульта</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РїСѓР»СЊС‚Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.398</number>
@@ -3088,12 +3088,12 @@
                   <word>AZV011</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение кабины</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РєР°Р±РёРЅС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.37</number>
@@ -3122,12 +3122,12 @@
                   <word>AZV12</word>
                </Name>
                <Hint type="section">
-                  <string>Вентиляция</string>
+                  <string>Р’РµРЅС‚РёР»СЏС†РёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.341</number>
@@ -3159,12 +3159,12 @@
                   <word>TB1</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи масло</string>
+                  <string>Р–Р°Р»СЋР·Рё РјР°СЃР»Рѕ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.839</number>
@@ -3196,12 +3196,12 @@
                   <word>TB2</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи вода</string>
+                  <string>Р–Р°Р»СЋР·Рё РІРѕРґР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.804</number>
@@ -3233,12 +3233,12 @@
                   <word>TB3</word>
                </Name>
                <Hint type="section">
-                  <string>ОП II ступень</string>
+                  <string>РћРџ II СЃС‚СѓРїРµРЅСЊ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.768</number>
@@ -3270,12 +3270,12 @@
                   <word>TB4</word>
                </Name>
                <Hint type="section">
-                  <string>ОП I ступень</string>
+                  <string>РћРџ I СЃС‚СѓРїРµРЅСЊ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Автомат]</string>
-                  <string>[Ручное]</string>
+                  <string>[РђРІС‚РѕРјР°С‚]</string>
+                  <string>[Р СѓС‡РЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.733</number>
@@ -3307,12 +3307,12 @@
                   <word>TB5</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение приборов</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РїСЂРёР±РѕСЂРѕРІ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.423</number>
@@ -3344,12 +3344,12 @@
                   <word>TB6</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение кабины</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РєР°Р±РёРЅС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.388</number>
@@ -3381,12 +3381,12 @@
                   <word>TB7</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение расписания</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ СЂР°СЃРїРёСЃР°РЅРёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.347</number>
@@ -3418,12 +3418,12 @@
                   <word>TB8</word>
                </Name>
                <Hint type="section">
-                  <string>Электрикалорифер</string>
+                  <string>Р­Р»РµРєС‚СЂРёРєР°Р»РѕСЂРёС„РµСЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.296</number>
@@ -3455,12 +3455,12 @@
                   <word>TB10</word>
                </Name>
                <Hint type="section">
-                  <string>Радиостанция</string>
+                  <string>Р Р°РґРёРѕСЃС‚Р°РЅС†РёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.154</number>
@@ -3492,12 +3492,12 @@
                   <word>TB011</word>
                </Name>
                <Hint type="section">
-                  <string>Манометры и термометры</string>
+                  <string>РњР°РЅРѕРјРµС‚СЂС‹ Рё С‚РµСЂРјРѕРјРµС‚СЂС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.169</number>
@@ -3526,12 +3526,12 @@
                   <word>TB12</word>
                </Name>
                <Hint type="section">
-                  <string>АЛСН</string>
+                  <string>РђР›РЎРќ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Без АЛС]</string>
-                  <string>[АЛС]</string>
+                  <string>[Р‘РµР· РђР›РЎ]</string>
+                  <string>[РђР›РЎ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.247</number>
@@ -3560,12 +3560,12 @@
                   <word>TB13</word>
                </Name>
                <Hint type="section">
-                  <string>Частота АСЛН</string>
+                  <string>Р§Р°СЃС‚РѕС‚Р° РђРЎР›Рќ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[25 Гц]</string>
-                  <string>[50 Гц]</string>
+                  <string>[25 Р“С†]</string>
+                  <string>[50 Р“С†]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.261</number>
@@ -3594,12 +3594,12 @@
                   <word>TB14</word>
                </Name>
                <Hint type="section">
-                  <string>Омыв окон</string>
+                  <string>РћРјС‹РІ РѕРєРѕРЅ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.012</number>
@@ -3631,12 +3631,12 @@
                   <word>TB15</word>
                </Name>
                <Hint type="section">
-                  <string>Стеклоочиститель</string>
+                  <string>РЎС‚РµРєР»РѕРѕС‡РёСЃС‚РёС‚РµР»СЊ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.06</number>
@@ -3665,7 +3665,7 @@
                   <word>BTN4</word>
                </Name>
                <Hint type="section">
-                  <string>Вызов помощника</string>
+                  <string>Р’С‹Р·РѕРІ РїРѕРјРѕС‰РЅРёРєР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.884</number>
@@ -3695,7 +3695,7 @@
                   <word>BTN5</word>
                </Name>
                <Hint type="section">
-                  <string>Отпуск тормозов локомотива</string>
+                  <string>РћС‚РїСѓСЃРє С‚РѕСЂРјРѕР·РѕРІ Р»РѕРєРѕРјРѕС‚РёРІР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.694</number>
@@ -3728,7 +3728,7 @@
                   <word>BTN1</word>
                </Name>
                <Hint type="section">
-                  <string>Свисток</string>
+                  <string>РЎРІРёСЃС‚РѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.114</number>
@@ -3761,7 +3761,7 @@
                   <word>BTN2</word>
                </Name>
                <Hint type="section">
-                  <string>Тифон</string>
+                  <string>РўРёС„РѕРЅ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.056</number>
@@ -3794,7 +3794,7 @@
                   <word>BTN3</word>
                </Name>
                <Hint type="section">
-                  <string>Песок</string>
+                  <string>РџРµСЃРѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.995</number>
@@ -3827,7 +3827,7 @@
                   <word>RB</word>
                </Name>
                <Hint type="section">
-                  <string>Рукоятка бдительности</string>
+                  <string>Р СѓРєРѕСЏС‚РєР° Р±РґРёС‚РµР»СЊРЅРѕСЃС‚Рё</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.52</number>
@@ -3860,7 +3860,7 @@
                   <word>BTN8</word>
                </Name>
                <Hint type="section">
-                  <string>Пуск дизеля ведущего тепловоза</string>
+                  <string>РџСѓСЃРє РґРёР·РµР»СЏ РІРµРґСѓС‰РµРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.465</number>
@@ -3890,7 +3890,7 @@
                   <word>BTN7</word>
                </Name>
                <Hint type="section">
-                  <string>Пуск дизеля ведомого тепловоза</string>
+                  <string>РџСѓСЃРє РґРёР·РµР»СЏ РІРµРґРѕРјРѕРіРѕ С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.51</number>
@@ -3920,7 +3920,7 @@
                   <word>BTN9</word>
                </Name>
                <Hint type="section">
-                  <string>Проверка ЭТ</string>
+                  <string>РџСЂРѕРІРµСЂРєР° Р­Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.188</number>
@@ -3950,7 +3950,7 @@
                   <word>BTN10</word>
                </Name>
                <Hint type="section">
-                  <string>ВК</string>
+                  <string>Р’Рљ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.209</number>
@@ -3980,7 +3980,7 @@
                   <word>BTN011</word>
                </Name>
                <Hint type="section">
-                  <string>Проверка АЛСН</string>
+                  <string>РџСЂРѕРІРµСЂРєР° РђР›РЎРќ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.231</number>
@@ -4010,13 +4010,13 @@
                   <word>TBP7</word>
                </Name>
                <Hint type="section">
-                  <string>Левый БФ</string>
+                  <string>Р›РµРІС‹Р№ Р‘Р¤</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Красный]</string>
-                  <string>[Выкл.]</string>
-                  <string>[Белый]</string>
+                  <string>[РљСЂР°СЃРЅС‹Р№]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р‘РµР»С‹Р№]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.099</number>
@@ -4046,13 +4046,13 @@
                   <word>TBP6</word>
                </Name>
                <Hint type="section">
-                  <string>Правый БФ</string>
+                  <string>РџСЂР°РІС‹Р№ Р‘Р¤</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Красный]</string>
-                  <string>[Выкл.]</string>
-                  <string>[Белый]</string>
+                  <string>[РљСЂР°СЃРЅС‹Р№]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р‘РµР»С‹Р№]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.057</number>
@@ -4082,12 +4082,12 @@
                   <word>TBP5</word>
                </Name>
                <Hint type="section">
-                  <string>Номерные знаки</string>
+                  <string>РќРѕРјРµСЂРЅС‹Рµ Р·РЅР°РєРё</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.019</number>
@@ -4116,12 +4116,12 @@
                   <word>TBP4</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение пульта</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ РїСѓР»СЊС‚Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.977</number>
@@ -4150,12 +4150,12 @@
                   <word>TBP3</word>
                </Name>
                <Hint type="section">
-                  <string>Освещение резервное</string>
+                  <string>РћСЃРІРµС‰РµРЅРёРµ СЂРµР·РµСЂРІРЅРѕРµ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.943</number>
@@ -4184,12 +4184,12 @@
                   <word>TBP2</word>
                </Name>
                <Hint type="section">
-                  <string>Калориферы</string>
+                  <string>РљР°Р»РѕСЂРёС„РµСЂС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.9</number>
@@ -4218,12 +4218,12 @@
                   <word>TBP1</word>
                </Name>
                <Hint type="section">
-                  <string>Вентиляторы</string>
+                  <string>Р’РµРЅС‚РёР»СЏС‚РѕСЂС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.862</number>
@@ -4252,12 +4252,12 @@
                   <word>TBP8</word>
                </Name>
                <Hint type="section">
-                  <string>Вольтметр</string>
+                  <string>Р’РѕР»СЊС‚РјРµС‚СЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[ЭПТ]</string>
-                  <string>[Батарея]</string>
+                  <string>[Р­РџРў]</string>
+                  <string>[Р‘Р°С‚Р°СЂРµСЏ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-1.224</number>
@@ -4286,7 +4286,7 @@
                   <word>BTNP2</word>
                </Name>
                <Hint type="section">
-                  <string>Тифон</string>
+                  <string>РўРёС„РѕРЅ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.192</number>
@@ -4316,7 +4316,7 @@
                   <word>BTNP1</word>
                </Name>
                <Hint type="section">
-                  <string>Свисток</string>
+                  <string>РЎРІРёСЃС‚РѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.287</number>
@@ -4346,13 +4346,13 @@
                   <word>KK</word>
                </Name>
                <Hint type="section">
-                  <string>Комбинированный кран усл. 103</string>
+                  <string>РљРѕРјР±РёРЅРёСЂРѕРІР°РЅРЅС‹Р№ РєСЂР°РЅ СѓСЃР». 103</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">3</number>
-                  <string>[Двойная тяга]</string>
-                  <string>[Нормальное]</string>
-                  <string>[Экстренное]</string>
+                  <string>[Р”РІРѕР№РЅР°СЏ С‚СЏРіР°]</string>
+                  <string>[РќРѕСЂРјР°Р»СЊРЅРѕРµ]</string>
+                  <string>[Р­РєСЃС‚СЂРµРЅРЅРѕРµ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">1.312</number>
@@ -4381,7 +4381,7 @@
                   <word>BTN12</word>
                </Name>
                <Hint type="section">
-                  <string>Маневры</string>
+                  <string>РњР°РЅРµРІСЂС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.465</number>
@@ -4414,7 +4414,7 @@
                   <word>BTN13</word>
                </Name>
                <Hint type="section">
-                  <string>Свисток</string>
+                  <string>РЎРІРёСЃС‚РѕРє</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.466</number>
@@ -4444,7 +4444,7 @@
                   <word>RBS</word>
                </Name>
                <Hint type="section">
-                  <string>РБС</string>
+                  <string>Р Р‘РЎ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.474</number>
@@ -4477,7 +4477,7 @@
                   <word>RBP</word>
                </Name>
                <Hint type="section">
-                  <string>РБП</string>
+                  <string>Р Р‘Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.475</number>
@@ -4507,7 +4507,7 @@
                   <word>DSP</word>
                </Name>
                <Hint type="section">
-                  <string>Вызов ДСП</string>
+                  <string>Р’С‹Р·РѕРІ Р”РЎРџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.076</number>
@@ -4537,7 +4537,7 @@
                   <word>DNC</word>
                </Name>
                <Hint type="section">
-                  <string>Вызов ДНЦ</string>
+                  <string>Р’С‹Р·РѕРІ Р”РќР¦</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.076</number>
@@ -4567,7 +4567,7 @@
                   <word>PODSV</word>
                </Name>
                <Hint type="section">
-                  <string>Подсветка</string>
+                  <string>РџРѕРґСЃРІРµС‚РєР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.174</number>
@@ -4597,7 +4597,7 @@
                   <word>PIT</word>
                </Name>
                <Hint type="section">
-                  <string>Питание радиостанции</string>
+                  <string>РџРёС‚Р°РЅРёРµ СЂР°РґРёРѕСЃС‚Р°РЅС†РёРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.187</number>
@@ -4627,15 +4627,15 @@
                   <word>RT</word>
                </Name>
                <Hint type="section">
-                  <string>Ручной тормоз</string>
+                  <string>Р СѓС‡РЅРѕР№ С‚РѕСЂРјРѕР·</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">5</number>
-                  <string>[Закручен]</string>
+                  <string>[Р—Р°РєСЂСѓС‡РµРЅ]</string>
                   <string>[75%]</string>
                   <string>[50%]</string>
                   <string>[25%]</string>
-                  <string>[Откручен]</string>
+                  <string>[РћС‚РєСЂСѓС‡РµРЅ]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.714</number>
@@ -4674,7 +4674,7 @@
                   <word>SLZAVOD</word>
                </Name>
                <Hint type="section">
-                  <string>Завод часов</string>
+                  <string>Р—Р°РІРѕРґ С‡Р°СЃРѕРІ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.353</number>
@@ -4887,8 +4887,8 @@
                   <number type="float">-0.1</number>
                </SwitchPrecision>
             </Switch>
-            <!-- ~~~~~~~~~~~~~~~~~~~~- Машинное ~~~~~~~~~~~~~~~~~~~~~~~~ -->
-            <comment>--------------------- Машинное ------------------------</comment>
+            <!-- ~~~~~~~~~~~~~~~~~~~~- РњР°С€РёРЅРЅРѕРµ ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>--------------------- РњР°С€РёРЅРЅРѕРµ ------------------------</comment>
             <Switch type="section">
                <ID type="section">
                   <number type="int">200</number>
@@ -4897,7 +4897,7 @@
                   <word>DOOR_F</word>
                </Name>
                <Hint type="section">
-                  <string>Шкаф</string>
+                  <string>РЁРєР°С„</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.218</number>
@@ -4929,12 +4929,12 @@
                   <word>RC1</word>
                </Name>
                <Hint type="section">
-                  <string>Переключение кабины</string>
+                  <string>РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РєР°Р±РёРЅС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Кабина 1]</string>
-                  <string>[Кабина 2]</string>
+                  <string>[РљР°Р±РёРЅР° 1]</string>
+                  <string>[РљР°Р±РёРЅР° 2]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.135</number>
@@ -4966,12 +4966,12 @@
                   <word>RC2</word>
                </Name>
                <Hint type="section">
-                  <string>Переключение кабины</string>
+                  <string>РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РєР°Р±РёРЅС‹</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Кабина 1]</string>
-                  <string>[Кабина 2]</string>
+                  <string>[РљР°Р±РёРЅР° 1]</string>
+                  <string>[РљР°Р±РёРЅР° 2]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.008</number>
@@ -5003,12 +5003,12 @@
                   <word>TBM6</word>
                </Name>
                <Hint type="section">
-                  <string>Питание топливного насоса</string>
+                  <string>РџРёС‚Р°РЅРёРµ С‚РѕРїР»РёРІРЅРѕРіРѕ РЅР°СЃРѕСЃР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[2 Тепловоза]</string>
-                  <string>[2 Тепловоза]</string>
+                  <string>[2 РўРµРїР»РѕРІРѕР·Р°]</string>
+                  <string>[2 РўРµРїР»РѕРІРѕР·Р°]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.2</number>
@@ -5037,12 +5037,12 @@
                   <word>OM1</word>
                </Name>
                <Hint type="section">
-                  <string>Отключение 1 ТЭД</string>
+                  <string>РћС‚РєР»СЋС‡РµРЅРёРµ 1 РўР­Р”</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.14</number>
@@ -5071,12 +5071,12 @@
                   <word>OM2</word>
                </Name>
                <Hint type="section">
-                  <string>Отключение 2 ТЭД</string>
+                  <string>РћС‚РєР»СЋС‡РµРЅРёРµ 2 РўР­Р”</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.103</number>
@@ -5105,12 +5105,12 @@
                   <word>OM3</word>
                </Name>
                <Hint type="section">
-                  <string>Отключение 3 ТЭД</string>
+                  <string>РћС‚РєР»СЋС‡РµРЅРёРµ 3 РўР­Р”</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.066</number>
@@ -5139,12 +5139,12 @@
                   <word>OM4</word>
                </Name>
                <Hint type="section">
-                  <string>Отключение 4 ТЭД</string>
+                  <string>РћС‚РєР»СЋС‡РµРЅРёРµ 4 РўР­Р”</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.021</number>
@@ -5173,12 +5173,12 @@
                   <word>OM5</word>
                </Name>
                <Hint type="section">
-                  <string>Отключение 5 ТЭД</string>
+                  <string>РћС‚РєР»СЋС‡РµРЅРёРµ 5 РўР­Р”</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.016</number>
@@ -5207,12 +5207,12 @@
                   <word>OM6</word>
                </Name>
                <Hint type="section">
-                  <string>Отключение 6 ТЭД</string>
+                  <string>РћС‚РєР»СЋС‡РµРЅРёРµ 6 РўР­Р”</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">-0.053</number>
@@ -5241,12 +5241,12 @@
                   <word>AZVM1</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ освещение дизельного</string>
+                  <string>РђР—Р’ РѕСЃРІРµС‰РµРЅРёРµ РґРёР·РµР»СЊРЅРѕРіРѕ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.799</number>
@@ -5275,12 +5275,12 @@
                   <word>AZVM2</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ резервное освещение дизельного</string>
+                  <string>РђР—Р’ СЂРµР·РµСЂРІРЅРѕРµ РѕСЃРІРµС‰РµРЅРёРµ РґРёР·РµР»СЊРЅРѕРіРѕ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.77</number>
@@ -5309,12 +5309,12 @@
                   <word>AZVM3</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ освещение подкузовное</string>
+                  <string>РђР—Р’ РѕСЃРІРµС‰РµРЅРёРµ РїРѕРґРєСѓР·РѕРІРЅРѕРµ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.741</number>
@@ -5343,12 +5343,12 @@
                   <word>AZVM4</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ освещение ВВК</string>
+                  <string>РђР—Р’ РѕСЃРІРµС‰РµРЅРёРµ Р’Р’Рљ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.712</number>
@@ -5377,12 +5377,12 @@
                   <word>AZVM5</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ питание розеток</string>
+                  <string>РђР—Р’ РїРёС‚Р°РЅРёРµ СЂРѕР·РµС‚РѕРє</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.654</number>
@@ -5411,12 +5411,12 @@
                   <word>AZVM6</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ питание автостопа</string>
+                  <string>РђР—Р’ РїРёС‚Р°РЅРёРµ Р°РІС‚РѕСЃС‚РѕРїР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.625</number>
@@ -5445,12 +5445,12 @@
                   <word>AZVM7</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ питание автостопа</string>
+                  <string>РђР—Р’ РїРёС‚Р°РЅРёРµ Р°РІС‚РѕСЃС‚РѕРїР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.596</number>
@@ -5479,12 +5479,12 @@
                   <word>AZVM8</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ пожарная сигнализация</string>
+                  <string>РђР—Р’ РїРѕР¶Р°СЂРЅР°СЏ СЃРёРіРЅР°Р»РёР·Р°С†РёСЏ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.567</number>
@@ -5513,12 +5513,12 @@
                   <word>AZVM9</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ буферные фонари</string>
+                  <string>РђР—Р’ Р±СѓС„РµСЂРЅС‹Рµ С„РѕРЅР°СЂРё</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.538</number>
@@ -5547,12 +5547,12 @@
                   <word>AZVM10</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ питание розеток</string>
+                  <string>РђР—Р’ РїРёС‚Р°РЅРёРµ СЂРѕР·РµС‚РѕРє</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.509</number>
@@ -5581,12 +5581,12 @@
                   <word>AZVM11</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ вспомогательные цепи</string>
+                  <string>РђР—Р’ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ С†РµРїРё</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.48</number>
@@ -5615,12 +5615,12 @@
                   <word>AZVM12</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ компрессор</string>
+                  <string>РђР—Р’ РєРѕРјРїСЂРµСЃСЃРѕСЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.451</number>
@@ -5649,12 +5649,12 @@
                   <word>AZVM13</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ топливный насос</string>
+                  <string>РђР—Р’ С‚РѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.422</number>
@@ -5683,12 +5683,12 @@
                   <word>AZVM14</word>
                </Name>
                <Hint type="section">
-                  <string>АЗВ калорифер</string>
+                  <string>РђР—Р’ РєР°Р»РѕСЂРёС„РµСЂ</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.393</number>
@@ -5717,12 +5717,12 @@
                   <word>TBM1</word>
                </Name>
                <Hint type="section">
-                  <string>Резервное питание насоса</string>
+                  <string>Р РµР·РµСЂРІРЅРѕРµ РїРёС‚Р°РЅРёРµ РЅР°СЃРѕСЃР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.626</number>
@@ -5751,12 +5751,12 @@
                   <word>TBM2</word>
                </Name>
                <Hint type="section">
-                  <string>Автостоп</string>
+                  <string>РђРІС‚РѕСЃС‚РѕРї</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.575</number>
@@ -5785,12 +5785,12 @@
                   <word>TBM3</word>
                </Name>
                <Hint type="section">
-                  <string>Шунтировка</string>
+                  <string>РЁСѓРЅС‚РёСЂРѕРІРєР°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.523</number>
@@ -5819,12 +5819,12 @@
                   <word>TBM4</word>
                </Name>
                <Hint type="section">
-                  <string>Электродинамический тормоз</string>
+                  <string>Р­Р»РµРєС‚СЂРѕРґРёРЅР°РјРёС‡РµСЃРєРёР№ С‚РѕСЂРјРѕР·</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.472</number>
@@ -5853,12 +5853,12 @@
                   <word>TBM5</word>
                </Name>
                <Hint type="section">
-                  <string>Ручная прокачка масла</string>
+                  <string>Р СѓС‡РЅР°СЏ РїСЂРѕРєР°С‡РєР° РјР°СЃР»Р°</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.421</number>
@@ -5887,12 +5887,12 @@
                   <word>RUB_AB1</word>
                </Name>
                <Hint type="section">
-                  <string>Батарея 1</string>
+                  <string>Р‘Р°С‚Р°СЂРµСЏ 1</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.06</number>
@@ -5921,12 +5921,12 @@
                   <word>RUB_AB2</word>
                </Name>
                <Hint type="section">
-                  <string>Батарея 2</string>
+                  <string>Р‘Р°С‚Р°СЂРµСЏ 2</string>
                </Hint>
                <StateHints type="section">
                   <number type="int">2</number>
-                  <string>[Выкл.]</string>
-                  <string>[Вкл.]</string>
+                  <string>[Р’С‹РєР».]</string>
+                  <string>[Р’РєР».]</string>
                </StateHints>
                <Position type="section">
                   <number type="float">0.06</number>
@@ -6062,7 +6062,7 @@
                   <word>ARR141</word>
                </Name>
                <Hint type="section">
-                  <string>Вольтметр</string>
+                  <string>Р’РѕР»СЊС‚РјРµС‚СЂ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.226</number>
@@ -6097,7 +6097,7 @@
                   <word>ARR151</word>
                </Name>
                <Hint type="section">
-                  <string>Амперметр АКБ</string>
+                  <string>РђРјРїРµСЂРјРµС‚СЂ РђРљР‘</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.128</number>
@@ -6132,7 +6132,7 @@
                   <word>ARR161</word>
                </Name>
                <Hint type="section">
-                  <string>Напряжение генератора</string>
+                  <string>РќР°РїСЂСЏР¶РµРЅРёРµ РіРµРЅРµСЂР°С‚РѕСЂР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.027</number>
@@ -6169,7 +6169,7 @@
                   <word>ARR171</word>
                </Name>
                <Hint type="section">
-                  <string>Индикатор</string>
+                  <string>РРЅРґРёРєР°С‚РѕСЂ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.506</number>
@@ -6204,7 +6204,7 @@
                   <word>ARR51</word>
                </Name>
                <Hint type="section">
-                  <string>Ток якоря Тяга</string>
+                  <string>РўРѕРє СЏРєРѕСЂСЏ РўСЏРіР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.491</number>
@@ -6239,7 +6239,7 @@
                   <word>ARR61</word>
                </Name>
                <Hint type="section">
-                  <string>Ток якоря ЭДТ</string>
+                  <string>РўРѕРє СЏРєРѕСЂСЏ Р­Р”Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.615</number>
@@ -6274,7 +6274,7 @@
                   <word>ARR71</word>
                </Name>
                <Hint type="section">
-                  <string>Заданная скорость</string>
+                  <string>Р—Р°РґР°РЅРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.743</number>
@@ -6309,7 +6309,7 @@
                   <word>ARR81</word>
                </Name>
                <Hint type="section">
-                  <string>Давление ТЦ</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РўР¦</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.853</number>
@@ -6344,7 +6344,7 @@
                   <word>ARR101</word>
                </Name>
                <Hint type="section">
-                  <string>Давление ТМ</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РўРњ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.978</number>
@@ -6379,7 +6379,7 @@
                   <word>ARR91</word>
                </Name>
                <Hint type="section">
-                  <string>Давление ГР</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ Р“Р </string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.978</number>
@@ -6414,7 +6414,7 @@
                   <word>ARR111</word>
                </Name>
                <Hint type="section">
-                  <string>Давление УР</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РЈР </string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.101</number>
@@ -6449,7 +6449,7 @@
                   <word>ARR01</word>
                </Name>
                <Hint type="section">
-                  <string>Скорость</string>
+                  <string>РЎРєРѕСЂРѕСЃС‚СЊ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.322</number>
@@ -6484,7 +6484,7 @@
                   <word>ARR121</word>
                </Name>
                <Hint type="section">
-                  <string>Часы</string>
+                  <string>Р§Р°СЃС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.322</number>
@@ -6518,7 +6518,7 @@
                   <word>ARR131</word>
                </Name>
                <Hint type="section">
-                  <string>Минуты</string>
+                  <string>РњРёРЅСѓС‚С‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.322</number>
@@ -6552,7 +6552,7 @@
                   <word>ARR011</word>
                </Name>
                <Hint type="section">
-                  <string>Температура воды</string>
+                  <string>РўРµРјРїРµСЂР°С‚СѓСЂР° РІРѕРґС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.476</number>
@@ -6587,7 +6587,7 @@
                   <word>ARR21</word>
                </Name>
                <Hint type="section">
-                  <string>Температура масла</string>
+                  <string>РўРµРјРїРµСЂР°С‚СѓСЂР° РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.549</number>
@@ -6622,7 +6622,7 @@
                   <word>ARR31</word>
                </Name>
                <Hint type="section">
-                  <string>Давление топлива</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ С‚РѕРїР»РёРІР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.631</number>
@@ -6657,7 +6657,7 @@
                   <word>ARR41</word>
                </Name>
                <Hint type="section">
-                  <string>Давление масла</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.699</number>
@@ -6692,7 +6692,7 @@
                   <word>LAMP011</word>
                </Name>
                <Hint type="section">
-                  <string>Сброс нагрузки</string>
+                  <string>РЎР±СЂРѕСЃ РЅР°РіСЂСѓР·РєРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.307</number>
@@ -6719,7 +6719,7 @@
                   <word>LAMP21</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи ЭТ открыты</string>
+                  <string>Р–Р°Р»СЋР·Рё Р­Рў РѕС‚РєСЂС‹С‚С‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.37</number>
@@ -6746,7 +6746,7 @@
                   <word>LAMP31</word>
                </Name>
                <Hint type="section">
-                  <string>Температура воды и масла</string>
+                  <string>РўРµРјРїРµСЂР°С‚СѓСЂР° РІРѕРґС‹ Рё РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.307</number>
@@ -6773,7 +6773,7 @@
                   <word>LAMP41</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи ЭТ открыты</string>
+                  <string>Р–Р°Р»СЋР·Рё Р­Рў РѕС‚РєСЂС‹С‚С‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.37</number>
@@ -6800,7 +6800,7 @@
                   <word>LAMP51</word>
                </Name>
                <Hint type="section">
-                  <string>Давление масла</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.307</number>
@@ -6827,7 +6827,7 @@
                   <word>LAMP61</word>
                </Name>
                <Hint type="section">
-                  <string>Нет зарядки батареи</string>
+                  <string>РќРµС‚ Р·Р°СЂСЏРґРєРё Р±Р°С‚Р°СЂРµРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.37</number>
@@ -6854,7 +6854,7 @@
                   <word>LAMP71</word>
                </Name>
                <Hint type="section">
-                  <string>ЭДТ I тепловоза</string>
+                  <string>Р­Р”Рў I С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.875</number>
@@ -6881,7 +6881,7 @@
                   <word>LAMP81</word>
                </Name>
                <Hint type="section">
-                  <string>ЭДТ II тепловоза</string>
+                  <string>Р­Р”Рў II С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.922</number>
@@ -6908,7 +6908,7 @@
                   <word>LAMP111</word>
                </Name>
                <Hint type="section">
-                  <string>О</string>
+                  <string>Рћ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.022</number>
@@ -6935,7 +6935,7 @@
                   <word>LAMP101</word>
                </Name>
                <Hint type="section">
-                  <string>П</string>
+                  <string>Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.07</number>
@@ -6962,7 +6962,7 @@
                   <word>LAMP91</word>
                </Name>
                <Hint type="section">
-                  <string>Т</string>
+                  <string>Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.116</number>
@@ -6989,7 +6989,7 @@
                   <word>LAMPP11</word>
                </Name>
                <Hint type="section">
-                  <string>Резервный топливный насос</string>
+                  <string>Р РµР·РµСЂРІРЅС‹Р№ С‚РѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.921</number>
@@ -7016,7 +7016,7 @@
                   <word>LAMPP21</word>
                </Name>
                <Hint type="section">
-                  <string>Нагружение на тормозные резисторы</string>
+                  <string>РќР°РіСЂСѓР¶РµРЅРёРµ РЅР° С‚РѕСЂРјРѕР·РЅС‹Рµ СЂРµР·РёСЃС‚РѕСЂС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.859</number>
@@ -7043,7 +7043,7 @@
                   <word>LAMPP31</word>
                </Name>
                <Hint type="section">
-                  <string>Пожар левой стороны ДП</string>
+                  <string>РџРѕР¶Р°СЂ Р»РµРІРѕР№ СЃС‚РѕСЂРѕРЅС‹ Р”Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.921</number>
@@ -7070,7 +7070,7 @@
                   <word>LAMPP41</word>
                </Name>
                <Hint type="section">
-                  <string>Пожар правой стороны ДП</string>
+                  <string>РџРѕР¶Р°СЂ РїСЂР°РІРѕР№ СЃС‚РѕСЂРѕРЅС‹ Р”Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.859</number>
@@ -7097,7 +7097,7 @@
                   <word>LAMPP51</word>
                </Name>
                <Hint type="section">
-                  <string>Перегрев электрического калорифера</string>
+                  <string>РџРµСЂРµРіСЂРµРІ СЌР»РµРєС‚СЂРёС‡РµСЃРєРѕРіРѕ РєР°Р»РѕСЂРёС„РµСЂР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.859</number>
@@ -7124,7 +7124,7 @@
                   <word>PSS11</word>
                </Name>
                <Hint type="section">
-                  <string>ПСС</string>
+                  <string>РџРЎРЎ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.399</number>
@@ -7151,7 +7151,7 @@
                   <word>PSS21</word>
                </Name>
                <Hint type="section">
-                  <string>Скатывание (H)</string>
+                  <string>РЎРєР°С‚С‹РІР°РЅРёРµ (H)</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.003</number>
@@ -7178,7 +7178,7 @@
                   <word>PSS31</word>
                </Name>
                <Hint type="section">
-                  <string>ПСС</string>
+                  <string>РџРЎРЎ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.042</number>
@@ -7224,8 +7224,8 @@
                </DisplayFade>
                <Flags type="section"/>
             </Display>
-            <!-- ~~~~~~~~~~~~~~~~~~- Кабина 2 ~~~~~~~~~~~~~~~~~~~~~~- -->
-            <comment>------------------- Кабина 2 -----------------------</comment>
+            <!-- ~~~~~~~~~~~~~~~~~~- РљР°Р±РёРЅР° 2 ~~~~~~~~~~~~~~~~~~~~~~- -->
+            <comment>------------------- РљР°Р±РёРЅР° 2 -----------------------</comment>
             <Display type="section">
                <ID type="section">
                   <number type="int">100</number>
@@ -7234,7 +7234,7 @@
                   <word>ARR14</word>
                </Name>
                <Hint type="section">
-                  <string>Вольтметр</string>
+                  <string>Р’РѕР»СЊС‚РјРµС‚СЂ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.226</number>
@@ -7269,7 +7269,7 @@
                   <word>ARR15</word>
                </Name>
                <Hint type="section">
-                  <string>Амперметр АКБ</string>
+                  <string>РђРјРїРµСЂРјРµС‚СЂ РђРљР‘</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.128</number>
@@ -7304,7 +7304,7 @@
                   <word>ARR16</word>
                </Name>
                <Hint type="section">
-                  <string>Напряжение генератора</string>
+                  <string>РќР°РїСЂСЏР¶РµРЅРёРµ РіРµРЅРµСЂР°С‚РѕСЂР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.027</number>
@@ -7341,7 +7341,7 @@
                   <word>ARR17</word>
                </Name>
                <Hint type="section">
-                  <string>Индикатор</string>
+                  <string>РРЅРґРёРєР°С‚РѕСЂ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.506</number>
@@ -7376,7 +7376,7 @@
                   <word>ARR5</word>
                </Name>
                <Hint type="section">
-                  <string>Ток якоря Тяга</string>
+                  <string>РўРѕРє СЏРєРѕСЂСЏ РўСЏРіР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.491</number>
@@ -7411,7 +7411,7 @@
                   <word>ARR6</word>
                </Name>
                <Hint type="section">
-                  <string>Ток якоря ЭДТ</string>
+                  <string>РўРѕРє СЏРєРѕСЂСЏ Р­Р”Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.615</number>
@@ -7446,7 +7446,7 @@
                   <word>ARR7</word>
                </Name>
                <Hint type="section">
-                  <string>Заданная скорость</string>
+                  <string>Р—Р°РґР°РЅРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.743</number>
@@ -7481,7 +7481,7 @@
                   <word>ARR8</word>
                </Name>
                <Hint type="section">
-                  <string>Давление ТЦ</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РўР¦</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.853</number>
@@ -7516,7 +7516,7 @@
                   <word>ARR9</word>
                </Name>
                <Hint type="section">
-                  <string>Давление ТМ</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РўРњ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.978</number>
@@ -7551,7 +7551,7 @@
                   <word>ARR10</word>
                </Name>
                <Hint type="section">
-                  <string>Давление ГР</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ Р“Р </string>
                </Hint>
                <Position type="section">
                   <number type="float">0.978</number>
@@ -7586,7 +7586,7 @@
                   <word>ARR11</word>
                </Name>
                <Hint type="section">
-                  <string>Давление УР</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РЈР </string>
                </Hint>
                <Position type="section">
                   <number type="float">1.101</number>
@@ -7621,7 +7621,7 @@
                   <word>ARR0</word>
                </Name>
                <Hint type="section">
-                  <string>Скорость</string>
+                  <string>РЎРєРѕСЂРѕСЃС‚СЊ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.322</number>
@@ -7656,7 +7656,7 @@
                   <word>ARR12</word>
                </Name>
                <Hint type="section">
-                  <string>Часы</string>
+                  <string>Р§Р°СЃС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.322</number>
@@ -7690,7 +7690,7 @@
                   <word>ARR13</word>
                </Name>
                <Hint type="section">
-                  <string>Минуты</string>
+                  <string>РњРёРЅСѓС‚С‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.322</number>
@@ -7724,7 +7724,7 @@
                   <word>ARR1</word>
                </Name>
                <Hint type="section">
-                  <string>Температура воды</string>
+                  <string>РўРµРјРїРµСЂР°С‚СѓСЂР° РІРѕРґС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.476</number>
@@ -7759,7 +7759,7 @@
                   <word>ARR2</word>
                </Name>
                <Hint type="section">
-                  <string>Температура масла</string>
+                  <string>РўРµРјРїРµСЂР°С‚СѓСЂР° РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.549</number>
@@ -7794,7 +7794,7 @@
                   <word>ARR3</word>
                </Name>
                <Hint type="section">
-                  <string>Давление топлива</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ С‚РѕРїР»РёРІР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.631</number>
@@ -7829,7 +7829,7 @@
                   <word>ARR4</word>
                </Name>
                <Hint type="section">
-                  <string>Давление масла</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.699</number>
@@ -7864,7 +7864,7 @@
                   <word>LAMP1</word>
                </Name>
                <Hint type="section">
-                  <string>Сброс нагрузки</string>
+                  <string>РЎР±СЂРѕСЃ РЅР°РіСЂСѓР·РєРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.307</number>
@@ -7891,7 +7891,7 @@
                   <word>LAMP2</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи ЭТ открыты</string>
+                  <string>Р–Р°Р»СЋР·Рё Р­Рў РѕС‚РєСЂС‹С‚С‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.37</number>
@@ -7918,7 +7918,7 @@
                   <word>LAMP3</word>
                </Name>
                <Hint type="section">
-                  <string>Температура воды и масла</string>
+                  <string>РўРµРјРїРµСЂР°С‚СѓСЂР° РІРѕРґС‹ Рё РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.307</number>
@@ -7945,7 +7945,7 @@
                   <word>LAMP4</word>
                </Name>
                <Hint type="section">
-                  <string>Жалюзи ЭТ открыты</string>
+                  <string>Р–Р°Р»СЋР·Рё Р­Рў РѕС‚РєСЂС‹С‚С‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.37</number>
@@ -7972,7 +7972,7 @@
                   <word>LAMP5</word>
                </Name>
                <Hint type="section">
-                  <string>Давление масла</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РјР°СЃР»Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.307</number>
@@ -7999,7 +7999,7 @@
                   <word>LAMP6</word>
                </Name>
                <Hint type="section">
-                  <string>Нет зарядки батареи</string>
+                  <string>РќРµС‚ Р·Р°СЂСЏРґРєРё Р±Р°С‚Р°СЂРµРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.37</number>
@@ -8026,7 +8026,7 @@
                   <word>LAMP7</word>
                </Name>
                <Hint type="section">
-                  <string>ЭДТ I тепловоза</string>
+                  <string>Р­Р”Рў I С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.875</number>
@@ -8053,7 +8053,7 @@
                   <word>LAMP8</word>
                </Name>
                <Hint type="section">
-                  <string>ЭДТ II тепловоза</string>
+                  <string>Р­Р”Рў II С‚РµРїР»РѕРІРѕР·Р°</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.922</number>
@@ -8080,7 +8080,7 @@
                   <word>LAMP11</word>
                </Name>
                <Hint type="section">
-                  <string>О</string>
+                  <string>Рћ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.022</number>
@@ -8107,7 +8107,7 @@
                   <word>LAMP10</word>
                </Name>
                <Hint type="section">
-                  <string>П</string>
+                  <string>Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.07</number>
@@ -8134,7 +8134,7 @@
                   <word>LAMP9</word>
                </Name>
                <Hint type="section">
-                  <string>Т</string>
+                  <string>Рў</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.116</number>
@@ -8161,7 +8161,7 @@
                   <word>LAMPP1</word>
                </Name>
                <Hint type="section">
-                  <string>Резервный топливный насос</string>
+                  <string>Р РµР·РµСЂРІРЅС‹Р№ С‚РѕРїР»РёРІРЅС‹Р№ РЅР°СЃРѕСЃ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.921</number>
@@ -8188,7 +8188,7 @@
                   <word>LAMPP2</word>
                </Name>
                <Hint type="section">
-                  <string>Нагружение на тормозные резисторы</string>
+                  <string>РќР°РіСЂСѓР¶РµРЅРёРµ РЅР° С‚РѕСЂРјРѕР·РЅС‹Рµ СЂРµР·РёСЃС‚РѕСЂС‹</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.859</number>
@@ -8215,7 +8215,7 @@
                   <word>LAMPP3</word>
                </Name>
                <Hint type="section">
-                  <string>Пожар левой стороны ДП</string>
+                  <string>РџРѕР¶Р°СЂ Р»РµРІРѕР№ СЃС‚РѕСЂРѕРЅС‹ Р”Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.921</number>
@@ -8242,7 +8242,7 @@
                   <word>LAMPP4</word>
                </Name>
                <Hint type="section">
-                  <string>Пожар правой стороны ДП</string>
+                  <string>РџРѕР¶Р°СЂ РїСЂР°РІРѕР№ СЃС‚РѕСЂРѕРЅС‹ Р”Рџ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.859</number>
@@ -8269,7 +8269,7 @@
                   <word>LAMPP5</word>
                </Name>
                <Hint type="section">
-                  <string>Перегрев электрического калорифера</string>
+                  <string>РџРµСЂРµРіСЂРµРІ СЌР»РµРєС‚СЂРёС‡РµСЃРєРѕРіРѕ РєР°Р»РѕСЂРёС„РµСЂР°</string>
                </Hint>
                <Position type="section">
                   <number type="float">-0.859</number>
@@ -8296,7 +8296,7 @@
                   <word>PSS1</word>
                </Name>
                <Hint type="section">
-                  <string>ПСС</string>
+                  <string>РџРЎРЎ</string>
                </Hint>
                <Position type="section">
                   <number type="float">0.399</number>
@@ -8323,7 +8323,7 @@
                   <word>PSS2</word>
                </Name>
                <Hint type="section">
-                  <string>Скатывание (H)</string>
+                  <string>РЎРєР°С‚С‹РІР°РЅРёРµ (H)</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.003</number>
@@ -8350,7 +8350,7 @@
                   <word>PSS3</word>
                </Name>
                <Hint type="section">
-                  <string>ПСС</string>
+                  <string>РџРЎРЎ</string>
                </Hint>
                <Position type="section">
                   <number type="float">1.042</number>
@@ -8483,7 +8483,7 @@
                            <word>BOTTOM</word>
                         </Alignment>
                         <Alphabet type="section">
-                           <word>ТЭП-1234567890</word>
+                           <word>РўР­Рџ-1234567890</word>
                         </Alphabet>
                         <MaxStringLength type="section">
                            <number type="int">10</number>
@@ -8579,7 +8579,7 @@
                            <word>BOTTOM</word>
                         </Alignment>
                         <Alphabet type="section">
-                           <word>ТЭП-1234567890</word>
+                           <word>РўР­Рџ-1234567890</word>
                         </Alphabet>
                         <MaxStringLength type="section">
                            <number type="int">10</number>
@@ -8596,7 +8596,7 @@
                   <word>ARRM1</word>
                </Name>
                <Hint type="section">
-                  <string>Давление масла до фильтра тонкой очистки</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РјР°СЃР»Р° РґРѕ С„РёР»СЊС‚СЂР° С‚РѕРЅРєРѕР№ РѕС‡РёСЃС‚РєРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.455</number>
@@ -8631,7 +8631,7 @@
                   <word>ARRM2</word>
                </Name>
                <Hint type="section">
-                  <string>Давление масла после фильтра тонкой очистки</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РјР°СЃР»Р° РїРѕСЃР»Рµ С„РёР»СЊС‚СЂР° С‚РѕРЅРєРѕР№ РѕС‡РёСЃС‚РєРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.455</number>
@@ -8666,7 +8666,7 @@
                   <word>ARRM3</word>
                </Name>
                <Hint type="section">
-                  <string>Давление топлива до фильтра тонкой очистки</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ С‚РѕРїР»РёРІР° РґРѕ С„РёР»СЊС‚СЂР° С‚РѕРЅРєРѕР№ РѕС‡РёСЃС‚РєРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.455</number>
@@ -8701,7 +8701,7 @@
                   <word>ARRM4</word>
                </Name>
                <Hint type="section">
-                  <string>Давление топлива после фильтра тонкой очистки</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ С‚РѕРїР»РёРІР° РїРѕСЃР»Рµ С„РёР»СЊС‚СЂР° С‚РѕРЅРєРѕР№ РѕС‡РёСЃС‚РєРё</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.455</number>
@@ -8736,7 +8736,7 @@
                   <word>ARRM5</word>
                </Name>
                <Hint type="section">
-                  <string>Наддув</string>
+                  <string>РќР°РґРґСѓРІ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.455</number>
@@ -8771,7 +8771,7 @@
                   <word>ARRM6</word>
                </Name>
                <Hint type="section">
-                  <string>Давление в гидростатической системе</string>
+                  <string>Р”Р°РІР»РµРЅРёРµ РІ РіРёРґСЂРѕСЃС‚Р°С‚РёС‡РµСЃРєРѕР№ СЃРёСЃС‚РµРјРµ</string>
                </Hint>
                <Position type="section">
                   <number type="float">-1.455</number>
@@ -9665,8 +9665,8 @@
                   <number type="float">1.7</number>
                   <number type="float">7.691</number>
                </InteriorPlane>
-               <!-- левая -->
-               <comment>левая</comment>
+               <!-- Р»РµРІР°СЏ -->
+               <comment>Р»РµРІР°СЏ</comment>
                <InteriorPlane type="section">
                   <word>DIESEL</word>
                   <number type="float">-1.319</number>
@@ -9721,8 +9721,8 @@
                   <number type="float">1.7</number>
                   <number type="float">-3.729</number>
                </InteriorPlane>
-               <!-- правая -->
-               <comment>правая</comment>
+               <!-- РїСЂР°РІР°СЏ -->
+               <comment>РїСЂР°РІР°СЏ</comment>
                <InteriorPlane type="section">
                   <word>DIESEL</word>
                   <number type="float">1.072</number>
@@ -9777,8 +9777,8 @@
                   <number type="float">1.7</number>
                   <number type="float">-3.739</number>
                </InteriorPlane>
-               <!-- центр -->
-               <comment>центр</comment>
+               <!-- С†РµРЅС‚СЂ -->
+               <comment>С†РµРЅС‚СЂ</comment>
                <InteriorPlane type="section">
                   <word>DIESEL</word>
                   <number type="float">-0.936</number>

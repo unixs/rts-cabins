@@ -1,4 +1,4 @@
-include_directories(include loco/include loco/tep70/include loco/tep70/model)
+include_directories(include)
 
 link_libraries(Mruby::Mruby)
 
