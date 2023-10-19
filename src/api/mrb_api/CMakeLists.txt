@@ -29,3 +29,5 @@ target_link_libraries(mrb_api
 	INTERFACE Mruby::Mruby)
 target_include_directories(mrb_api
 	INTERFACE include)
+target_compile_definitions(mrb_api
+	INTERFACE MRB_USE_FLOAT32)

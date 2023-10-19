@@ -18,3 +18,22 @@ public:
   Tep70State *
   state();
 };
+
+class VarState {
+  float *_var = nullptr;
+
+public:
+  VarState(float[]);
+
+  /**
+   * #### Главный таймер
+   */
+  float
+  mainTimer();
+
+  VarState
+  setMainTimer(float);
+
+  float
+  oilTemp();
+};

@@ -6,7 +6,10 @@ link_libraries(cabin_api)
 
 add_library(${MOD_NAME}_common OBJECT tep70.cc)
 
+stf_parser_command(model/Cab.sd)
+
 add_library(${MOD_NAME} MODULE dll.cc)
+target_sources(${MOD_NAME} PRIVATE model/Cab.hpp)
 target_link_options(${MOD_NAME} PRIVATE "-static")
 target_link_libraries(${MOD_NAME}
 	PRIVATE

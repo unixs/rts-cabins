@@ -1,0 +1,2142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <header>SIMISA@@@@@@@@@@JINX0x1t______</header>
+   <Tr_SMS type="section">
+      <ScalabiltyGroup type="section">
+         <number type="int">7</number>
+         <Activation type="section">
+            <CabCam type="section"/>
+            <Distance type="section">
+               <number type="int">100</number>
+            </Distance>
+         </Activation>
+         <Deactivation type="section">
+            <ExternalCam type="section"/>
+            <PassengerCam type="section"/>
+            <Distance type="section">
+               <number type="int">100</number>
+            </Distance>
+         </Deactivation>
+         <Stereo type="section"/>
+         <Volume type="section">
+            <number type="float">1.0</number>
+         </Volume>
+         <DiscreteTriggerPairs type="section">
+            <Pair type="section">
+               <On type="section">
+                  <number type="int">1</number>
+                  <number type="int">14</number>
+               </On>
+               <Off type="section">
+                  <number type="int">1</number>
+                  <number type="int">54</number>
+               </Off>
+            </Pair>
+            <Pair type="section">
+               <On type="section">
+                  <number type="int">1</number>
+                  <number type="int">12</number>
+               </On>
+               <Off type="section">
+                  <number type="int">1</number>
+                  <number type="int">13</number>
+               </Off>
+            </Pair>
+         </DiscreteTriggerPairs>
+         <SoundSources type="section">
+            <number type="int">26</number>
+            <number type="float">0.0</number>
+            <number type="float">3.5</number>
+            <number type="float">0.0</number>
+            <number type="float">1.0</number>
+            <!-- дизель -->
+            <comment>дизель</comment>
+            <number type="float">0.49</number>
+            <number type="float">2.7</number>
+            <number type="float">-6.6</number>
+            <number type="float">1.0</number>
+            <!-- компрессор -->
+            <comment>компрессор</comment>
+            <number type="float">0.51</number>
+            <number type="float">1.4</number>
+            <number type="float">10.38</number>
+            <number type="float">1.0</number>
+            <!-- тифон -->
+            <comment>тифон</comment>
+            <number type="float">-0.51</number>
+            <number type="float">1.4</number>
+            <number type="float">-10.38</number>
+            <number type="float">1.0</number>
+            <number type="float">0.76</number>
+            <number type="float">0.0</number>
+            <number type="float">8.45</number>
+            <number type="float">1.0</number>
+            <!-- стук колес, песок -->
+            <comment>стук колес, песок</comment>
+            <number type="float">-0.76</number>
+            <number type="float">0.0</number>
+            <number type="float">8.45</number>
+            <number type="float">1.0</number>
+            <number type="float">0.76</number>
+            <number type="float">0.0</number>
+            <number type="float">-8.45</number>
+            <number type="float">1.0</number>
+            <!-- стук колес, песок -->
+            <comment>стук колес, песок</comment>
+            <number type="float">-0.76</number>
+            <number type="float">0.0</number>
+            <number type="float">-8.45</number>
+            <number type="float">1.0</number>
+            <number type="float">0.0</number>
+            <number type="float">1.13</number>
+            <number type="float">10.85</number>
+            <number type="float">1.0</number>
+            <!-- сцепка -->
+            <comment>сцепка</comment>
+            <number type="float">0.0</number>
+            <number type="float">1.13</number>
+            <number type="float">-10.85</number>
+            <number type="float">1.0</number>
+            <number type="float">0.96</number>
+            <number type="float">3.9</number>
+            <number type="float">8.67</number>
+            <number type="float">1.0</number>
+            <!-- САУТ, радио -->
+            <comment>САУТ, радио</comment>
+            <number type="float">-0.96</number>
+            <number type="float">3.9</number>
+            <number type="float">-8.67</number>
+            <number type="float">1.0</number>
+            <number type="float">1.3</number>
+            <number type="float">2.4</number>
+            <number type="float">9.6</number>
+            <number type="float">1.0</number>
+            <!-- краны торм., разобщительный -->
+            <comment>краны торм., разобщительный</comment>
+            <number type="float">-1.3</number>
+            <number type="float">2.4</number>
+            <number type="float">-9.6</number>
+            <number type="float">1.0</number>
+            <number type="float">0.8</number>
+            <number type="float">3.95</number>
+            <number type="float">10.3</number>
+            <number type="float">1.0</number>
+            <!-- шторы -->
+            <comment>шторы</comment>
+            <number type="float">-0.8</number>
+            <number type="float">3.95</number>
+            <number type="float">10.3</number>
+            <number type="float">1.0</number>
+            <number type="float">0.8</number>
+            <number type="float">3.95</number>
+            <number type="float">-10.3</number>
+            <number type="float">1.0</number>
+            <!-- шторы -->
+            <comment>шторы</comment>
+            <number type="float">-0.8</number>
+            <number type="float">3.95</number>
+            <number type="float">-10.3</number>
+            <number type="float">1.0</number>
+            <number type="float">0.76</number>
+            <number type="float">3.05</number>
+            <number type="float">10.62</number>
+            <number type="float">1.0</number>
+            <!-- дворники -->
+            <comment>дворники</comment>
+            <number type="float">-0.76</number>
+            <number type="float">3.05</number>
+            <number type="float">10.62</number>
+            <number type="float">1.0</number>
+            <number type="float">0.76</number>
+            <number type="float">3.05</number>
+            <number type="float">-10.62</number>
+            <number type="float">1.0</number>
+            <!-- дворники -->
+            <comment>дворники</comment>
+            <number type="float">-0.76</number>
+            <number type="float">3.05</number>
+            <number type="float">-10.62</number>
+            <number type="float">1.0</number>
+            <number type="float">1.5</number>
+            <number type="float">3.15</number>
+            <number type="float">9.58</number>
+            <number type="float">1.0</number>
+            <!-- окна -->
+            <comment>окна</comment>
+            <number type="float">-1.5</number>
+            <number type="float">3.15</number>
+            <number type="float">9.58</number>
+            <number type="float">1.0</number>
+            <number type="float">1.5</number>
+            <number type="float">3.15</number>
+            <number type="float">-9.58</number>
+            <number type="float">1.0</number>
+            <!-- окна -->
+            <comment>окна</comment>
+            <number type="float">-1.5</number>
+            <number type="float">3.15</number>
+            <number type="float">-9.58</number>
+            <number type="float">1.0</number>
+         </SoundSources>
+         <Streams type="section">
+            <number type="int">39</number>
+            <Stream type="section"><!-- ~~~~~~~~~~~~~~ Радиостанция ~~~~~~~~~~~~~~ -->
+               <comment>-------------- Радиостанция --------------</comment>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">10</number>
+                  <number type="int">11</number>
+               </Sources>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">157</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>tchm_dcp.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">158</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>tchm_dnc.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">10</number>
+               </Sources>
+               <Volume type="section">
+                  <number type="float">0.8</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">313</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>calorifer.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">314</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">11</number>
+               </Sources>
+               <Volume type="section">
+                  <number type="float">0.8</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">315</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>calorifer.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">316</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Ч А С Ы 3 С Л 2 М ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+               <comment>-------------------------------- Ч А С Ы 3 С Л 2 М --------------------------------</comment>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">10</number>
+                  <number type="int">11</number>
+               </Sources>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">8</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.6</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">171</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>sl2m_time.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Р А Б О Т А 3 С Л 2 М ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+               <comment>-------------------------------- Р А Б О Т А 3 С Л 2 М --------------------------------</comment>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">10</number>
+                  <number type="int">11</number>
+               </Sources>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">8</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.67</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">4</number>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Inc_Past</word>
+                     <number type="float">1.38</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>sl2m.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Inc_Past</word>
+                     <number type="int">60</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="int">60</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>sl2m.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">1.38</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <point>
+                        <number type="float">0.0</number>
+                        <number type="float">0.0</number>
+                     </point>
+                     <point>
+                        <number type="float">0.2</number>
+                        <number type="float">0.7</number>
+                     </point>
+                     <point>
+                        <number type="float">5.0</number>
+                        <number type="float">0.9</number>
+                     </point>
+                     <point>
+                        <number type="float">8.0</number>
+                        <number type="float">0.9</number>
+                     </point>
+                     <point>
+                        <number type="float">60.0</number>
+                        <number type="float">0.9</number>
+                     </point>
+                     <point>
+                        <number type="float">8.0</number>
+                        <number type="float">0.9</number>
+                     </point>
+                     <point>
+                        <number type="float">5.0</number>
+                        <number type="float">0.9</number>
+                     </point>
+                     <point>
+                        <number type="float">0.2</number>
+                        <number type="float">0.7</number>
+                     </point>
+                     <point>
+                        <number type="float">0.0</number>
+                        <number type="float">0.0</number>
+                     </point>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.01</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ К Н О П К И ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+               <comment>-------------------------------- К Н О П К И --------------------------------</comment>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.6</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">14</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">25</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>rb.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">26</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">50</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>epk_key.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">15</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>revers.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">16</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>kontroller.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">20</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>reversIns.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">21</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>reversOut.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">18</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>switch.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">24</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>switch_on.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">159</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>handbrake.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">160</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>rubilnik.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">161</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>krani.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">154</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>azv.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">170</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>sl2m_zavod.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- ~~~~~~~~~~~~~~ ЭПК ~~~~~~~~~~~~~~ -->
+               <comment>-------------- ЭПК --------------</comment>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">10</number>
+                  <number type="int">11</number>
+               </Sources>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">2.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">56</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>epk.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">57</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <ReleaseLoopRelease type="section"/>
+                        <HaltPlayback type="section"/>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">106</number>
+                     <TriggerActions type="section">
+                        <number type="int">2</number>
+                        <HaltPlayback type="section"/>
+                        <PlayOneShot type="section">
+                           <number type="int">1</number>
+                           <File type="section">
+                              <string>epk_1.wav</string>
+                              <number type="int">-1</number>
+                           </File>
+                           <SelectionMethod type="section">
+                              <word>SequentialSelection</word>
+                           </SelectionMethod>
+                        </PlayOneShot>
+                     </TriggerActions>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">8</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">14</number>
+                     <ReleaseLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>tsrsound-x_brzdeni2_t.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </ReleaseLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">14</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>tsrsound-brzdeni2_z.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">14</number>
+                     <DisableTrigger type="section">
+                        <number type="int">2</number>
+                     </DisableTrigger>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">14</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>tsrsound-brzdeni2.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">54</number>
+                     <ReleaseLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>tsrsound-brzdeni2.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </ReleaseLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">54</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>tsrsound-brzdeni2_k.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">54</number>
+                     <EnableTrigger type="section">
+                        <number type="int">2</number>
+                     </EnableTrigger>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">54</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>tsrsound-x_brzdeni2_t.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Discrete_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="float">-40.000</number>
+                     <number type="int">14000</number>
+                     <number type="float">0.000</number>
+                     <number type="int">8000</number>
+                     <number type="float">40.000</number>
+                     <number type="int">14000</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">100</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">5</number>
+                     <number type="float">-40.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">-8.5</number>
+                     <number type="float">0.9</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">8.5</number>
+                     <number type="float">0.9</number>
+                     <number type="float">40.0</number>
+                     <number type="float">1.0</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.8</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">12</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.02</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.09</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.15</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.2</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.3</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.4</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.5</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.6</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.7</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.8</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.93</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.98</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>P4.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.46</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">7</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">1.0</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.94</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.88</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.7</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.6</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.5</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.41</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.9</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.31</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.21</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.9</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.15</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.08</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.02</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>D1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Д И З Е Л Ь ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- Д И З Е Л Ь --------------------------------</comment>
+            <Stream type="section"><!-- 3 2a5d49-2-111.wav -->
+               <comment>3 2a5d49-2-111.wav</comment>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.9</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.01</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>2a5d49-2-111.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.01</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">5</number>
+                     <number type="float">0.00</number>
+                     <number type="float">0.00</number>
+                     <number type="float">0.11</number>
+                     <number type="float">0.00</number>
+                     <number type="float">0.24</number>
+                     <number type="float">0.10</number>
+                     <number type="float">0.53</number>
+                     <number type="float">0.3</number>
+                     <number type="float">1.00</number>
+                     <number type="float">0.50</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.001</number>
+                  </Granularity>
+               </VolumeCurve>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="float">0.00</number>
+                     <number type="int">16250</number>
+                     <number type="float">0.66</number>
+                     <number type="int">22000</number>
+                     <number type="float">1.00</number>
+                     <number type="int">25550</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">20</number>
+                  </Granularity>
+               </FrequencyCurve>
+            </Stream>
+            <Stream type="section"><!-- 4 2a5d49-2-xx.wav -->
+               <comment>4 2a5d49-2-xx.wav</comment>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.9</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.01</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>2a5d49-2-xx.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.01</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">4</number>
+                     <number type="float">0.00</number>
+                     <number type="int">22025</number>
+                     <number type="float">0.10</number>
+                     <number type="int">24025</number>
+                     <number type="float">0.18</number>
+                     <number type="int">25000</number>
+                     <number type="float">1.00</number>
+                     <number type="int">29025</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">100</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">4</number>
+                     <number type="float">0.00</number>
+                     <number type="float">0.20</number>
+                     <number type="float">0.10</number>
+                     <number type="float">0.21</number>
+                     <number type="float">0.18</number>
+                     <number type="float">0.1</number>
+                     <number type="float">1.00</number>
+                     <number type="float">0.00</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.01</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- 5 2a5d49-2-2.wav -->
+               <comment>5 2a5d49-2-2.wav</comment>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.9</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_past</word>
+                     <number type="float">0.04</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>2a5d49-2-2.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_past</word>
+                     <number type="float">0.01</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">2</number>
+                     <number type="float">0.00</number>
+                     <number type="int">22025</number>
+                     <number type="float">1.00</number>
+                     <number type="int">33075</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">100</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="float">0.10</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.18</number>
+                     <number type="float">0.2</number>
+                     <number type="float">1.00</number>
+                     <number type="float">0.3</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.01</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- 6 2a5d49-1-nagr3.wav -->
+               <comment>6 2a5d49-1-nagr3.wav</comment>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.9</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.01</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>2a5d49-1-nagr3.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.01</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="float">0.00</number>
+                     <number type="int">17000</number>
+                     <number type="float">0.29</number>
+                     <number type="int">22025</number>
+                     <number type="float">1.00</number>
+                     <number type="int">30000</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">25</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">4</number>
+                     <number type="float">0.00</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.19</number>
+                     <number type="float">0.1</number>
+                     <number type="float">0.34</number>
+                     <number type="float">0.1</number>
+                     <number type="float">1.00</number>
+                     <number type="float">0.2</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ З А П У С К Д И З Е Л Я ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- З А П У С К Д И З Е Л Я --------------------------------</comment>
+            <Stream type="section"><!-- 8-1 disel_2А-5Д49 _start.wav -->
+               <comment>8-1 disel_2А-5Д49 _start.wav</comment>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">100</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>disel_2А-5Д49 _start.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ О С Т А Н О В К А Д И З Е Л Я ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- О С Т А Н О В К А Д И З Е Л Я --------------------------------</comment>
+            <Stream type="section"><!-- 8-3 disel_2А-5Д49 _stop.wav -->
+               <comment>8-3 disel_2А-5Д49 _stop.wav</comment>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">101</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>disel_2А-5Д49 _stop.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">100</number>
+                     <HaltPlayback type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Д В Е Р И ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- Д В Е Р И --------------------------------</comment>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">300</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>open_door.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">301</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>close_door.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ О К Н А ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- О К Н А --------------------------------</comment>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">302</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>open_window.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">303</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>close_window.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Ш К А Ф ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- Ш К А Ф --------------------------------</comment>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">142</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>open_met_door.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">143</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>close_met_door.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ П Е С О К ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- П Е С О К --------------------------------</comment>
+            <Stream type="section"><!-- 11 pesok.wav 123 132 -->
+               <comment>11 pesok.wav 123 132</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.2</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">123</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>pesok.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">132</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- 40 wiper 135 -->
+               <comment>40 wiper 135</comment>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">10</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">135</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>dvorniki.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">136</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- 41 wiper 137 -->
+               <comment>41 wiper 137</comment>
+               <Priority type="section">
+                  <number type="int">5</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">2</number>
+                  <number type="int">11</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">137</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>dvorniki.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">138</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">7</number>
+               </Priority>
+               <Triggers type="section">
+                  <number type="int">7</number>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Inc_Past</word>
+                     <number type="float">0.02</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Inc_Past</word>
+                     <number type="float">0.02</number>
+                     <EnableTrigger type="section">
+                        <number type="int">5</number>
+                     </EnableTrigger>
+                  </Variable_Trigger>
+                  <Random_Trigger type="section">
+                     <Delay_Min_Max type="section">
+                        <number type="int">22</number>
+                        <number type="int">98</number>
+                     </Delay_Min_Max>
+                     <Volume_Min_Max type="section">
+                        <number type="float">0.4</number>
+                        <number type="float">0.9</number>
+                     </Volume_Min_Max>
+                     <PlayOneShot type="section">
+                        <number type="int">2</number>
+                        <File type="section">
+                           <string>240_sedacka_07.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>240_sedacka_08.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                     </PlayOneShot>
+                  </Random_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">0.02</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>x_2cyl_power_cruise0.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">0.02</number>
+                     <DisableTrigger type="section">
+                        <number type="int">5</number>
+                     </DisableTrigger>
+                  </Variable_Trigger>
+               </Triggers>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="int">0</number>
+                     <number type="int">0</number>
+                     <number type="float">2.0</number>
+                     <number type="float">0.5</number>
+                     <number type="float">25.0</number>
+                     <number type="float">2.2</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Т И Ф О Н ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- Т И Ф О Н --------------------------------</comment>
+            <Stream type="section"><!-- 12 tifon.wav 124 125 -->
+               <comment>12 tifon.wav 124 125</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">124</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>x_tifon.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">125</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ С В И С Т О К ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- С В И С Т О К --------------------------------</comment>
+            <Stream type="section"><!-- 13 tifon.wav 126 127 -->
+               <comment>13 tifon.wav 126 127</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">126</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>x_svistok.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">127</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ П О Л Н А Я О С Т А Н О В К А ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>-------------------------------- П О Л Н А Я О С Т А Н О В К А --------------------------------</comment>
+            <Stream type="section"><!-- 19 styk_strelka_1.wav -->
+               <comment>19 styk_strelka_1.wav</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.6</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Event_Trigger type="section">
+                     <word>WagonOnJunction</word>
+                     <number type="int">1</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>styk_strelka_1.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Event_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="float">-33.33</number>
+                     <number type="int">44100</number>
+                     <number type="float">0.0</number>
+                     <number type="int">22050</number>
+                     <number type="float">33.33</number>
+                     <number type="int">44100</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">100</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">5</number>
+                     <number type="float">-33.33</number>
+                     <number type="float">0.6</number>
+                     <number type="float">-11.11</number>
+                     <number type="float">0.6</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">11.11</number>
+                     <number type="float">0.6</number>
+                     <number type="float">33.33</number>
+                     <number type="float">0.6</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">10</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- 20 skrip_strelka.wav -->
+               <comment>20 skrip_strelka.wav</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.2</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Event_Trigger type="section">
+                     <word>WagonOnJunction</word>
+                     <number type="int">1</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>skrip_strelka.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Event_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">3</number>
+                     <number type="float">-120.0</number>
+                     <number type="int">22050</number>
+                     <number type="float">0.0</number>
+                     <number type="int">22050</number>
+                     <number type="float">120.0</number>
+                     <number type="int">22050</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">100</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">5</number>
+                     <number type="float">-33.33</number>
+                     <number type="float">0.6</number>
+                     <number type="float">-11.11</number>
+                     <number type="float">1.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">11.11</number>
+                     <number type="float">1.0</number>
+                     <number type="float">33.33</number>
+                     <number type="float">0.6</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">10</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- 28 pricep.wav -->
+               <comment>28 pricep.wav</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.8</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">58</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>pricep.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">61</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>scepka.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- 29 skrip -->
+               <comment>29 skrip</comment>
+               <Priority type="section">
+                  <number type="int">7</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Radius_Dec_Past</word>
+                     <number type="int">680</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <word>curve.wav</word>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Radius_Inc_Past</word>
+                     <number type="int">680</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <VolumeCurve type="section">
+                  <word>RadiusControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">8</number>
+                     <number type="int">-870</number>
+                     <number type="int">0</number>
+                     <number type="int">-450</number>
+                     <number type="int">1</number>
+                     <number type="int">-320</number>
+                     <number type="int">1</number>
+                     <number type="int">-200</number>
+                     <number type="int">1</number>
+                     <number type="int">200</number>
+                     <number type="int">1</number>
+                     <number type="int">320</number>
+                     <number type="int">1</number>
+                     <number type="int">450</number>
+                     <number type="int">1</number>
+                     <number type="int">870</number>
+                     <number type="int">0</number>
+                  </CurvePoints>
+               </VolumeCurve>
+            </Stream>
+         </Streams>
+      </ScalabiltyGroup>
+   </Tr_SMS>
+</root>

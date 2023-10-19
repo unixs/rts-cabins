@@ -2357,9 +2357,8 @@
                   <number type="float">0.45</number>
                </AnimTime>
             </Switch>
-            <Skip type="section">
-               <string>--------------------   Кабина 2 ----------------------</string>
-            </Skip>
+            <!-- ~~~~~~~~~~~~~~~~~~~~   Кабина 2 ~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>--------------------   Кабина 2 ----------------------</comment>
             <Switch type="section">
                <ID type="section">
                   <number type="int">100</number>
@@ -4888,9 +4887,8 @@
                   <number type="float">-0.1</number>
                </SwitchPrecision>
             </Switch>
-            <Skip type="section">
-               <string>--------------------- Машинное ------------------------</string>
-            </Skip>
+            <!-- ~~~~~~~~~~~~~~~~~~~~- Машинное ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <comment>--------------------- Машинное ------------------------</comment>
             <Switch type="section">
                <ID type="section">
                   <number type="int">200</number>
@@ -7226,9 +7224,8 @@
                </DisplayFade>
                <Flags type="section"/>
             </Display>
-            <Skip type="section">
-               <string>------------------- Кабина 2 -----------------------</string>
-            </Skip>
+            <!-- ~~~~~~~~~~~~~~~~~~- Кабина 2 ~~~~~~~~~~~~~~~~~~~~~~- -->
+            <comment>------------------- Кабина 2 -----------------------</comment>
             <Display type="section">
                <ID type="section">
                   <number type="int">100</number>
@@ -9668,9 +9665,8 @@
                   <number type="float">1.7</number>
                   <number type="float">7.691</number>
                </InteriorPlane>
-               <Skip type="section">
-                  <string>левая</string>
-               </Skip>
+               <!-- левая -->
+               <comment>левая</comment>
                <InteriorPlane type="section">
                   <word>DIESEL</word>
                   <number type="float">-1.319</number>
@@ -9725,9 +9721,8 @@
                   <number type="float">1.7</number>
                   <number type="float">-3.729</number>
                </InteriorPlane>
-               <Skip type="section">
-                  <string>правая</string>
-               </Skip>
+               <!-- правая -->
+               <comment>правая</comment>
                <InteriorPlane type="section">
                   <word>DIESEL</word>
                   <number type="float">1.072</number>
@@ -9782,9 +9777,8 @@
                   <number type="float">1.7</number>
                   <number type="float">-3.739</number>
                </InteriorPlane>
-               <Skip type="section">
-                  <string>центр</string>
-               </Skip>
+               <!-- центр -->
+               <comment>центр</comment>
                <InteriorPlane type="section">
                   <word>DIESEL</word>
                   <number type="float">-0.936</number>

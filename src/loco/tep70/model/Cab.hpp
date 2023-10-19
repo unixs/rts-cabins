@@ -9,7 +9,7 @@ namespace model {
   ## Переключатели.
   **/
   enum class sw : unsigned short {
-  
+    
     /**
     ### Тормоз поезда
     Type: Мультипереключатель
@@ -1400,15 +1400,15 @@ namespace model {
   ## Указатели.
   **/
   enum class disp : unsigned short {
-  
+    
     /**
     ### Вольтметр
     Type: ARROW
     Name: `ARR141`
-    #### Values:
-    MIN: `0.0`
-    MAX: `150.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `150.0`
+        ZERO: `0.0`
     **/
     ARR141_0 = 0,
 
@@ -1416,10 +1416,10 @@ namespace model {
     ### Амперметр АКБ
     Type: ARROW
     Name: `ARR151`
-    #### Values:
-    MIN: `-150.0`
-    MAX: `150.0`
-    ZERO: `-150.0`
+        #### Values:
+        MIN: `-150.0`
+        MAX: `150.0`
+        ZERO: `-150.0`
     **/
     ARR151_1 = 1,
 
@@ -1427,10 +1427,10 @@ namespace model {
     ### Напряжение генератора
     Type: ARROW
     Name: `ARR161`
-    #### Values:
-    MIN: `0.0`
-    MAX: `1000.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `1000.0`
+        ZERO: `0.0`
     **/
     ARR161_2 = 2,
 
@@ -1438,10 +1438,10 @@ namespace model {
     ### Индикатор
     Type: ARROW
     Name: `ARR171`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR171_3 = 3,
 
@@ -1449,10 +1449,10 @@ namespace model {
     ### Ток якоря Тяга
     Type: ARROW
     Name: `ARR51`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR51_4 = 4,
 
@@ -1460,10 +1460,10 @@ namespace model {
     ### Ток якоря ЭДТ
     Type: ARROW
     Name: `ARR61`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR61_5 = 5,
 
@@ -1471,10 +1471,10 @@ namespace model {
     ### Заданная скорость
     Type: ARROW
     Name: `ARR71`
-    #### Values:
-    MIN: `0.0`
-    MAX: `150.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `150.0`
+        ZERO: `0.0`
     **/
     ARR71_6 = 6,
 
@@ -1482,10 +1482,10 @@ namespace model {
     ### Давление ТЦ
     Type: ARROW
     Name: `ARR81`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.2`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.2`
+        ZERO: `0.0`
     **/
     ARR81_7 = 7,
 
@@ -1493,10 +1493,10 @@ namespace model {
     ### Давление ТМ
     Type: ARROW
     Name: `ARR101`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARR101_8 = 8,
 
@@ -1504,10 +1504,10 @@ namespace model {
     ### Давление ГР
     Type: ARROW
     Name: `ARR91`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARR91_9 = 9,
 
@@ -1515,10 +1515,10 @@ namespace model {
     ### Давление УР
     Type: ARROW
     Name: `ARR111`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR111_10 = 10,
 
@@ -1526,10 +1526,10 @@ namespace model {
     ### Скорость
     Type: ARROW
     Name: `ARR01`
-    #### Values:
-    MIN: `0.0`
-    MAX: `62.50`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `62.50`
+        ZERO: `0.0`
     **/
     ARR01_11 = 11,
 
@@ -1537,10 +1537,10 @@ namespace model {
     ### Часы
     Type: ARROW
     Name: `ARR121`
-    #### Values:
-    MIN: `0.0`
-    MAX: `24.00`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `24.00`
+        ZERO: `0.0`
     **/
     ARR121_12 = 12,
 
@@ -1548,10 +1548,10 @@ namespace model {
     ### Минуты
     Type: ARROW
     Name: `ARR131`
-    #### Values:
-    MIN: `0.0`
-    MAX: `60.00`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `60.00`
+        ZERO: `0.0`
     **/
     ARR131_13 = 13,
 
@@ -1559,10 +1559,10 @@ namespace model {
     ### Температура воды
     Type: ARROW
     Name: `ARR011`
-    #### Values:
-    MIN: `0.0`
-    MAX: `127.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `127.0`
+        ZERO: `0.0`
     **/
     ARR011_14 = 14,
 
@@ -1570,10 +1570,10 @@ namespace model {
     ### Температура масла
     Type: ARROW
     Name: `ARR21`
-    #### Values:
-    MIN: `0.0`
-    MAX: `127.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `127.0`
+        ZERO: `0.0`
     **/
     ARR21_15 = 15,
 
@@ -1581,10 +1581,10 @@ namespace model {
     ### Давление топлива
     Type: ARROW
     Name: `ARR31`
-    #### Values:
-    MIN: `0.0`
-    MAX: `15.8`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `15.8`
+        ZERO: `0.0`
     **/
     ARR31_16 = 16,
 
@@ -1592,10 +1592,10 @@ namespace model {
     ### Давление масла
     Type: ARROW
     Name: `ARR41`
-    #### Values:
-    MIN: `0.0`
-    MAX: `15.8`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `15.8`
+        ZERO: `0.0`
     **/
     ARR41_17 = 17,
 
@@ -1603,9 +1603,9 @@ namespace model {
     ### Сброс нагрузки
     Type: LAMP
     Name: `LAMP011`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP011_20 = 20,
 
@@ -1613,9 +1613,9 @@ namespace model {
     ### Жалюзи ЭТ открыты
     Type: LAMP
     Name: `LAMP21`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP21_21 = 21,
 
@@ -1623,9 +1623,9 @@ namespace model {
     ### Температура воды и масла
     Type: LAMP
     Name: `LAMP31`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP31_22 = 22,
 
@@ -1633,9 +1633,9 @@ namespace model {
     ### Жалюзи ЭТ открыты
     Type: LAMP
     Name: `LAMP41`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP41_23 = 23,
 
@@ -1643,9 +1643,9 @@ namespace model {
     ### Давление масла
     Type: LAMP
     Name: `LAMP51`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP51_24 = 24,
 
@@ -1653,9 +1653,9 @@ namespace model {
     ### Нет зарядки батареи
     Type: LAMP
     Name: `LAMP61`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP61_25 = 25,
 
@@ -1663,9 +1663,9 @@ namespace model {
     ### ЭДТ I тепловоза
     Type: LAMP
     Name: `LAMP71`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP71_26 = 26,
 
@@ -1673,9 +1673,9 @@ namespace model {
     ### ЭДТ II тепловоза
     Type: LAMP
     Name: `LAMP81`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP81_27 = 27,
 
@@ -1683,9 +1683,9 @@ namespace model {
     ### О
     Type: LAMP
     Name: `LAMP111`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP111_28 = 28,
 
@@ -1693,9 +1693,9 @@ namespace model {
     ### П
     Type: LAMP
     Name: `LAMP101`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP101_29 = 29,
 
@@ -1703,9 +1703,9 @@ namespace model {
     ### Т
     Type: LAMP
     Name: `LAMP91`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP91_30 = 30,
 
@@ -1713,9 +1713,9 @@ namespace model {
     ### Резервный топливный насос
     Type: LAMP
     Name: `LAMPP11`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP11_31 = 31,
 
@@ -1723,9 +1723,9 @@ namespace model {
     ### Нагружение на тормозные резисторы
     Type: LAMP
     Name: `LAMPP21`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP21_32 = 32,
 
@@ -1733,9 +1733,9 @@ namespace model {
     ### Пожар левой стороны ДП
     Type: LAMP
     Name: `LAMPP31`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP31_33 = 33,
 
@@ -1743,9 +1743,9 @@ namespace model {
     ### Пожар правой стороны ДП
     Type: LAMP
     Name: `LAMPP41`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP41_34 = 34,
 
@@ -1753,9 +1753,9 @@ namespace model {
     ### Перегрев электрического калорифера
     Type: LAMP
     Name: `LAMPP51`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP51_35 = 35,
 
@@ -1763,9 +1763,9 @@ namespace model {
     ### ПСС
     Type: LAMP
     Name: `PSS11`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     PSS11_36 = 36,
 
@@ -1773,9 +1773,9 @@ namespace model {
     ### Скатывание (H)
     Type: LAMP
     Name: `PSS21`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     PSS21_37 = 37,
 
@@ -1783,9 +1783,9 @@ namespace model {
     ### ПСС
     Type: LAMP
     Name: `PSS31`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     PSS31_38 = 38,
 
@@ -1793,9 +1793,9 @@ namespace model {
     ### UNNAMED
     Type: LAMP
     Name: `LAMPPO1`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPPO1_39 = 39,
 
@@ -1803,10 +1803,10 @@ namespace model {
     ### Вольтметр
     Type: ARROW
     Name: `ARR14`
-    #### Values:
-    MIN: `0.0`
-    MAX: `150.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `150.0`
+        ZERO: `0.0`
     **/
     ARR14_100 = 100,
 
@@ -1814,10 +1814,10 @@ namespace model {
     ### Амперметр АКБ
     Type: ARROW
     Name: `ARR15`
-    #### Values:
-    MIN: `-150.0`
-    MAX: `150.0`
-    ZERO: `-150.0`
+        #### Values:
+        MIN: `-150.0`
+        MAX: `150.0`
+        ZERO: `-150.0`
     **/
     ARR15_101 = 101,
 
@@ -1825,10 +1825,10 @@ namespace model {
     ### Напряжение генератора
     Type: ARROW
     Name: `ARR16`
-    #### Values:
-    MIN: `0.0`
-    MAX: `1000.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `1000.0`
+        ZERO: `0.0`
     **/
     ARR16_102 = 102,
 
@@ -1836,10 +1836,10 @@ namespace model {
     ### Индикатор
     Type: ARROW
     Name: `ARR17`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR17_103 = 103,
 
@@ -1847,10 +1847,10 @@ namespace model {
     ### Ток якоря Тяга
     Type: ARROW
     Name: `ARR5`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR5_104 = 104,
 
@@ -1858,10 +1858,10 @@ namespace model {
     ### Ток якоря ЭДТ
     Type: ARROW
     Name: `ARR6`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR6_105 = 105,
 
@@ -1869,10 +1869,10 @@ namespace model {
     ### Заданная скорость
     Type: ARROW
     Name: `ARR7`
-    #### Values:
-    MIN: `0.0`
-    MAX: `150.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `150.0`
+        ZERO: `0.0`
     **/
     ARR7_106 = 106,
 
@@ -1880,10 +1880,10 @@ namespace model {
     ### Давление ТЦ
     Type: ARROW
     Name: `ARR8`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.2`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.2`
+        ZERO: `0.0`
     **/
     ARR8_107 = 107,
 
@@ -1891,10 +1891,10 @@ namespace model {
     ### Давление ТМ
     Type: ARROW
     Name: `ARR9`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARR9_108 = 108,
 
@@ -1902,10 +1902,10 @@ namespace model {
     ### Давление ГР
     Type: ARROW
     Name: `ARR10`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARR10_109 = 109,
 
@@ -1913,10 +1913,10 @@ namespace model {
     ### Давление УР
     Type: ARROW
     Name: `ARR11`
-    #### Values:
-    MIN: `0.0`
-    MAX: `10.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `10.0`
+        ZERO: `0.0`
     **/
     ARR11_110 = 110,
 
@@ -1924,10 +1924,10 @@ namespace model {
     ### Скорость
     Type: ARROW
     Name: `ARR0`
-    #### Values:
-    MIN: `0.0`
-    MAX: `62.50`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `62.50`
+        ZERO: `0.0`
     **/
     ARR0_111 = 111,
 
@@ -1935,10 +1935,10 @@ namespace model {
     ### Часы
     Type: ARROW
     Name: `ARR12`
-    #### Values:
-    MIN: `0.0`
-    MAX: `24.00`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `24.00`
+        ZERO: `0.0`
     **/
     ARR12_112 = 112,
 
@@ -1946,10 +1946,10 @@ namespace model {
     ### Минуты
     Type: ARROW
     Name: `ARR13`
-    #### Values:
-    MIN: `0.0`
-    MAX: `60.00`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `60.00`
+        ZERO: `0.0`
     **/
     ARR13_113 = 113,
 
@@ -1957,10 +1957,10 @@ namespace model {
     ### Температура воды
     Type: ARROW
     Name: `ARR1`
-    #### Values:
-    MIN: `0.0`
-    MAX: `127.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `127.0`
+        ZERO: `0.0`
     **/
     ARR1_114 = 114,
 
@@ -1968,10 +1968,10 @@ namespace model {
     ### Температура масла
     Type: ARROW
     Name: `ARR2`
-    #### Values:
-    MIN: `0.0`
-    MAX: `127.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `127.0`
+        ZERO: `0.0`
     **/
     ARR2_115 = 115,
 
@@ -1979,10 +1979,10 @@ namespace model {
     ### Давление топлива
     Type: ARROW
     Name: `ARR3`
-    #### Values:
-    MIN: `0.0`
-    MAX: `15.8`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `15.8`
+        ZERO: `0.0`
     **/
     ARR3_116 = 116,
 
@@ -1990,10 +1990,10 @@ namespace model {
     ### Давление масла
     Type: ARROW
     Name: `ARR4`
-    #### Values:
-    MIN: `0.0`
-    MAX: `15.8`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `15.8`
+        ZERO: `0.0`
     **/
     ARR4_117 = 117,
 
@@ -2001,9 +2001,9 @@ namespace model {
     ### Сброс нагрузки
     Type: LAMP
     Name: `LAMP1`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP1_120 = 120,
 
@@ -2011,9 +2011,9 @@ namespace model {
     ### Жалюзи ЭТ открыты
     Type: LAMP
     Name: `LAMP2`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP2_121 = 121,
 
@@ -2021,9 +2021,9 @@ namespace model {
     ### Температура воды и масла
     Type: LAMP
     Name: `LAMP3`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP3_122 = 122,
 
@@ -2031,9 +2031,9 @@ namespace model {
     ### Жалюзи ЭТ открыты
     Type: LAMP
     Name: `LAMP4`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP4_123 = 123,
 
@@ -2041,9 +2041,9 @@ namespace model {
     ### Давление масла
     Type: LAMP
     Name: `LAMP5`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP5_124 = 124,
 
@@ -2051,9 +2051,9 @@ namespace model {
     ### Нет зарядки батареи
     Type: LAMP
     Name: `LAMP6`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP6_125 = 125,
 
@@ -2061,9 +2061,9 @@ namespace model {
     ### ЭДТ I тепловоза
     Type: LAMP
     Name: `LAMP7`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP7_126 = 126,
 
@@ -2071,9 +2071,9 @@ namespace model {
     ### ЭДТ II тепловоза
     Type: LAMP
     Name: `LAMP8`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP8_127 = 127,
 
@@ -2081,9 +2081,9 @@ namespace model {
     ### О
     Type: LAMP
     Name: `LAMP11`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP11_128 = 128,
 
@@ -2091,9 +2091,9 @@ namespace model {
     ### П
     Type: LAMP
     Name: `LAMP10`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP10_129 = 129,
 
@@ -2101,9 +2101,9 @@ namespace model {
     ### Т
     Type: LAMP
     Name: `LAMP9`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMP9_130 = 130,
 
@@ -2111,9 +2111,9 @@ namespace model {
     ### Резервный топливный насос
     Type: LAMP
     Name: `LAMPP1`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP1_131 = 131,
 
@@ -2121,9 +2121,9 @@ namespace model {
     ### Нагружение на тормозные резисторы
     Type: LAMP
     Name: `LAMPP2`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP2_132 = 132,
 
@@ -2131,9 +2131,9 @@ namespace model {
     ### Пожар левой стороны ДП
     Type: LAMP
     Name: `LAMPP3`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP3_133 = 133,
 
@@ -2141,9 +2141,9 @@ namespace model {
     ### Пожар правой стороны ДП
     Type: LAMP
     Name: `LAMPP4`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP4_134 = 134,
 
@@ -2151,9 +2151,9 @@ namespace model {
     ### Перегрев электрического калорифера
     Type: LAMP
     Name: `LAMPP5`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPP5_135 = 135,
 
@@ -2161,9 +2161,9 @@ namespace model {
     ### ПСС
     Type: LAMP
     Name: `PSS1`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     PSS1_136 = 136,
 
@@ -2171,9 +2171,9 @@ namespace model {
     ### Скатывание (H)
     Type: LAMP
     Name: `PSS2`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     PSS2_137 = 137,
 
@@ -2181,9 +2181,9 @@ namespace model {
     ### ПСС
     Type: LAMP
     Name: `PSS3`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     PSS3_138 = 138,
 
@@ -2191,9 +2191,9 @@ namespace model {
     ### UNNAMED
     Type: LAMP
     Name: `LAMPPO`
-    #### Values:
-    `0` - OFF
-    `1` - ON
+        #### Values:
+        `0` - OFF
+        `1` - ON
     **/
     LAMPPO_139 = 139,
 
@@ -2215,10 +2215,10 @@ namespace model {
     ### Давление масла до фильтра тонкой очистки
     Type: ARROW
     Name: `ARRM1`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARRM1_162 = 162,
 
@@ -2226,10 +2226,10 @@ namespace model {
     ### Давление масла после фильтра тонкой очистки
     Type: ARROW
     Name: `ARRM2`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARRM2_163 = 163,
 
@@ -2237,10 +2237,10 @@ namespace model {
     ### Давление топлива до фильтра тонкой очистки
     Type: ARROW
     Name: `ARRM3`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARRM3_164 = 164,
 
@@ -2248,10 +2248,10 @@ namespace model {
     ### Давление топлива после фильтра тонкой очистки
     Type: ARROW
     Name: `ARRM4`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARRM4_165 = 165,
 
@@ -2259,10 +2259,10 @@ namespace model {
     ### Наддув
     Type: ARROW
     Name: `ARRM5`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARRM5_166 = 166,
 
@@ -2270,10 +2270,10 @@ namespace model {
     ### Давление в гидростатической системе
     Type: ARROW
     Name: `ARRM6`
-    #### Values:
-    MIN: `0.0`
-    MAX: `16.0`
-    ZERO: `0.0`
+        #### Values:
+        MIN: `0.0`
+        MAX: `16.0`
+        ZERO: `0.0`
     **/
     ARRM6_167 = 167,
 
@@ -2283,7 +2283,7 @@ namespace model {
   ## Состояния приборов
   **/
   namespace st {
-  
+    
     /**
     #### Состояния переключателя
     ### Тормоз поезда
@@ -8221,119 +8221,119 @@ namespace model {
    **/
   enum class lights : unsigned short {
     
-      /**
-      #### Источник света
-      ### LCAB
-      **/
-      LCAB_0 = 0,
+    /**
+    #### Источник света
+    ### LCAB
+    **/
+    LCAB_0 = 0,
 
-      /**
-      #### Источник света
-      ### LCAB
-      **/
-      LCAB_1 = 1,
+    /**
+    #### Источник света
+    ### LCAB
+    **/
+    LCAB_1 = 1,
 
-      /**
-      #### Источник света
-      ### Lamp1P1
-      **/
-      Lamp1P1_2 = 2,
+    /**
+    #### Источник света
+    ### Lamp1P1
+    **/
+    Lamp1P1_2 = 2,
 
-      /**
-      #### Источник света
-      ### Lamp1P2
-      **/
-      Lamp1P2_3 = 3,
+    /**
+    #### Источник света
+    ### Lamp1P2
+    **/
+    Lamp1P2_3 = 3,
 
-      /**
-      #### Источник света
-      ### LCAB1
-      **/
-      LCAB1_4 = 4,
+    /**
+    #### Источник света
+    ### LCAB1
+    **/
+    LCAB1_4 = 4,
 
-      /**
-      #### Источник света
-      ### LCAB1
-      **/
-      LCAB1_5 = 5,
+    /**
+    #### Источник света
+    ### LCAB1
+    **/
+    LCAB1_5 = 5,
 
-      /**
-      #### Источник света
-      ### Lamp2P1
-      **/
-      Lamp2P1_6 = 6,
+    /**
+    #### Источник света
+    ### Lamp2P1
+    **/
+    Lamp2P1_6 = 6,
 
-      /**
-      #### Источник света
-      ### Lamp2P2
-      **/
-      Lamp2P2_7 = 7,
+    /**
+    #### Источник света
+    ### Lamp2P2
+    **/
+    Lamp2P2_7 = 7,
 
-      /**
-      #### Источник света
-      ### SVET
-      **/
-      SVET_8 = 8,
+    /**
+    #### Источник света
+    ### SVET
+    **/
+    SVET_8 = 8,
 
-      /**
-      #### Источник света
-      ### LampM2
-      **/
-      LampM2_9 = 9,
+    /**
+    #### Источник света
+    ### LampM2
+    **/
+    LampM2_9 = 9,
 
-      /**
-      #### Источник света
-      ### LampM3
-      **/
-      LampM3_10 = 10,
+    /**
+    #### Источник света
+    ### LampM3
+    **/
+    LampM3_10 = 10,
 
-      /**
-      #### Источник света
-      ### LampM4
-      **/
-      LampM4_11 = 11,
+    /**
+    #### Источник света
+    ### LampM4
+    **/
+    LampM4_11 = 11,
 
-      /**
-      #### Источник света
-      ### LampM5
-      **/
-      LampM5_12 = 12,
+    /**
+    #### Источник света
+    ### LampM5
+    **/
+    LampM5_12 = 12,
 
-      /**
-      #### Источник света
-      ### LampM6
-      **/
-      LampM6_13 = 13,
+    /**
+    #### Источник света
+    ### LampM6
+    **/
+    LampM6_13 = 13,
 
-      /**
-      #### Источник света
-      ### LampM7
-      **/
-      LampM7_14 = 14,
+    /**
+    #### Источник света
+    ### LampM7
+    **/
+    LampM7_14 = 14,
 
-      /**
-      #### Источник света
-      ### Lamp1P3
-      **/
-      Lamp1P3_15 = 15,
+    /**
+    #### Источник света
+    ### Lamp1P3
+    **/
+    Lamp1P3_15 = 15,
 
-      /**
-      #### Источник света
-      ### Lamp1P4
-      **/
-      Lamp1P4_16 = 16,
+    /**
+    #### Источник света
+    ### Lamp1P4
+    **/
+    Lamp1P4_16 = 16,
 
-      /**
-      #### Источник света
-      ### Lamp2P3
-      **/
-      Lamp2P3_17 = 17,
+    /**
+    #### Источник света
+    ### Lamp2P3
+    **/
+    Lamp2P3_17 = 17,
 
-      /**
-      #### Источник света
-      ### Lamp2P4
-      **/
-      Lamp2P4_18 = 18,
+    /**
+    #### Источник света
+    ### Lamp2P4
+    **/
+    Lamp2P4_18 = 18,
 
   };
 
