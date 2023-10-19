@@ -35,4 +35,4 @@ target_link_libraries(dlltest
 # cabin_api)
 add_subdirectory(api)
 add_subdirectory(loco)
-add_subdirectory(aux)
+add_subdirectory(auxlib)
