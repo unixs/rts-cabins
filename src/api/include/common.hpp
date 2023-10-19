@@ -50,17 +50,3 @@
 #define CAB_CONTEXT(T)                                                         \
   CABIN;                                                                       \
   CONTEXT(T)
-
-/**
- * #### Запускает итерацию главного цикла
- */
-inline void
-main_loop_run(Context *ctxt, const float time)
-{
-  if (ctxt) {
-    ctxt->run(time);
-  }
-  else {
-    // TODO: some debug output
-  }
-}
