@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://rts.unixcode.net/xml/cabin/state/1.0.0"
-  xmlns="https://rts.unixcode.net/xml/cabin/state/1.0.0"
+  targetNamespace="http://rts.unixcode.net/xml/cabin/state/1.0.0"
+  xmlns="http://rts.unixcode.net/xml/cabin/state/1.0.0"
   elementFormDefault="qualified">
 
   <xs:element name="state">
@@ -16,12 +16,24 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="offset" type="xs:unsignedInt" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Дополнительное смещение переменных состояния в массиве после
+                    базового.</xs:documentation>
+                </xs:annotation>
+              </xs:element>
               <xs:element name="var" minOccurs="1" maxOccurs="unbounded">
                 <xs:annotation>
                   <xs:documentation>Описание одной переменной</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
+                    <xs:element name="private" maxOccurs="1" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Признак приватного доступа</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType />
+                    </xs:element>
                     <xs:element name="brief" minOccurs="1" maxOccurs="1">
                       <xs:annotation>
                         <xs:documentation>Комментарий для разработчика</xs:documentation>
@@ -50,6 +62,16 @@
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+            <xs:attribute name="baseOffset" use="required">
+              <xs:annotation>
+                <xs:documentation>Базовое зарезервированное смещение</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:unsignedInt">
+                  <xs:enumeration value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
