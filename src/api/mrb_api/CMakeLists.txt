@@ -1,6 +1,15 @@
 include_directories(include)
 link_libraries(Mruby::Mruby)
 
+add_compile_definitions(
+	MRB_USE_FLOAT32
+	MRB_INT32
+	MRB_GC_ARENA_SIZE=300
+	MRB_USE_RATIONAL
+	MRB_USE_COMPLEX
+	MRB_USE_BIGINT
+)
+
 add_library(mrb_context
 	OBJECT mrb_context.cc)
 
@@ -29,5 +38,3 @@ target_link_libraries(mrb_api
 	INTERFACE Mruby::Mruby)
 target_include_directories(mrb_api
 	INTERFACE include)
-target_compile_definitions(mrb_api
-	INTERFACE MRB_USE_FLOAT32)

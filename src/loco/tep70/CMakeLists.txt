@@ -2,7 +2,7 @@ set(MOD_NAME tep70)
 
 include_directories(include model)
 
-link_libraries(cabin_api)
+link_libraries(cabin_api mrb_api)
 
 stf_parser_command(model/Cab.sd)
 

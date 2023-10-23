@@ -1,6 +1,8 @@
 #include <winsock2.h>
 #include <windows.h>
-#include <dll_tools.h>
+
+#define __export __declspec(dllexport)
+#define __import __declspec(dllimport)
 
 #define Run _Run
 #define Switched _Switched
