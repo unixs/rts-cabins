@@ -16,11 +16,16 @@
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="offset" type="xs:unsignedInt" minOccurs="0" maxOccurs="1">
+              <xs:element name="offset" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
                   <xs:documentation>Дополнительное смещение переменных состояния в массиве после
                     базового.</xs:documentation>
                 </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:unsignedInt">
+                    <xs:minInclusive value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
               </xs:element>
               <xs:element name="var" minOccurs="1" maxOccurs="unbounded">
                 <xs:annotation>
@@ -50,6 +55,9 @@
                       </xs:annotation>
                       <xs:complexType>
                         <xs:attribute name="name">
+                          <xs:annotation>
+                            <xs:documentation>С++ идентификатор для формирования имени метода.</xs:documentation>
+                          </xs:annotation>
                           <xs:simpleType>
                             <xs:restriction base="xs:Name">
                               <xs:minLength value="3" />
