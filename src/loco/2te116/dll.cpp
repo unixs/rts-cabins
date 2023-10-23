@@ -30,7 +30,7 @@ SWITCHED
     DI_ON(disp::sn2_18);
   }
 
-  DI_STATE(disp::ohla_19, 1);
+  DI_ON(disp::ohla_19);
 }
 
 
