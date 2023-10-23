@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+  xmlns="http://rts.unixcode.net/xml/cabin/state/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://rts.unixcode.net/xml/cabin/state/1.0.0 http://rts.unixcode.net/xml/cabin/state-1.0.0.xsd">
+  <!-- ../../../../docker -->
+  <!-- http://rts.unixcode.net -->
+
+  <vars baseOffset="10">
+    <offset>5</offset>
+    <var>
+      <brief>Таймер запуска дизеля</brief>
+      <ident name="dizel_start_time" />
+    </var>
+    <var>
+      <brief>Таймер прокачки масла</brief>
+      <ident name="dizel_oil_time" />
+    </var>
+    <var>
+      <brief>Мощность</brief>
+      <ident name="power" />
+    </var>
+    <var>
+      <private />
+      <brief>Какой-то внутренний счётчик не раскрываемый для клиента</brief>
+      <ident name="priv_counter" />
+    </var>
+  </vars>
+</state>

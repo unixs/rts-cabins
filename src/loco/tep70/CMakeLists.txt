@@ -7,6 +7,7 @@ link_libraries(cabin_api)
 stf_parser_command(model/Cab.sd)
 
 add_library(${MOD_NAME}_common OBJECT tep70.cc)
+add_library(${MOD_NAME}_debug OBJECT debug.cpp)
 
 add_library(${MOD_NAME} MODULE dll.cc)
 target_sources(${MOD_NAME} PRIVATE model/Cab.hpp)

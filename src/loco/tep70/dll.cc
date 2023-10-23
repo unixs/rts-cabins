@@ -41,7 +41,7 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
 {
   CONTEXT(Tep70Context);
 
-  // main_loop_run(ctxt, time);
+  main_loop_run(ctxt, time);
 }
 
 extern "C" __export bool

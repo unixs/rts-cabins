@@ -37,6 +37,19 @@ public:
 Context *
 init_context();
 
+/**
+ * #### Запускает итерацию главного цикла
+ */
+inline void
+main_loop_run(Context *ctxt, const float time)
+{
+  if (ctxt) {
+    ctxt->run(time);
+  }
+  else {
+    // TODO: some debug output
+  }
+}
 
 // #ifdef __cplusplus
 //   extern "C" {
