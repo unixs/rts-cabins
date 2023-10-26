@@ -2,7 +2,7 @@
 <state
   xmlns="http://rts.unixcode.net/xml/cabin/state/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://rts.unixcode.net/xml/cabin/state/1.0.0 http://rts.unixcode.net/xml/cabin/state-1.0.0.xsd">
+  xsi:schemaLocation="http://rts.unixcode.net/xml/cabin/state/1.0.0 ../../../../docker/xml/cabin/state-1.0.0.xsd">
   <!-- ../../../../docker -->
   <!-- http://rts.unixcode.net -->
 
@@ -11,19 +11,40 @@
     <var>
       <brief>Таймер запуска дизеля</brief>
       <ident name="dizel_start_time" />
+      <def type="float">0</def>
     </var>
     <var>
       <brief>Таймер прокачки масла</brief>
       <ident name="dizel_oil_time" />
+      <def type="int">0</def>
     </var>
     <var>
       <brief>Мощность</brief>
       <ident name="power" />
+      <def type="bool">1</def>
     </var>
     <var>
       <private />
       <brief>Какой-то внутренний счётчик не раскрываемый для клиента</brief>
       <ident name="priv_counter" />
+      <def type="bool">0</def>
     </var>
   </vars>
+  <timers namespace="timers">
+    <timer time="12">
+      <brief>Реле времени проворота коленчатого вала</brief>
+      <ident name="ziezel_start" />
+      <callback name="ziezel_start_cb" />
+    </timer>
+    <timer time="60">
+      <brief>Реле времени прокачки масла перед пуском дизеля</brief>
+      <ident name="ziezel_oil_start" />
+      <callback name="ziezel_oil_start_cb" />
+    </timer>
+    <interval time="120">
+      <brief>Какой-то интервал</brief>
+      <ident name="proverka_g" />
+      <callback name="proverka_g_cb" />
+    </interval>
+  </timers>
 </state>

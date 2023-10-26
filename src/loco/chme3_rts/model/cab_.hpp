@@ -8,7 +8,7 @@ namespace model {
   /**
   ## Переключатели.
   **/
-  enum class sw : unsigned short {
+  enum class sw : unsigned int {
 
     /**
     ### Тяга
@@ -377,7 +377,6 @@ namespace model {
     Flags: NONFIXED
     **/
     SW_P_SV_45 = 45,
-
   };
 
   /**
@@ -597,7 +596,6 @@ namespace model {
     ZERO: `14.45`
     **/
     D_SKOR1_19 = 19,
-
   };
 
   /**
@@ -2155,7 +2153,6 @@ namespace model {
     ### UNNAMED
     **/
     _0 = 0,
-
   };
 
   /**
@@ -2186,6 +2183,5 @@ namespace model {
     ### WIPER4
     **/
     WIPER4_3 = 3,
-
   };
 }; // namespace model

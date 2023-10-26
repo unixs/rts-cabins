@@ -1,11 +1,11 @@
 #include <ts_fix.h>
 
-#ifdef DIESEL_LOCO
-#  define __ENGINE_TYPE DieselEngine
-#  define __LOCO_TYPE DieselLocomotive
+#ifdef DIESEL
+#  define ENGINE_TYPE DieselEngine
+#  define LOCO_TYPE DieselLocomotive
 #else
-#  define __ENGINE_TYPE ElectricEngine
-#  define __LOCO_TYPE ElectricLocomotive
+#  define ENGINE_TYPE ElectricEngine
+#  define LOCO_TYPE ElectricLocomotive
 #endif
 
 /**
@@ -62,7 +62,7 @@
  * Ф-ция API RTS
  */
 #define RUN                                                                    \
-  extern "C" void __export Run(__ENGINE_TYPE *eng, const __LOCO_TYPE *loco,    \
+  extern "C" void __export Run(ENGINE_TYPE *eng, const LOCO_TYPE *loco,        \
                                unsigned long State, float time,                \
                                float AirTemperature)
 
@@ -70,23 +70,23 @@
  * Ф-ция API RTS
  */
 #define CAN_SWITCH                                                             \
-  extern "C" bool __export CanSwitch(                                          \
-      const __LOCO_TYPE *loco, __ENGINE_TYPE *eng, unsigned int switch_id,     \
-      unsigned int new_state)
+  extern "C" bool __export CanSwitch(const LOCO_TYPE *loco, ENGINE_TYPE *eng,  \
+                                     unsigned int switch_id,                   \
+                                     unsigned int new_state)
 
 /**
  * Ф-ция API RTS
  */
 #define SWITCHED                                                               \
-  extern "C" void __export Switched(                                           \
-      const __LOCO_TYPE *loco, __ENGINE_TYPE *eng, unsigned int switch_id,     \
-      unsigned int prev_state)
+  extern "C" void __export Switched(const LOCO_TYPE *loco, ENGINE_TYPE *eng,   \
+                                    unsigned int switch_id,                    \
+                                    unsigned int prev_state)
 
 /**
  * Ф-ция API RTS
  */
 #define INIT                                                                   \
-  extern "C" bool __export Init(__ENGINE_TYPE *eng, __LOCO_TYPE *loco,         \
+  extern "C" bool __export Init(ENGINE_TYPE *eng, LOCO_TYPE *loco,             \
                                 unsigned long State, float time,               \
                                 float AirTemperature)
 

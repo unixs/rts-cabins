@@ -400,10 +400,10 @@ Switched(const DieselLocomotive *loco, DieselEngine *eng, unsigned int SwitchID,
   }
 
   switch (SwitchID) {
-  case 0:
+  case (UINT) sw::C_MAIN_0:
     eng->ThrottlePosition = cab->Switch((UINT) sw::C_MAIN_0);
     break;
-  case 1:
+  case (UINT) sw::C_REV_1:
     if (!cab->Switch((UINT) sw::C_REV_1)) {
       break;
     }
@@ -412,9 +412,9 @@ Switched(const DieselLocomotive *loco, DieselEngine *eng, unsigned int SwitchID,
     // if(loco->Flags&1)
     // eng->Reverse=-eng->Reverse;
     break;
-  case 2:
-    n = cab->Switch(2);
-    n1 = cab->Switch(3);
+  case (UINT) sw::C254_2:
+    n = cab->Switch((UINT) sw::C254_2);
+    n1 = cab->Switch((UINT) sw::C396_3);
     if (n1 > n) {
       n = n1;
     }
@@ -422,7 +422,7 @@ Switched(const DieselLocomotive *loco, DieselEngine *eng, unsigned int SwitchID,
       eng->IndependentBrakeValue = 0.0;
     }
     else {
-      eng->IndependentBrakeValue = 1.0 * (n - 1);
+      eng->IndependentBrakeValue = 1.0 * (n - 1); // Magic
     }
     break;
   case 4:
@@ -469,13 +469,13 @@ Switched(const DieselLocomotive *loco, DieselEngine *eng, unsigned int SwitchID,
     };
     break;
   case 10:
-    SwitchLights(loco, cab->Switch(10) + 19);
+    SwitchLights(loco, cab->Switch((UINT) sw::SW_VTK_10) + 19);
     break;
   case 13:
-    SwitchLights(loco, cab->Switch(13) + 1);
+    SwitchLights(loco, cab->Switch((UINT) sw::SW_VBLP_13) + 1);
     break;
   case 14:
-    SwitchLights(loco, cab->Switch(14) + 4);
+    SwitchLights(loco, cab->Switch((UINT) sw::SW_VBFP_14) + 4);
     break;
   case 15:
     if (cab->Switch(16)) {
@@ -920,8 +920,8 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
   eng->TrainPipeRate = 0.0;
   if (loco->LocoFlags & 1) {
     // Train brake
-    switch (cab->Switch(4)) {
-    case 0:
+    switch (cab->Switch((UINT) sw::C395_4)) {
+    case (UINT) st::C395::ST_0:
       if (eng->var[5] < 45.0) {
         if (!cab->SwitchSet(4)) {
           eng->UR += BRAKE_UR_RATE_CHARGE * time;
@@ -935,7 +935,7 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
         }
       };
       break;
-    case 1:
+    case (UINT) st::C395::ST_1:
       if (eng->var[5] < 45.0) {
         if (eng->UR < 5.2) {
           float rate = (loco->MainResPressure - eng->UR) * 2.0;
@@ -969,7 +969,7 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
         };
       };
       break;
-    case 2:
+    case (UINT) st::C395::ST_2:
       if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
       }
@@ -983,7 +983,7 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
         eng->TrainPipeRate = PIPE_DISCHARGE_SLOW;
       }
       break;
-    case 3:
+    case (UINT) st::C395::ST_3:
       if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
       }
@@ -997,8 +997,8 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
         eng->TrainPipeRate = -BRAKE_PIPE_RATE;
       }
       break;
-    case 4:
-      if (cab->SwitchSet(4) < 4) {
+    case (UINT) st::C395::ST_4:
+      if (cab->SwitchSet((UINT) sw::C395_4) < 4) {
         break;
       }
       eng->UR += (BRAKE_TP_DISCHARGE_RATE * 1.2) * time;
@@ -1013,15 +1013,19 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
         loco->PostTriggerCab(116);
       }
       break;
-    case 5:
+    case (UINT) st::C395::ST_5:
       eng->UR += BRAKE_PIPE_EMERGENCY * 1.2 * time;
+
       if (eng->UR > loco->MainResPressure) {
         eng->UR = loco->MainResPressure;
       }
+
       if (eng->UR < 0) {
         eng->UR = 0;
       }
+
       eng->TrainPipeRate = BRAKE_PIPE_EMERGENCY;
+
       if ((loco->TrainPipePressure < 0.4) &&
           loco->IsSMSTriggerOnCab(115) != 0) {
         loco->PostTriggerCab(116);
@@ -1030,8 +1034,8 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
     };
 
     // EPK
-    if (!cab->Switch(32) && (loco->Velocity > 0.3 || loco->Velocity < -0.3) &&
-        eng->Reverse) {
+    if (!cab->Switch((UINT) sw::SW_ALSN_32) &&
+        (loco->Velocity > 0.3 || loco->Velocity < -0.3) && eng->Reverse) {
       bool SoundOn = Flags & 2;
       UINT Aspect = cab->Signal.Aspect[0];
       if (Aspect != unsigned(eng->var[8])) {
