@@ -3,6 +3,42 @@
   xmlns="http://rts.unixcode.net/xml/cabin/state/1.0.0"
   elementFormDefault="qualified">
 
+  <xs:simpleType name="c_type">
+    <xs:annotation>
+      <xs:documentation>Имя с++ типа [int, float, bool].</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="int" />
+      <xs:enumeration value="float" />
+      <xs:enumeration value="bool" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="c_ident_name">
+    <xs:annotation>
+      <xs:documentation>Имя c++ идентификатора для формирования идентификатора объекта</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:Name">
+      <xs:minLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="c_ident">
+    <xs:annotation>
+      <xs:documentation>C++ Идентификатор</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="c_ident_name" />
+  </xs:complexType>
+
+  <xs:simpleType name="brief">
+    <xs:annotation>
+      <xs:documentation>Комментарий для разработчика</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:element name="state">
     <xs:annotation>
       <xs:documentation>Состояние модели кабины</xs:documentation>
@@ -39,31 +75,22 @@
                       </xs:annotation>
                       <xs:complexType />
                     </xs:element>
-                    <xs:element name="brief" minOccurs="1" maxOccurs="1">
-                      <xs:annotation>
-                        <xs:documentation>Комментарий для разработчика</xs:documentation>
-                      </xs:annotation>
-                      <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                          <xs:minLength value="3" />
-                        </xs:restriction>
-                      </xs:simpleType>
-                    </xs:element>
-                    <xs:element name="ident">
+                    <xs:element name="brief" type="brief" />
+                    <xs:element name="ident" type="c_ident">
                       <xs:annotation>
                         <xs:documentation>Идентификатор для маппинга</xs:documentation>
                       </xs:annotation>
+                    </xs:element>
+                    <xs:element name="def">
+                      <xs:annotation>
+                        <xs:documentation>Значение для инициализации</xs:documentation>
+                      </xs:annotation>
                       <xs:complexType>
-                        <xs:attribute name="name">
-                          <xs:annotation>
-                            <xs:documentation>С++ идентификатор для формирования имени метода.</xs:documentation>
-                          </xs:annotation>
-                          <xs:simpleType>
-                            <xs:restriction base="xs:Name">
-                              <xs:minLength value="3" />
-                            </xs:restriction>
-                          </xs:simpleType>
-                        </xs:attribute>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:float">
+                            <xs:attribute name="type" type="c_type" />
+                          </xs:extension>
+                        </xs:simpleContent>
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
@@ -79,6 +106,72 @@
                   <xs:enumeration value="10" />
                 </xs:restriction>
               </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="timers" maxOccurs="1" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Описание таймеров</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="timer" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>Описание простого однократного таймера</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="brief" type="brief" />
+                    <xs:element name="ident" type="c_ident">
+                      <xs:annotation>
+                        <xs:documentation>Bдентификатор для доступа к значению таймера</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="callback" type="c_ident">
+                      <xs:annotation>
+                        <xs:documentation>Идентификатор ф-ции тфймера</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="time">
+                    <xs:annotation>
+                      <xs:documentation>Стартовое значение таймра в секундах</xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:unsignedInt" />
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="interval" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>Описание простого однократного таймера</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="brief" type="brief" />
+                    <xs:element name="ident" type="c_ident" />
+                    <xs:element name="callback" type="c_ident">
+                      <xs:annotation>
+                        <xs:documentation>Идентификатор ф-ции интервала</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="time">
+                    <xs:annotation>
+                      <xs:documentation>Стартовое значение интервала в секундах</xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:unsignedInt" />
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="namespace" type="c_ident_name">
+              <xs:annotation>
+                <xs:documentation>Идентификатор с++ нэйспейся для вложенных объектов</xs:documentation>
+              </xs:annotation>
             </xs:attribute>
           </xs:complexType>
         </xs:element>
