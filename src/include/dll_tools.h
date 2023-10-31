@@ -103,3 +103,35 @@
 #define CAN_WORK_WITH                                                          \
   extern "C" bool __export CanWorkWith(const Locomotive *loco,                 \
                                        const wchar_t *type)
+
+#define DEF_BRANCH(func)                                                       \
+  void func##_branch(const LOCO_TYPE *loco, ENGINE_TYPE *eng,                  \
+                     unsigned int switch_id, unsigned int prev_state)
+
+#define DEF_SWITCH(id, func, block)                                            \
+  void func##_switch(const LOCO_TYPE *loco, ENGINE_TYPE *eng,                  \
+                     unsigned int switch_id, unsigned int prev_state)          \
+  {                                                                            \
+    if (switch_id != (UINT) id) {                                              \
+      return;                                                                  \
+    }                                                                          \
+    block                                                                      \
+  }
+
+/**
+ * Вызов ф-ций ветки эл-ой схемы начиная с заданной
+ */
+#define CALL_BRANCH(func) func(loco, eng, switch_id, prev_state)
+
+#define CASE_SW(sw) case (UINT) sw
+
+/**
+ * Подстановка выключателя к обработчику
+ */
+#define CASE_BRANCH(sw, func)                                                  \
+  CASE_SW(sw) : { CALL_BRANCH(func); }                                         \
+  break;
+
+#define SWITCH_BLOCK(sw, on, off)                                              \
+  if (pcond && SW(sw))                                                         \
+  on else off

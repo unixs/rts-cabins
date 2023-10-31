@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
+<root
+  xmlns="http://rts.unixcode.net/xml/cabin/model/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://rts.unixcode.net/xml/cabin/model/1.0.0 ../../../../docker/xml/cabin/model-1.0.0.xsd">
+  <!-- ../../../../docker -->
+  <!-- http://rts.unixcode.net -->
+
+
   <header>SIMISA@@@@@@@@@@JINX0t1t______</header>
   <Shape type="section">
-    <word>Cab.s</word>
+    <word>hbjb/Cab.s</word>
     <ESD_Detail_Level type="section">
       <number type="int">0</number>
     </ESD_Detail_Level>

@@ -8,113 +8,191 @@ using namespace model;
 
 
 EMPTY_ENTRYPOINT
-extern void (*signal(int, void (*)(int)))(int);
 
 //-----{ INIT }-----------------------------------------------------------------
 
 INIT { return true; }
 
 
-//-----{ SWITCHED }-------------------------------------------------------------
+//-----{ STATE }----------------------------------------------------------------
 
 class DieselState {
 public:
-  bool
-  shema_power();
-
-  void
-  set_schema_power(bool);
-
-  bool
-  oil_pump();
-
-  void
-  set_oil_pump(bool);
-
-  bool
-  fuel_pump();
-
-  void
-  set_fuel_pump(bool);
 };
 
 static DieselState *state;
 
-// Тут может быть макрос маппинга имени ф-ции на внутренний макрос
-inline void
-main_switch(BlackBox *state, const LOCO_TYPE *loco, const ENGINE_TYPE *eng)
+
+//-----{ BRANCHES }-------------------------------------------------------------
+
+#define LIGHT_PCOND auto pcond = SW(sw::AB_64) && SW(sw::AZVOS_77)
+
+DEF_BRANCH(dizel_light)
 {
   CABIN;
 
-  // тут может быть макрос маппинга переключателя на метод
-  if (SW(sw::tn1_7)) {
-    state->set_schema_power(true);
-  }
-  else {
-    state->set_schema_power(false);
-  }
+  LIGHT_PCOND;
 
-  // Тут запускаем ф-ции всех веток, которые содержат флаг в своих предусловиях
-  // Флаг или выключатель
+  SWITCH_BLOCK(sw::osdp_74,
+               {
+                   // Включаем что-то
+               },
+               {
+                   // Выключаем что-то
+               });
+
+  // Нету дочерних веток
 }
 
-void
-dizel_start_branch(DieselState *state, const LOCO_TYPE *loco,
-                   const ENGINE_TYPE *eng)
+DEF_BRANCH(vvk_light)
 {
-  if ((state->shema_is_ready()) && SW(sw::tn1_7)) {
-    return 1.;
+  CABIN;
+
+  LIGHT_PCOND;
+
+  if (pcond && SW(sw::osvvk_75)) {
+    // Включаем что-то
   }
   else {
-    .0;
+    // Выключаем что-то
+  }
+
+  // Нету дочерних веток
+}
+
+DEF_BRANCH(cabin_light)
+{
+  CABIN;
+
+  LIGHT_PCOND;
+
+  if (pcond && SW(sw::oscab_30)) {
+    // Включаем что-то
+  }
+  else {
+    // Выключаем что-то
+  }
+
+  // Нету дочерних веток
+}
+
+DEF_BRANCH(pult_light)
+{
+  CABIN;
+
+  LIGHT_PCOND;
+
+  if (pcond && SW(sw::ospult_28)) {
+    // Включаем что-то
+  }
+  else {
+    // Выключаем что-то
+  }
+
+  // Нету дочерних веток
+}
+
+DEF_BRANCH(tambur_light)
+{
+  CABIN;
+
+  LIGHT_PCOND;
+
+  if (pcond && SW(sw::osv_71)) {
+    // Включаем что-то
+  }
+  else {
+    // Выключаем что-то
+  }
+
+  // Нету дочерних веток
+}
+
+DEF_BRANCH(podkuzov_light)
+{
+  CABIN;
+
+  LIGHT_PCOND;
+
+  if (pcond && SW(sw::ospod_73)) {
+    // Включаем что-то
+  }
+  else {
+    // Выключаем что-то
+  }
+
+  // Нету дочерних веток
+}
+
+DEF_BRANCH(sl2m_light)
+{
+  CABIN;
+
+  LIGHT_PCOND;
+
+  if (pcond && SW(sw::osskor_80)) {
+    // Включаем что-то
+  }
+  else {
+    // Выключаем что-то
+  }
+
+  // Нету дочерних веток
+}
+
+/**
+ * Отдельные ветви схемы освещения
+ */
+DEF_BRANCH(light)
+{
+  CALL_BRANCH(pult_light_branch);
+  CALL_BRANCH(cabin_light_branch);
+  CALL_BRANCH(tambur_light_branch);
+  CALL_BRANCH(podkuzov_light_branch);
+  CALL_BRANCH(dizel_light_branch);
+  CALL_BRANCH(vvk_light_branch);
+  CALL_BRANCH(sl2m_light_branch);
+}
+
+/**
+ * Начало схемы освещения
+ */
+DEF_BRANCH(light_root)
+{
+  switch (switch_id) {
+    CASE_BRANCH(sw::ospult_28, pult_light_branch);
+    CASE_BRANCH(sw::oscab_30, cabin_light_branch);
+    CASE_BRANCH(sw::osv_71, tambur_light_branch);
+    CASE_BRANCH(sw::ospod_73, podkuzov_light_branch);
+    CASE_BRANCH(sw::osdp_74, dizel_light_branch);
+    CASE_BRANCH(sw::osvvk_75, vvk_light_branch);
+    CASE_BRANCH(sw::osskor_80, sl2m_light_branch);
+
+
+    case (UINT) sw::AZVOS_77:
+    case (UINT) sw::AB_64:
+      CALL_BRANCH(light_branch);
+      break;
   }
 }
+
+
+//-----{ SWITCHED }-------------------------------------------------------------
 
 SWITCHED
 {
-  CABIN;
-  /*
-  // Главный рубильник АБ
-  main_switch(state, loco, eng);
-
-  // Ветка запуска дизеля
-  dizel_start_branch(state, loco, eng);
-
-  // Контроль пуска и глушения
-  dizel_control(loco, eng);
-
-  eng->var[3] = dizel_start_prep();*/
-  /*
-  АБ, ДИзель, топливный насос автомат, топливный насос тумблер 1 секции, пуск
-  дизеля
-  */
-  // Предусловие
-  if (SW(sw::PD1_33)) {
-    // Условное действие
-    DI_ON(disp::sn_17);
-    loco->PostTriggerCab(103);
-    // timer
-    // pusk
-    // kontrol
-    // disel_on
-    // AB zaradka
-    // kopressor_start
-  }
-  // Отмена действия
-  else {
-    DI_ON(disp::sn2_18);
-  }
-
-  DI_ON(disp::ohla_19);
+  // Вызываем основные ветки
+  CALL_BRANCH(light_root_branch);
 }
 
 
 //-----{ RUN }------------------------------------------------------------------
 
-float
-someFunc();
 
-RUN { check_rdtm(); }
+RUN
+{
+  // noop
+}
 
 
 //-----{ CAN_SWITCH }-----------------------------------------------------------
@@ -124,7 +202,10 @@ CAN_SWITCH { return true; }
 
 //-----{ CHANGE_LOCO }----------------------------------------------------------
 
-CHANGE_LOCO {}
+CHANGE_LOCO
+{
+  // noop
+}
 
 
 //-----{ CAN_WORK_WITH }--------------------------------------------------------

@@ -2,7 +2,7 @@
 <state
   xmlns="http://rts.unixcode.net/xml/cabin/state/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://rts.unixcode.net/xml/cabin/state/1.0.0 ../../../../docker/xml/cabin/state-1.0.0.xsd">
+  xsi:schemaLocation="http://rts.unixcode.net/xml/cabin/state/1.0.0 http://rts.unixcode.net/xml/cabin/state-1.0.0.xsd">
   <!-- ../../../../docker -->
   <!-- http://rts.unixcode.net -->
 

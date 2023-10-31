@@ -1,0 +1,113 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://rts.unixcode.net/xml/cabin/model/1.0.0"
+  xmlns="http://rts.unixcode.net/xml/cabin/model/1.0.0"
+  elementFormDefault="qualified">
+
+  <xs:simpleType name="section">
+    <xs:annotation>
+      <xs:documentation>Тип узла</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="section" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="word">
+    <xs:annotation>
+      <xs:documentation>Строка без внешних кавычек и без внутренних пробелов</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:normalizedString" />
+  </xs:simpleType>
+
+  <xs:complexType name="number">
+    <xs:annotation>
+      <xs:documentation>Число с типом</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:restriction base="xs:float" />
+    </xs:simpleContent>
+    <xs:attribute name="type" type="type" />
+  </xs:complexType>
+
+  <xs:simpleType name="type">
+    <xs:annotation>
+      <xs:documentation>Имя типа [int, float, bool]</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="int" />
+      <xs:enumeration value="float" />
+      <xs:enumeration value="bool" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="root">
+    <xs:annotation>
+      <xs:documentation>Корень конфига модели</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="header">
+          <xs:annotation>
+            <xs:documentation>Волшебный заголовок файла</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="SIMISA@@@@@@@@@@JINX0t1t______" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Shape">
+          <xs:annotation>
+            <xs:documentation>Модель</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="word">
+                <xs:annotation>
+                  <xs:documentation>Путь до сжатой текстуры</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="word">
+                    <xs:pattern value="[0-9A-Za-z_/]+\.s" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESD_Detail_Level">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="number" />
+                  </xs:sequence>
+                  <xs:attribute name="type" type="section" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ESD_Alternative_Texture">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="number"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ESD_Bounding_Box">
+                <xs:complexType>
+                  <!-- comment -->
+                </xs:complexType>
+              </xs:element>
+
+
+            </xs:sequence>
+            <xs:attribute name="type">
+              <xs:annotation>
+                <xs:documentation>Тип узла</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="section" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

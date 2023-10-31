@@ -47,15 +47,13 @@
       <xs:sequence>
         <xs:element name="vars">
           <xs:annotation>
-            <xs:documentation>Маппинг переменных массива var на идентификаторы. Порядок будет
-              учитываться при сопоставлении элементов массива.</xs:documentation>
+            <xs:documentation>Маппинг переменных массива var на идентификаторы. Порядок будет учитываться при сопоставлении элементов массива.</xs:documentation>
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="offset" minOccurs="0" maxOccurs="1">
                 <xs:annotation>
-                  <xs:documentation>Дополнительное смещение переменных состояния в массиве после
-                    базового.</xs:documentation>
+                  <xs:documentation>Дополнительное смещение переменных состояния в массиве после базового.</xs:documentation>
                 </xs:annotation>
                 <xs:simpleType>
                   <xs:restriction base="xs:unsignedInt">
