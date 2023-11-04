@@ -14,7 +14,7 @@ target_sources(${MOD_NAME} PRIVATE model/Cab.hpp)
 target_link_options(${MOD_NAME} PRIVATE "-static")
 target_link_libraries(${MOD_NAME}
 	PRIVATE
-	tep70_common)
+	${MOD_NAME}_common)
 
 # default_cabin
 # cabin_context)

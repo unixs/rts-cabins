@@ -24,12 +24,15 @@ list(APPEND LIB_OBJECTS
 	$<TARGET_OBJECTS:main_loop>
 	$<TARGET_OBJECTS:context_pool>
 	$<TARGET_OBJECTS:context>
-	$<TARGET_OBJECTS:contextptr>)
+	$<TARGET_OBJECTS:contextptr>
+	$<TARGET_OBJECTS:rts_api>)
 
 add_library(cabin_api STATIC ${LIB_OBJECTS})
 target_link_libraries(cabin_api
 	INTERFACE libuv::uv_a
-	INTERFACE mrb_api)
-target_include_directories(cabin_api INTERFACE include)
+	INTERFACE mrb_api
+	INTERFACE rts_api)
+target_include_directories(cabin_api INTERFACE include rts/include)
 
-add_subdirectory(mrb_api)
+add_subdirectory(rts)
+add_subdirectory(mrb)

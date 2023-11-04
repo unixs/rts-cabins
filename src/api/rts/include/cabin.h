@@ -1,3 +1,5 @@
+#pragma once
+
 #include <ts_fix.h>
 
 #ifdef DIESEL
@@ -108,6 +110,10 @@
   void func##_branch(const LOCO_TYPE *loco, ENGINE_TYPE *eng,                  \
                      unsigned int switch_id, unsigned int prev_state)
 
+#define DEF_NODE(func)                                                         \
+  void func##_node(const LOCO_TYPE *loco, ENGINE_TYPE *eng,                    \
+                   unsigned int switch_id, unsigned int prev_state)
+
 #define DEF_SWITCH(id, func, block)                                            \
   void func##_switch(const LOCO_TYPE *loco, ENGINE_TYPE *eng,                  \
                      unsigned int switch_id, unsigned int prev_state)          \
@@ -121,7 +127,7 @@
 /**
  * Вызов ф-ций ветки эл-ой схемы начиная с заданной
  */
-#define CALL_BRANCH(func) func(loco, eng, switch_id, prev_state)
+#define CALL_SW(func) func(loco, eng, switch_id, prev_state)
 
 #define CASE_SW(sw) case (UINT) sw
 
@@ -129,9 +135,26 @@
  * Подстановка выключателя к обработчику
  */
 #define CASE_BRANCH(sw, func)                                                  \
-  CASE_SW(sw) : { CALL_BRANCH(func); }                                         \
+  CASE_SW(sw) : { CALL_SW(func); }                                             \
   break;
 
+/**
+ * Главное предусловие
+ */
+#define MAIN_PCOND(condition) auto main_pcond = (condition)
+
+#define CHAIN_MAIN_PCOND(condition) main_pcond = main_pcond && (condition)
+
+/**
+ * Главный условный блок ветки
+ */
 #define SWITCH_BLOCK(sw, on, off)                                              \
-  if (pcond && SW(sw))                                                         \
+  if (main_pcond && SW(sw))                                                    \
+  on else off
+
+/**
+ * Главный условный блок ветки
+ */
+#define COND_BLOCK(cond, on, off)                                              \
+  if (main_pcond && (cond))                                                    \
   on else off
