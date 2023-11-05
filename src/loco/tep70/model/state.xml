@@ -6,7 +6,7 @@
   <!-- ../../../../docker -->
   <!-- http://rts.unixcode.net -->
 
-  <vars baseOffset="10">
+  <vars baseOffset="0" pointerOffset="10">
     <offset>5</offset>
     <var>
       <brief>Таймер запуска дизеля</brief>

@@ -97,7 +97,17 @@
             </xs:sequence>
             <xs:attribute name="baseOffset" use="required">
               <xs:annotation>
-                <xs:documentation>Базовое зарезервированное смещение</xs:documentation>
+                <xs:documentation>Базовое зарезервированное смещение всего стейта</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:unsignedInt">
+                  <xs:minInclusive value="0" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="pointerOffset" use="required">
+              <xs:annotation>
+                <xs:documentation>Смещение для выделения фрагмента под хранение указателя</xs:documentation>
               </xs:annotation>
               <xs:simpleType>
                 <xs:restriction base="xs:unsignedInt">
