@@ -85,7 +85,7 @@
                       </xs:annotation>
                       <xs:complexType>
                         <xs:simpleContent>
-                          <xs:extension base="xs:float">
+                          <xs:extension base="c_ident">
                             <xs:attribute name="type" type="c_type" />
                           </xs:extension>
                         </xs:simpleContent>
@@ -95,6 +95,11 @@
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+            <xs:attribute name="klass" type="c_ident_name">
+              <xs:annotation>
+                <xs:documentation>Идентификатор класса для стэйта. По-умолчанию - State</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="baseOffset" use="required">
               <xs:annotation>
                 <xs:documentation>Базовое зарезервированное смещение всего стейта</xs:documentation>
