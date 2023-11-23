@@ -5,6 +5,7 @@ include_directories(include model)
 link_libraries(cabin_api mrb_api)
 
 stf_parser_command(model/Cab.sd)
+stf_parser_command(model/state.xml)
 
 add_library(${MOD_NAME}_common OBJECT tep70.cc)
 add_library(${MOD_NAME}_debug OBJECT debug.cpp)

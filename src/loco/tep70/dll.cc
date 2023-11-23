@@ -3,21 +3,24 @@
 #include <tep70.hpp>
 
 using namespace model;
+using namespace cabin;
+
+static State state;
 
 BOOL WINAPI
 DllMain(HINSTANCE hinstDLL, DWORD reason, LPVOID lpReserved)
 {
   switch (reason) {
-  case DLL_PROCESS_ATTACH:
-    init_pool();
-    // printf("Dll has been attached to process.\n");
-    // Initialize once for each new process.
-    // Return FALSE to fail DLL load.
-    break;
+    case DLL_PROCESS_ATTACH:
+      init_pool();
+      // printf("Dll has been attached to process.\n");
+      // Initialize once for each new process.
+      // Return FALSE to fail DLL load.
+      break;
 
-  case DLL_PROCESS_DETACH:
-    // Perform any necessary cleanup.
-    break;
+    case DLL_PROCESS_DETACH:
+      // Perform any necessary cleanup.
+      break;
   }
 
   return TRUE; // Successful DLL_PROCESS_ATTACH.
@@ -56,6 +59,9 @@ Switched(const DieselLocomotive *loco, DieselEngine *eng,
          unsigned int switch_id, unsigned int prev_state)
 {
   CAB_CONTEXT(Tep70Context);
+  state.setVar(eng->var);
+
+  auto time = state.get_dizel_oil_time();
 
   if (SW(sw::AZV51_13)) {
     DI_ON(disp::LAMP011_20);

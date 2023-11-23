@@ -30,21 +30,4 @@
 			<def type="bool">0</def>
 		</var>
 	</vars>
-	<timers namespace="timers">
-		<timer time="12">
-			<brief>Реле времени проворота коленчатого вала</brief>
-			<ident name="ziezel_start" />
-			<callback name="ziezel_start_cb" />
-		</timer>
-		<timer time="60">
-			<brief>Реле времени прокачки масла перед пуском дизеля</brief>
-			<ident name="ziezel_oil_start" />
-			<callback name="ziezel_oil_start_cb" />
-		</timer>
-		<interval time="120">
-			<brief>Какой-то интервал</brief>
-			<ident name="proverka_g" />
-			<callback name="proverka_g_cb" />
-		</interval>
-	</timers>
 </state>

@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <header>SIMISA@@@@@@@@@@JINX0x1t______</header>
+   <Tr_SMS type="section">
+      <ScalabiltyGroup type="section">
+         <number type="int">7</number>
+         <Activation type="section">
+            <CabCam type="section"/>
+            <Distance type="section">
+               <number type="int">300</number>
+            </Distance>
+         </Activation>
+         <Deactivation type="section">
+            <ExternalCam type="section"/>
+            <Distance type="section">
+               <number type="int">300</number>
+            </Distance>
+         </Deactivation>
+         <Volume type="section">
+            <number type="float">1.0</number>
+         </Volume>
+         <Stereo type="section"/>
+         <SoundSources type="section">
+            <number type="int">1</number>
+            <number type="float">0.0</number>
+            <number type="float">2.0</number>
+            <number type="float">0.0</number>
+            <number type="float">1.0</number>
+         </SoundSources>
+         <DiscreteTriggerPairs type="section">
+            <Pair type="section">
+               <On type="section">
+                  <number type="int">1</number>
+                  <number type="int">107</number>
+               </On>
+               <Off type="section">
+                  <number type="int">1</number>
+                  <number type="int">108</number>
+               </Off>
+            </Pair>
+            <Pair type="section">
+               <On type="section">
+                  <number type="int">1</number>
+                  <number type="int">115</number>
+               </On>
+               <Off type="section">
+                  <number type="int">1</number>
+                  <number type="int">116</number>
+               </Off>
+            </Pair>
+         </DiscreteTriggerPairs>
+         <Streams type="section">
+            <number type="int">15</number>
+            <Stream type="section"><!-- **** Cruise 0-8 **** -->
+               <comment>**** Cruise 0-8 ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.01</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_diesel.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.01</number>
+                     <ReleaseLoopRelease type="section">
+                        <Fade type="section">
+                           <number type="float">1.0</number>
+                        </Fade>
+                     </ReleaseLoopRelease>
+                  </Variable_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable1Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <number type="float">0.000</number>
+                     <number type="int">11025</number>
+                     <number type="float">0.050</number>
+                     <number type="int">11100</number>
+                     <number type="float">0.100</number>
+                     <number type="int">11800</number>
+                     <number type="float">0.200</number>
+                     <number type="int">12500</number>
+                     <number type="float">0.300</number>
+                     <number type="int">13250</number>
+                     <number type="float">0.400</number>
+                     <number type="int">14000</number>
+                     <number type="float">0.600</number>
+                     <number type="int">14700</number>
+                     <number type="float">0.800</number>
+                     <number type="int">15400</number>
+                     <number type="float">1.000</number>
+                     <number type="int">16100</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">5</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <number type="float">0.000</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.050</number>
+                     <number type="float">0.71</number>
+                     <number type="float">0.100</number>
+                     <number type="float">0.73</number>
+                     <number type="float">0.200</number>
+                     <number type="float">0.75</number>
+                     <number type="float">0.300</number>
+                     <number type="float">0.8</number>
+                     <number type="float">0.400</number>
+                     <number type="float">0.85</number>
+                     <number type="float">0.600</number>
+                     <number type="float">0.9</number>
+                     <number type="float">0.800</number>
+                     <number type="float">0.95</number>
+                     <number type="float">1.000</number>
+                     <number type="float">1.0</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- **** Engine Starter **** -->
+               <comment>**** Engine Starter ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">4</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">103</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>start1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                        <Fade type="section">
+                           <number type="float">1.0</number>
+                        </Fade>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">104</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Discrete_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Dec_Past</word>
+                     <number type="float">0.001</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.025</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">2</number>
+                     <number type="float">0.000</number>
+                     <number type="int">11025</number>
+                     <number type="float">1.000</number>
+                     <number type="int">11025</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">5</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">4</number>
+                     <number type="float">0.000</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.008</number>
+                     <number type="float">0.7</number>
+                     <number type="float">0.018</number>
+                     <number type="float">0.7</number>
+                     <number type="float">0.025</number>
+                     <number type="float">0.0</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- **** Engine Start **** -->
+               <comment>**** Engine Start ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Sources type="section">
+                  <number type="int">1</number>
+                  <number type="int">0</number>
+               </Sources>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Variable_Trigger type="section">
+                     <word>Variable2_Inc_Past</word>
+                     <number type="float">0.018</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>start2.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Variable_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">2</number>
+                     <number type="float">0.000</number>
+                     <number type="int">11025</number>
+                     <number type="float">1.000</number>
+                     <number type="int">11025</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">5</number>
+                  </Granularity>
+               </FrequencyCurve>
+            </Stream>
+            <Stream type="section"><!-- **** Brake switch **** -->
+               <comment>**** Brake switch ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">115</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>chme3_airb_auto3.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">116</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Brake switch **** -->
+               <comment>**** Brake switch ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">113</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>chme3_abrakef.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">114</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>chme3_airb_auto1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Sand **** -->
+               <comment>**** Sand ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">111</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_sand.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">112</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Compressor **** -->
+               <comment>**** Compressor ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.3</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">107</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>comp.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">108</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <!-- **** Skorostomer **** -->
+               <comment>**** Skorostomer ****</comment>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Speed_inc_past</word>
+                     <number type="float">1.4</number>
+                     <Startlooprelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_skorostemer.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </Startlooprelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_dec_past</word>
+                     <number type="float">1.4</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Reverse Throttle Brakes **** -->
+               <comment>**** Reverse Throttle Brakes ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.2</number>
+               </Volume>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">15</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_reverser_forwards_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">16</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_trottle.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">18</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_locomotive-brake_click.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <!-- **** Switches **** -->
+               <comment>**** Switches ****</comment>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">5</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">6</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_ventilator_switch_on_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">7</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_ventilator_switch_off.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">37</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_switch_on_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">102</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_switch_on_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">105</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>chme3_rb.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Vigilance alarm **** -->
+               <comment>**** Vigilance alarm ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">6</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">109</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">1.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">109</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>epk.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">110</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">0.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">110</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">117</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">1.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">117</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>epk_rel.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Grind **** -->
+               <comment>**** Grind ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">2.0</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_grind.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">0.2</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Inc_Past</word>
+                     <number type="float">2.1</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <number type="float">-2.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">-1.5</number>
+                     <number type="float">0.5</number>
+                     <number type="float">-1.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">-0.2</number>
+                     <number type="float">1.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.2</number>
+                     <number type="float">1.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">1.5</number>
+                     <number type="float">0.5</number>
+                     <number type="float">2.0</number>
+                     <number type="float">0.0</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- **** Tifon **** -->
+               <comment>**** Tifon ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Mono type="section"/>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">8</number>
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_tifon_2562.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                        <Fade type="section">
+                           <number type="float">0.1</number>
+                        </Fade>
+                     </StartLoop>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">9</number>
+                     <ReleaseLoopRelease type="section">
+                        <Fade type="section">
+                           <number type="float">0.8</number>
+                        </Fade>
+                     </ReleaseLoopRelease>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Whistle **** -->
+               <comment>**** Whistle ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Mono type="section"/>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">10</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_whistle_2562.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <AllowStreamOnWindowCamera type="section"/>
+               <Triggers type="section">
+                  <number type="int">6</number>
+                  <Initial_Trigger type="section">
+                     <DisableTrigger type="section">
+                        <number type="int">5</number>
+                     </DisableTrigger>
+                  </Initial_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">100</number>
+                     <EnableTrigger type="section">
+                        <number type="int">5</number>
+                     </EnableTrigger>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">100</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">1.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">101</number>
+                     <DisableTrigger type="section">
+                        <number type="int">5</number>
+                     </DisableTrigger>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">101</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">0.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Random_Trigger type="section">
+                     <Delay_Min_Max type="section">
+                        <number type="int">30</number>
+                        <number type="int">90</number>
+                     </Delay_Min_Max>
+                     <Volume_Min_Max type="section">
+                        <number type="float">0.9</number>
+                        <number type="float">1.0</number>
+                     </Volume_Min_Max>
+                     <PlayOneShot type="section">
+                        <number type="int">32</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio01.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio02.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio03.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio04.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio05.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio06.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio07.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio08.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio09.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio10.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio11.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio12.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio13.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio14.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio15.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio16.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio17.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio18.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio19.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio20.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio21.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio22.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio23.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio24.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio25.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio26.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio27.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio28.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio29.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio30.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio31.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/tsr_manevr-Radio32.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>RandomSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Random_Trigger>
+               </Triggers>
+            </Stream>
+         </Streams>
+      </ScalabiltyGroup>
+      <ScalabiltyGroup type="section">
+         <number type="int">5</number>
+         <Activation type="section">
+            <CabCam type="section"/>
+            <Distance type="section">
+               <number type="int">300</number>
+            </Distance>
+         </Activation>
+         <Deactivation type="section">
+            <ExternalCam type="section"/>
+            <Distance type="section">
+               <number type="int">300</number>
+            </Distance>
+         </Deactivation>
+         <Volume type="section">
+            <number type="float">1.0</number>
+         </Volume>
+         <Stereo type="section"/>
+         <Streams type="section">
+            <number type="int">8</number>
+            <Stream type="section"><!-- **** Cruise 0-8 **** -->
+               <comment>**** Cruise 0-8 ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Initial_Trigger type="section">
+                     <StartLoop type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_diesel.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoop>
+                  </Initial_Trigger>
+               </Triggers>
+               <FrequencyCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <number type="float">0.000</number>
+                     <number type="int">11025</number>
+                     <number type="float">0.050</number>
+                     <number type="int">11100</number>
+                     <number type="float">0.100</number>
+                     <number type="int">11800</number>
+                     <number type="float">0.200</number>
+                     <number type="int">12500</number>
+                     <number type="float">0.300</number>
+                     <number type="int">13250</number>
+                     <number type="float">0.400</number>
+                     <number type="int">14000</number>
+                     <number type="float">0.600</number>
+                     <number type="int">14700</number>
+                     <number type="float">0.800</number>
+                     <number type="int">15400</number>
+                     <number type="float">1.000</number>
+                     <number type="int">16100</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="int">5</number>
+                  </Granularity>
+               </FrequencyCurve>
+               <VolumeCurve type="section">
+                  <word>Variable2Controlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <number type="float">0.000</number>
+                     <number type="float">0.7</number>
+                     <number type="float">0.050</number>
+                     <number type="float">0.71</number>
+                     <number type="float">0.100</number>
+                     <number type="float">0.73</number>
+                     <number type="float">0.200</number>
+                     <number type="float">0.75</number>
+                     <number type="float">0.300</number>
+                     <number type="float">0.8</number>
+                     <number type="float">0.400</number>
+                     <number type="float">0.85</number>
+                     <number type="float">0.600</number>
+                     <number type="float">0.9</number>
+                     <number type="float">0.800</number>
+                     <number type="float">0.95</number>
+                     <number type="float">1.000</number>
+                     <number type="float">1.0</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <!-- **** Skorostomer **** -->
+               <comment>**** Skorostomer ****</comment>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Speed_inc_past</word>
+                     <number type="float">1.4</number>
+                     <Startlooprelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_skorostemer.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </Startlooprelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_dec_past</word>
+                     <number type="float">1.4</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Reverse Throttle Brakes **** -->
+               <comment>**** Reverse Throttle Brakes ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">15</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_reverser_forwards_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">16</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_trottle.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">18</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_locomotive-brake_click.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section">
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <!-- **** Switches **** -->
+               <comment>**** Switches ****</comment>
+               <Volume type="section">
+                  <number type="float">1.0</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">3</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">6</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_ventilator_switch_on_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">7</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_ventilator_switch_off.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">37</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_switch_on_1.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Vigelence alarm **** -->
+               <comment>**** Vigelence alarm ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Triggers type="section">
+                  <number type="int">4</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">56</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">1.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">56</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_epk.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">57</number>
+                     <SetStreamVolume type="section">
+                        <number type="float">0.0</number>
+                     </SetStreamVolume>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">57</number>
+                     <ReleaseLoopRelease type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Grind **** -->
+               <comment>**** Grind ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">2.0</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_grind.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Variable_Trigger>
+                  <Variable_Trigger type="section">
+                     <word>Speed_Dec_Past</word>
+                     <number type="float">0.2</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Variable_Trigger>
+               </Triggers>
+               <VolumeCurve type="section">
+                  <word>SpeedControlled</word>
+                  <CurvePoints type="section">
+                     <number type="int">9</number>
+                     <number type="float">-2.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">-1.5</number>
+                     <number type="float">0.5</number>
+                     <number type="float">-1.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">-0.2</number>
+                     <number type="float">1.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.0</number>
+                     <number type="float">0.2</number>
+                     <number type="float">1.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">1.0</number>
+                     <number type="float">1.5</number>
+                     <number type="float">0.5</number>
+                     <number type="float">2.0</number>
+                     <number type="float">0.0</number>
+                  </CurvePoints>
+                  <Granularity type="section">
+                     <number type="float">0.05</number>
+                  </Granularity>
+               </VolumeCurve>
+            </Stream>
+            <Stream type="section"><!-- **** Tifon **** -->
+               <comment>**** Tifon ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Mono type="section"/>
+               <Triggers type="section">
+                  <number type="int">2</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">8</number>
+                     <StartLoopRelease type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_tifon_2562.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </StartLoopRelease>
+                  </Discrete_Trigger>
+                  <Discrete_Trigger type="section">
+                     <number type="int">9</number>
+                     <ReleaseLoopReleaseWithJump type="section"/>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+            <Stream type="section"><!-- **** Whistle **** -->
+               <comment>**** Whistle ****</comment>
+               <Priority type="section">
+                  <number type="int">6</number>
+               </Priority>
+               <Volume type="section">
+                  <number type="float">0.5</number>
+               </Volume>
+               <Mono type="section"/>
+               <Triggers type="section">
+                  <number type="int">1</number>
+                  <Discrete_Trigger type="section">
+                     <number type="int">10</number>
+                     <PlayOneShot type="section">
+                        <number type="int">1</number>
+                        <File type="section">
+                           <string>../../tsrLoco_CHME3-Alias/Sound/chme3_whistle_2562.wav</string>
+                           <number type="int">-1</number>
+                        </File>
+                        <SelectionMethod type="section">
+                           <word>SequentialSelection</word>
+                        </SelectionMethod>
+                     </PlayOneShot>
+                  </Discrete_Trigger>
+               </Triggers>
+            </Stream>
+         </Streams>
+      </ScalabiltyGroup>
+   </Tr_SMS>
+</root>

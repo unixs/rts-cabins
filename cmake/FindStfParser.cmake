@@ -5,10 +5,10 @@ find_package(Java 17.0 REQUIRED)
 include(CMakePrintHelpers)
 include(UseJava)
 
-set(JAR_VERSION 0.1.2)
+set(JAR_VERSION 0.2.2)
+set(JAR_MD5 10db56efb0097b8b2954ca8a9458dd8f)
 set(JAR_FILENAME parser-${JAR_VERSION})
 set(JAR_URL https://github.com/unixs/stf-parser/releases/download/v${JAR_VERSION}/parser-${JAR_VERSION}-jar-with-dependencies.jar)
-set(JAR_MD5 307ff81517568d86e051490fd7363d36)
 set(JAR_PROJECT_PATH ${PROJECT_SOURCE_DIR}/tools/${JAR_FILENAME}.jar)
 
 message(STATUS "Checking parser jar.")
@@ -54,8 +54,8 @@ find_package_handle_standard_args(StfParser
 function(stf_parser_command source)
 	set(HEADER_EXTENSION hpp)
 
-	get_filename_component(OUTPUT_DIR ${source} DIRECTORY CACHE)
-	get_filename_component(OUTPUT_FILE ${source} NAME_WE CACHE)
+	get_filename_component(OUTPUT_DIR ${source} DIRECTORY)
+	get_filename_component(OUTPUT_FILE ${source} NAME_WE)
 
 	add_custom_command(
 		OUTPUT ${OUTPUT_DIR}/${OUTPUT_FILE}.${HEADER_EXTENSION}

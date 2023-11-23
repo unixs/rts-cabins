@@ -110,5 +110,12 @@ namespace cabin {
     
   };
   
+    /**
+     * ## Таймеры
+     */
+    namespace timers {
+    
+    };
+  
 }
   

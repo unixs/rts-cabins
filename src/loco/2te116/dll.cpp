@@ -5,13 +5,14 @@
 #include <state.hpp>
 
 using namespace model;
+using namespace cabin;
 
 
 EMPTY_ENTRYPOINT
 
 //-----{ STATE }----------------------------------------------------------------
 
-static DieselState *state;
+static State state;
 
 
 //-----{ INIT }-----------------------------------------------------------------
