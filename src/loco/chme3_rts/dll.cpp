@@ -3,7 +3,7 @@
 #define RTS_STACKSIZE 11
 #define RTS_ADAPTER_COMPLY
 
-#include <cab_.hpp>
+#include <cab.hpp>
 #include <fix.h>
 #include <math.h>
 #include <ts.h>
@@ -37,115 +37,115 @@ SwitchLights(const DieselLocomotive *loco, UINT State)
 {
   Cabin *cab = loco->Cab();
   switch (State) {
-  case 0:
-    /*loco->lights[0].Flags&=~8;
-    loco->lights[3].Flags&=~8;
-    loco->lights[4].Flags&=~8;
-    loco->lights[6].Flags&=~8;
-    loco->lights[7].Flags&=~8;
-    loco->lights[8].Flags&=~8;
-    loco->lights[9].Flags&=~8;
-    loco->lights[10].Flags&=~8;
-    loco->lights[11].Flags&=~8;
-    if(loco->loco->cab->NumLights>1){
-     loco->loco->cab->Light[0].State=0;
-     loco->loco->cab->Light[1].State=0;
-    };*/
-    loco->SwitchLight(0, false);
-    loco->SwitchLight(3, false);
-    loco->SwitchLight(4, false);
-    loco->SwitchLight(6, false);
-    loco->SwitchLight(7, false);
-    loco->SwitchLight(8, false);
-    loco->SwitchLight(9, false);
-    loco->SwitchLight(10, false);
-    loco->SwitchLight(11, false);
-    if (cab->NumLights > 1) {
+    case 0:
+      /*loco->lights[0].Flags&=~8;
+      loco->lights[3].Flags&=~8;
+      loco->lights[4].Flags&=~8;
+      loco->lights[6].Flags&=~8;
+      loco->lights[7].Flags&=~8;
+      loco->lights[8].Flags&=~8;
+      loco->lights[9].Flags&=~8;
+      loco->lights[10].Flags&=~8;
+      loco->lights[11].Flags&=~8;
+      if(loco->loco->cab->NumLights>1){
+       loco->loco->cab->Light[0].State=0;
+       loco->loco->cab->Light[1].State=0;
+      };*/
+      loco->SwitchLight(0, false);
+      loco->SwitchLight(3, false);
+      loco->SwitchLight(4, false);
+      loco->SwitchLight(6, false);
+      loco->SwitchLight(7, false);
+      loco->SwitchLight(8, false);
+      loco->SwitchLight(9, false);
+      loco->SwitchLight(10, false);
+      loco->SwitchLight(11, false);
+      if (cab->NumLights > 1) {
+        cab->SwitchLight(0, false);
+        cab->SwitchLight(1, false);
+      };
+      break;
+    case 1:
+      loco->SwitchLight(6, true, 0.0, C_WHITE);
+      break;
+    case 2:
+      loco->SwitchLight(6, false);
+      break;
+    case 3:
+      loco->SwitchLight(6, true, 0.0, C_RED);
+      break;
+    case 4:
+      loco->SwitchLight(7, true, 0.0, C_WHITE);
+      break;
+    case 5:
+      loco->SwitchLight(7, false);
+      break;
+    case 6:
+      loco->SwitchLight(7, true, 0.0, C_RED);
+      break;
+    case 7:
+      loco->SwitchLight(8, true);
+      loco->SwitchLight(3, true, 150.0, 0xccdddd50);
+      break;
+    case 8:
+      loco->SwitchLight(8, false);
+      loco->SwitchLight(3, false);
+      break;
+    case 9:
+      loco->SwitchLight(8, true);
+      loco->SwitchLight(3, true, 60.0, 0x80ffffff);
+      break;
+    case 10:
+      loco->SwitchLight(9, true, 0.0, C_RED);
+      break;
+    case 11:
+      loco->SwitchLight(9, false);
+      break;
+    case 12:
+      loco->SwitchLight(9, true, 0.0, C_WHITE);
+      break;
+    case 13:
+      loco->SwitchLight(0, true, 0.0, C_RED);
+      break;
+    case 14:
+      loco->SwitchLight(0, false);
+      break;
+    case 15:
+      loco->SwitchLight(0, true, 0.0, C_WHITE);
+      break;
+    case 16:
+      loco->SwitchLight(10, true);
+      loco->SwitchLight(4, true, 150.0, 0xccdddd50);
+      break;
+    case 17:
+      loco->SwitchLight(10, false);
+      loco->SwitchLight(4, false);
+      break;
+    case 18:
+      loco->SwitchLight(10, true);
+      loco->SwitchLight(4, true, 60.0, 0x80ffffff);
+      break;
+    case 19:
+      loco->SwitchLight(11, false);
+      break;
+    case 20:
+      loco->SwitchLight(11, true);
+      break;
+    case 21:
       cab->SwitchLight(0, false);
+      break;
+    case 22:
+      cab->SwitchLight(0, true);
+      break;
+    case 23:
+      cab->SetLightState(1, true, 0x80807010, -1.0, 0.0, 0.0);
+      break;
+    case 24:
       cab->SwitchLight(1, false);
-    };
-    break;
-  case 1:
-    loco->SwitchLight(6, true, 0.0, C_WHITE);
-    break;
-  case 2:
-    loco->SwitchLight(6, false);
-    break;
-  case 3:
-    loco->SwitchLight(6, true, 0.0, C_RED);
-    break;
-  case 4:
-    loco->SwitchLight(7, true, 0.0, C_WHITE);
-    break;
-  case 5:
-    loco->SwitchLight(7, false);
-    break;
-  case 6:
-    loco->SwitchLight(7, true, 0.0, C_RED);
-    break;
-  case 7:
-    loco->SwitchLight(8, true);
-    loco->SwitchLight(3, true, 150.0, 0xccdddd50);
-    break;
-  case 8:
-    loco->SwitchLight(8, false);
-    loco->SwitchLight(3, false);
-    break;
-  case 9:
-    loco->SwitchLight(8, true);
-    loco->SwitchLight(3, true, 60.0, 0x80ffffff);
-    break;
-  case 10:
-    loco->SwitchLight(9, true, 0.0, C_RED);
-    break;
-  case 11:
-    loco->SwitchLight(9, false);
-    break;
-  case 12:
-    loco->SwitchLight(9, true, 0.0, C_WHITE);
-    break;
-  case 13:
-    loco->SwitchLight(0, true, 0.0, C_RED);
-    break;
-  case 14:
-    loco->SwitchLight(0, false);
-    break;
-  case 15:
-    loco->SwitchLight(0, true, 0.0, C_WHITE);
-    break;
-  case 16:
-    loco->SwitchLight(10, true);
-    loco->SwitchLight(4, true, 150.0, 0xccdddd50);
-    break;
-  case 17:
-    loco->SwitchLight(10, false);
-    loco->SwitchLight(4, false);
-    break;
-  case 18:
-    loco->SwitchLight(10, true);
-    loco->SwitchLight(4, true, 60.0, 0x80ffffff);
-    break;
-  case 19:
-    loco->SwitchLight(11, false);
-    break;
-  case 20:
-    loco->SwitchLight(11, true);
-    break;
-  case 21:
-    cab->SwitchLight(0, false);
-    break;
-  case 22:
-    cab->SwitchLight(0, true);
-    break;
-  case 23:
-    cab->SetLightState(1, true, 0x80807010, -1.0, 0.0, 0.0);
-    break;
-  case 24:
-    cab->SwitchLight(1, false);
-    break;
-  case 25:
-    cab->SetLightState(1, true, 0x80cccc10, -1.0, 0.0, 0.0);
-    break;
+      break;
+    case 25:
+      cab->SetLightState(1, true, 0x80cccc10, -1.0, 0.0, 0.0);
+      break;
   };
 };
 
@@ -242,61 +242,61 @@ Init(DieselEngine *eng, DieselLocomotive *loco, unsigned long State, float time,
   cab->SetSwitch((UINT) sw::C_HANDBR_5, 1, true);
 
   switch (State & 0xFF) {
-  case 0:
-    // loco is static, single
-    loco->AuxiliaryPressure = 4.2;
-    loco->MainResPressure = 6.0;
-    loco->IndependentBrakePressure = 4.0;
-    loco->BrakeCylinderPressure = 4.2;
-    loco->TrainPipePressure = 0.0;
-    cab->SetSwitch((UINT) sw::C254_2, 5, true);
-    cab->SetSwitch((UINT) sw::C396_3, 5, true);
-    cab->SetSwitch((UINT) sw::C395_4, 5, true);
-    cab->SetSwitch((UINT) sw::C_HANDBR_5, 1, true);
-    break;
-  case 1:
-    // loco is static, with wagons
-    eng->DieselOn = 1;
-    eng->RPM = 350.0;
-    eng->Power = 464.0;
-    eng->HandbrakePercent = 0.0;
-    loco->AuxiliaryPressure = 5.0;
-    loco->MainResPressure = 6.2;
-    loco->IndependentBrakePressure = 4.0;
-    loco->BrakeCylinderPressure = 0.0;
-    loco->TrainPipePressure = 5.2;
-    eng->UR = 5.2;
-    cab->SetSwitch((UINT) sw::C254_2, 5, true);
-    cab->SetSwitch((UINT) sw::C396_3, 5, true);
-    cab->SetSwitch((UINT) sw::C_HANDBR_5, 0, true);
-    cab->SetSwitch((UINT) sw::SW_STOP_26, 1, true);
-    break;
-  case 2:
-  case 3:
-    // loco is moving
-    eng->DieselOn = 1;
-    eng->RPM = 350.0;
-    eng->Power = 464.0;
-    eng->HandbrakePercent = 0.0;
-    eng->IndependentBrakeValue = 0.0;
-    loco->AuxiliaryPressure = 5.0;
-    loco->MainResPressure = 7.8;
-    loco->IndependentBrakePressure = 0.0;
-    loco->BrakeCylinderPressure = 0.0;
-    loco->TrainPipePressure = 5.2;
-    eng->UR = 5.2;
-    if (loco->Velocity >= 0.0) {
-      cab->SetSwitch((UINT) sw::C_REV_1, 3, false);
-      eng->Reverse = 1;
-    }
-    else {
-      cab->SetSwitch((UINT) sw::C_REV_1, 1, false);
-      eng->Reverse = -1;
-    };
-    cab->SetSwitch((UINT) sw::C_HANDBR_5, 0, true);
-    cab->SetSwitch((UINT) sw::SW_STOP_26, 1, true);
-    cab->SetSwitch((UINT) sw::SW_ALSN_32, 0, true);
-    break;
+    case 0:
+      // loco is static, single
+      loco->AuxiliaryPressure = 4.2;
+      loco->MainResPressure = 6.0;
+      loco->IndependentBrakePressure = 4.0;
+      loco->BrakeCylinderPressure = 4.2;
+      loco->TrainPipePressure = 0.0;
+      cab->SetSwitch((UINT) sw::C254_2, 5, true);
+      cab->SetSwitch((UINT) sw::C396_3, 5, true);
+      cab->SetSwitch((UINT) sw::C395_4, 5, true);
+      cab->SetSwitch((UINT) sw::C_HANDBR_5, 1, true);
+      break;
+    case 1:
+      // loco is static, with wagons
+      eng->DieselOn = 1;
+      eng->RPM = 350.0;
+      eng->Power = 464.0;
+      eng->HandbrakePercent = 0.0;
+      loco->AuxiliaryPressure = 5.0;
+      loco->MainResPressure = 6.2;
+      loco->IndependentBrakePressure = 4.0;
+      loco->BrakeCylinderPressure = 0.0;
+      loco->TrainPipePressure = 5.2;
+      eng->UR = 5.2;
+      cab->SetSwitch((UINT) sw::C254_2, 5, true);
+      cab->SetSwitch((UINT) sw::C396_3, 5, true);
+      cab->SetSwitch((UINT) sw::C_HANDBR_5, 0, true);
+      cab->SetSwitch((UINT) sw::SW_STOP_26, 1, true);
+      break;
+    case 2:
+    case 3:
+      // loco is moving
+      eng->DieselOn = 1;
+      eng->RPM = 350.0;
+      eng->Power = 464.0;
+      eng->HandbrakePercent = 0.0;
+      eng->IndependentBrakeValue = 0.0;
+      loco->AuxiliaryPressure = 5.0;
+      loco->MainResPressure = 7.8;
+      loco->IndependentBrakePressure = 0.0;
+      loco->BrakeCylinderPressure = 0.0;
+      loco->TrainPipePressure = 5.2;
+      eng->UR = 5.2;
+      if (loco->Velocity >= 0.0) {
+        cab->SetSwitch((UINT) sw::C_REV_1, 3, false);
+        eng->Reverse = 1;
+      }
+      else {
+        cab->SetSwitch((UINT) sw::C_REV_1, 1, false);
+        eng->Reverse = -1;
+      };
+      cab->SetSwitch((UINT) sw::C_HANDBR_5, 0, true);
+      cab->SetSwitch((UINT) sw::SW_STOP_26, 1, true);
+      cab->SetSwitch((UINT) sw::SW_ALSN_32, 0, true);
+      break;
   };
 
   return true;
@@ -333,34 +333,34 @@ CanSwitch(const DieselLocomotive *loco, const DieselEngine *eng,
   }
 
   switch (SwitchID) {
-  case 0:
-    loco->PostTriggerBoth(16);
-    break;
-  case 1:
-    if (cab->Switch(0)) {
-      return false;
-    }
-    loco->PostTriggerCab(15);
-    break;
-  case 4:
-    if (SetState < 4 && cab->Switch(4) >= 4) {
-      loco->PostTriggerCab(116);
-    }
-    break;
-  case 7:
-    if (SetState == 1) {
-      Trig = 8;
-    }
-    else {
-      Trig = 9;
-    }
-    loco->PostTriggerBoth(Trig);
-    break;
-  case 6:
-    if (SetState == 1) {
-      loco->PostTriggerBoth(10);
-    }
-    break;
+    case 0:
+      loco->PostTriggerBoth(16);
+      break;
+    case 1:
+      if (cab->Switch(0)) {
+        return false;
+      }
+      loco->PostTriggerCab(15);
+      break;
+    case 4:
+      if (SetState < 4 && cab->Switch(4) >= 4) {
+        loco->PostTriggerCab(116);
+      }
+      break;
+    case 7:
+      if (SetState == 1) {
+        Trig = 8;
+      }
+      else {
+        Trig = 9;
+      }
+      loco->PostTriggerBoth(Trig);
+      break;
+    case 6:
+      if (SetState == 1) {
+        loco->PostTriggerBoth(10);
+      }
+      break;
   };
 
   if (SwitchID == 2 || SwitchID == 3 || SwitchID == 4) {
@@ -400,264 +400,264 @@ Switched(const DieselLocomotive *loco, DieselEngine *eng, unsigned int SwitchID,
   }
 
   switch (SwitchID) {
-  case (UINT) sw::C_MAIN_0:
-    eng->ThrottlePosition = cab->Switch((UINT) sw::C_MAIN_0);
-    break;
-  case (UINT) sw::C_REV_1:
-    if (!cab->Switch((UINT) sw::C_REV_1)) {
+    case (UINT) sw::C_MAIN_0:
+      eng->ThrottlePosition = cab->Switch((UINT) sw::C_MAIN_0);
       break;
-    }
-    eng->Reverse = cab->Switch((UINT) sw::C_REV_1) - 2;
-    // if(eng->Reverse)
-    // if(loco->Flags&1)
-    // eng->Reverse=-eng->Reverse;
-    break;
-  case (UINT) sw::C254_2:
-    n = cab->Switch((UINT) sw::C254_2);
-    n1 = cab->Switch((UINT) sw::C396_3);
-    if (n1 > n) {
-      n = n1;
-    }
-    if (n < 2) {
-      eng->IndependentBrakeValue = 0.0;
-    }
-    else {
-      eng->IndependentBrakeValue = 1.0 * (n - 1); // Magic
-    }
-    break;
-  case 4:
-    switch (cab->Switch(4)) {
-    case 0:
-      loco->PostTriggerCab(113);
+    case (UINT) sw::C_REV_1:
+      if (!cab->Switch((UINT) sw::C_REV_1)) {
+        break;
+      }
+      eng->Reverse = cab->Switch((UINT) sw::C_REV_1) - 2;
+      // if(eng->Reverse)
+      // if(loco->Flags&1)
+      // eng->Reverse=-eng->Reverse;
       break;
-    case 1:
-      if (loco->BrakeCylinderPressure && PrevState != 0) {
-        loco->PostTriggerCab(113);
+    case (UINT) sw::C254_2:
+      n = cab->Switch((UINT) sw::C254_2);
+      n1 = cab->Switch((UINT) sw::C396_3);
+      if (n1 > n) {
+        n = n1;
+      }
+      if (n < 2) {
+        eng->IndependentBrakeValue = 0.0;
       }
       else {
-        loco->PostTriggerCab(114);
-      };
-      break;
-    case 3:
-      if (PrevState == 4) {
-        loco->PostTriggerCab(114);
+        eng->IndependentBrakeValue = 1.0 * (n - 1); // Magic
       }
       break;
     case 4:
-      if (PrevState != 5) {
-        loco->PostTriggerCab(115);
-      }
-      break;
-    };
-    break;
-  case 8:
-    if (cab->Switch(8) || cab->Switch(44)) {
-      eng->Sanding = 1;
-      loco->PostTriggerBoth(111);
-    }
-    else {
-      eng->Sanding = 0;
-      loco->PostTriggerBoth(112);
-    };
-    break;
-  case 9:
-    if (cab->Switch(9)) {
-      loco->PostTriggerCab(100);
-    }
-    else {
-      loco->PostTriggerCab(101);
-    };
-    break;
-  case 10:
-    SwitchLights(loco, cab->Switch((UINT) sw::SW_VTK_10) + 19);
-    break;
-  case 13:
-    SwitchLights(loco, cab->Switch((UINT) sw::SW_VBLP_13) + 1);
-    break;
-  case 14:
-    SwitchLights(loco, cab->Switch((UINT) sw::SW_VBFP_14) + 4);
-    break;
-  case 15:
-    if (cab->Switch(16)) {
-      break;
-    }
-    if (cab->Switch(15)) {
-      SwitchLights(loco, 7);
-    }
-    else {
-      SwitchLights(loco, 8);
-    }
-    break;
-  case 16:
-    if (cab->Switch(16)) {
-      SwitchLights(loco, 9);
-    }
-    else {
-      Switched(loco, eng, 15, 0);
-    }
-    break;
-  case 17:
-    if (eng->DieselOn == 1) {
-      break;
-    }
-    if (cab->Switch((UINT) sw::SW_START_17)) {
-      if (cab->Switch((UINT) sw::SW_STOP_26)) {
-        if (eng->var[9] > 95.0) {
+      switch (cab->Switch(4)) {
+        case 0:
+          loco->PostTriggerCab(113);
           break;
-        }
-        eng->DieselOn = 2;
-        loco->PostTriggerBoth(103);
+        case 1:
+          if (loco->BrakeCylinderPressure && PrevState != 0) {
+            loco->PostTriggerCab(113);
+          }
+          else {
+            loco->PostTriggerCab(114);
+          };
+          break;
+        case 3:
+          if (PrevState == 4) {
+            loco->PostTriggerCab(114);
+          }
+          break;
+        case 4:
+          if (PrevState != 5) {
+            loco->PostTriggerCab(115);
+          }
+          break;
       };
-    }
-    else {
-      /*eng->DieselOn=0;
-      if(loco->sound)
-       loco->sound->PostTrigger(104);
-      if(eng->sound)
-       eng->sound->PostTrigger(104);*/
-    };
-    break;
-  case 19:
-    if (!PrevState) {
-      anim = loco->FindAnim(L"wiper1");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = loco->FindAnim(L"wiper2");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = loco->FindAnim(L"wiper3");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = loco->FindAnim(L"wiper4");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = cab->FindAnim(L"wiper1");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = cab->FindAnim(L"wiper2");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = cab->FindAnim(L"wiper3");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-      anim = cab->FindAnim(L"wiper4");
-      if (anim) {
-        anim->Flags |= 1;
-      }
-    }
-    else if (!cab->Switch(19)) {
-      anim = loco->FindAnim(L"wiper1");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = loco->FindAnim(L"wiper2");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = loco->FindAnim(L"wiper3");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = loco->FindAnim(L"wiper4");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = cab->FindAnim(L"wiper1");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = cab->FindAnim(L"wiper2");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = cab->FindAnim(L"wiper3");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-      anim = cab->FindAnim(L"wiper4");
-      if (anim) {
-        anim->Flags &= ~1;
-      }
-    };
-    break;
-  case 20:
-    SwitchLights(loco, cab->Switch(20) + 23);
-    break;
-  case 21:
-    SwitchLights(loco, cab->Switch(21) + 21);
-    break;
-  case 22:
-    SwitchLights(loco, cab->Switch(22) + 10);
-    break;
-  case 23:
-    SwitchLights(loco, cab->Switch(23) + 13);
-    break;
-  case 24:
-    if (cab->Switch(25)) {
       break;
-    }
-    if (cab->Switch(24)) {
-      SwitchLights(loco, 16);
-    }
-    else {
-      SwitchLights(loco, 17);
-    }
-    break;
-  case 25:
-    if (cab->Switch(25)) {
-      SwitchLights(loco, 18);
-    }
-    else {
-      Switched(loco, eng, 24, 0);
-    }
-    break;
-  case 26:
-    if (!cab->Switch(26)) {
-      if (eng->DieselOn == 2) {
-        loco->PostTriggerBoth(104);
+    case 8:
+      if (cab->Switch(8) || cab->Switch(44)) {
+        eng->Sanding = 1;
+        loco->PostTriggerBoth(111);
+      }
+      else {
+        eng->Sanding = 0;
+        loco->PostTriggerBoth(112);
       };
-      eng->DieselOn = 0;
-    };
-    break;
-  case 29:
-  case 37:
-    // KNAS2
-    if (cab->Switch(29) || cab->Switch(37)) {
+      break;
+    case 9:
+      if (cab->Switch(9)) {
+        loco->PostTriggerCab(100);
+      }
+      else {
+        loco->PostTriggerCab(101);
+      };
+      break;
+    case 10:
+      SwitchLights(loco, cab->Switch((UINT) sw::SW_VTK_10) + 19);
+      break;
+    case 13:
+      SwitchLights(loco, cab->Switch((UINT) sw::SW_VBLP_13) + 1);
+      break;
+    case 14:
+      SwitchLights(loco, cab->Switch((UINT) sw::SW_VBFP_14) + 4);
+      break;
+    case 15:
+      if (cab->Switch(16)) {
+        break;
+      }
+      if (cab->Switch(15)) {
+        SwitchLights(loco, 7);
+      }
+      else {
+        SwitchLights(loco, 8);
+      }
+      break;
+    case 16:
+      if (cab->Switch(16)) {
+        SwitchLights(loco, 9);
+      }
+      else {
+        Switched(loco, eng, 15, 0);
+      }
+      break;
+    case 17:
+      if (eng->DieselOn == 1) {
+        break;
+      }
+      if (cab->Switch((UINT) sw::SW_START_17)) {
+        if (cab->Switch((UINT) sw::SW_STOP_26)) {
+          if (eng->var[9] > 95.0) {
+            break;
+          }
+          eng->DieselOn = 2;
+          loco->PostTriggerBoth(103);
+        };
+      }
+      else {
+        /*eng->DieselOn=0;
+        if(loco->sound)
+         loco->sound->PostTrigger(104);
+        if(eng->sound)
+         eng->sound->PostTrigger(104);*/
+      };
+      break;
+    case 19:
       if (!PrevState) {
-        loco->LockCoupling(false, true);
-        loco->DetachCoupling(false, true);
+        anim = loco->FindAnim(L"wiper1");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = loco->FindAnim(L"wiper2");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = loco->FindAnim(L"wiper3");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = loco->FindAnim(L"wiper4");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = cab->FindAnim(L"wiper1");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = cab->FindAnim(L"wiper2");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = cab->FindAnim(L"wiper3");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+        anim = cab->FindAnim(L"wiper4");
+        if (anim) {
+          anim->Flags |= 1;
+        }
+      }
+      else if (!cab->Switch(19)) {
+        anim = loco->FindAnim(L"wiper1");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = loco->FindAnim(L"wiper2");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = loco->FindAnim(L"wiper3");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = loco->FindAnim(L"wiper4");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = cab->FindAnim(L"wiper1");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = cab->FindAnim(L"wiper2");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = cab->FindAnim(L"wiper3");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
+        anim = cab->FindAnim(L"wiper4");
+        if (anim) {
+          anim->Flags &= ~1;
+        }
       };
-    }
-    else {
-      loco->LockCoupling(false, false);
-      loco->DetachCoupling(false, false);
-    };
-    break;
-  case 30:
-  case 38:
-    // KNAS1
-    if (cab->Switch(30) || cab->Switch(38)) {
-      if (!PrevState) {
-        loco->LockCoupling(true, true);
-        loco->DetachCoupling(true, true);
+      break;
+    case 20:
+      SwitchLights(loco, cab->Switch(20) + 23);
+      break;
+    case 21:
+      SwitchLights(loco, cab->Switch(21) + 21);
+      break;
+    case 22:
+      SwitchLights(loco, cab->Switch(22) + 10);
+      break;
+    case 23:
+      SwitchLights(loco, cab->Switch(23) + 13);
+      break;
+    case 24:
+      if (cab->Switch(25)) {
+        break;
+      }
+      if (cab->Switch(24)) {
+        SwitchLights(loco, 16);
+      }
+      else {
+        SwitchLights(loco, 17);
+      }
+      break;
+    case 25:
+      if (cab->Switch(25)) {
+        SwitchLights(loco, 18);
+      }
+      else {
+        Switched(loco, eng, 24, 0);
+      }
+      break;
+    case 26:
+      if (!cab->Switch(26)) {
+        if (eng->DieselOn == 2) {
+          loco->PostTriggerBoth(104);
+        };
+        eng->DieselOn = 0;
       };
-    }
-    else {
-      loco->LockCoupling(true, false);
-      loco->DetachCoupling(true, false);
-    };
-    break;
-  case 33:
-    eng->var[5] = 0.0;
-    Flags &= ~4;
-    break;
+      break;
+    case 29:
+    case 37:
+      // KNAS2
+      if (cab->Switch(29) || cab->Switch(37)) {
+        if (!PrevState) {
+          loco->LockCoupling(false, true);
+          loco->DetachCoupling(false, true);
+        };
+      }
+      else {
+        loco->LockCoupling(false, false);
+        loco->DetachCoupling(false, false);
+      };
+      break;
+    case 30:
+    case 38:
+      // KNAS1
+      if (cab->Switch(30) || cab->Switch(38)) {
+        if (!PrevState) {
+          loco->LockCoupling(true, true);
+          loco->DetachCoupling(true, true);
+        };
+      }
+      else {
+        loco->LockCoupling(true, false);
+        loco->DetachCoupling(true, false);
+      };
+      break;
+    case 33:
+      eng->var[5] = 0.0;
+      Flags &= ~4;
+      break;
   };
 };
 
@@ -921,116 +921,117 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
   if (loco->LocoFlags & 1) {
     // Train brake
     switch (cab->Switch((UINT) sw::C395_4)) {
-    case (UINT) st::C395::ST_0:
-      if (eng->var[5] < 45.0) {
-        if (!cab->SwitchSet(4)) {
-          eng->UR += BRAKE_UR_RATE_CHARGE * time;
-        }
-        if (eng->UR > loco->MainResPressure) {
-          eng->UR = loco->MainResPressure;
-        }
-        if (loco->TrainPipePressure < eng->UR) {
-          eng->TrainPipeRate =
-              (eng->UR - loco->TrainPipePressure) / BRAKE_PIPE_RATE_CHARGE;
-        }
-      };
-      break;
-    case (UINT) st::C395::ST_1:
-      if (eng->var[5] < 45.0) {
-        if (eng->UR < 5.2) {
-          float rate = (loco->MainResPressure - eng->UR) * 2.0;
-          if (rate < 0.0) {
-            rate = 0.0;
+      case (UINT) st::C395::ST_0:
+        if (eng->var[5] < 45.0) {
+          if (!cab->SwitchSet(4)) {
+            eng->UR += BRAKE_UR_RATE_CHARGE * time;
           }
-          if (rate > BRAKE_UR_RATE_CHARGE) {
-            rate = BRAKE_UR_RATE_CHARGE;
+          if (eng->UR > loco->MainResPressure) {
+            eng->UR = loco->MainResPressure;
           }
-          eng->UR += rate * time;
-        }
-        else if (loco->BrakeCylinderPressure > 0.0 &&
-                 (eng->UR - loco->TrainPipePressure) < 0.1) {
-          eng->UR += 0.15 * time;
-        }
-        if (eng->UR > loco->MainResPressure) {
-          eng->UR = loco->MainResPressure;
-        }
-        if (eng->UR > loco->TrainPipePressure) {
-          eng->UR -= 0.003 * time;
-        }
-        if (loco->TrainPipePressure < eng->UR - 0.01) {
-          eng->TrainPipeRate =
-              (eng->UR - loco->TrainPipePressure) / BRAKE_PIPE_RATE_CHARGE;
-        }
-        else if (loco->TrainPipePressure > eng->UR) {
-          eng->TrainPipeRate = (eng->UR - loco->TrainPipePressure);
-          if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
-            eng->TrainPipeRate = -BRAKE_PIPE_RATE;
+          if (loco->TrainPipePressure < eng->UR) {
+            eng->TrainPipeRate =
+                (eng->UR - loco->TrainPipePressure) / BRAKE_PIPE_RATE_CHARGE;
           }
         };
-      };
-      break;
-    case (UINT) st::C395::ST_2:
-      if (eng->UR > loco->MainResPressure) {
-        eng->UR = loco->MainResPressure;
-      }
-      if (loco->TrainPipePressure > eng->UR) {
-        eng->TrainPipeRate = eng->UR - loco->TrainPipePressure;
-      }
-      if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
-        eng->TrainPipeRate = -BRAKE_PIPE_RATE;
-      }
-      else if (eng->TrainPipeRate > PIPE_DISCHARGE_SLOW) {
-        eng->TrainPipeRate = PIPE_DISCHARGE_SLOW;
-      }
-      break;
-    case (UINT) st::C395::ST_3:
-      if (eng->UR > loco->MainResPressure) {
-        eng->UR = loco->MainResPressure;
-      }
-      if (loco->TrainPipePressure > eng->UR) {
-        eng->TrainPipeRate = eng->UR - loco->TrainPipePressure;
-      }
-      else if (eng->UR - loco->TrainPipePressure > 0.1) {
-        eng->TrainPipeRate = 0.05;
-      }
-      if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
-        eng->TrainPipeRate = -BRAKE_PIPE_RATE;
-      }
-      break;
-    case (UINT) st::C395::ST_4:
-      if (cab->SwitchSet((UINT) sw::C395_4) < 4) {
         break;
-      }
-      eng->UR += (BRAKE_TP_DISCHARGE_RATE * 1.2) * time;
-      if (eng->UR > loco->MainResPressure) {
-        eng->UR = loco->MainResPressure;
-      }
-      if (eng->UR < 0) {
-        eng->UR = 0;
-      }
-      eng->TrainPipeRate = BRAKE_TP_DISCHARGE_RATE;
-      if (loco->TrainPipePressure < 0.4 && loco->IsSMSTriggerOnCab(115) != 0) {
-        loco->PostTriggerCab(116);
-      }
-      break;
-    case (UINT) st::C395::ST_5:
-      eng->UR += BRAKE_PIPE_EMERGENCY * 1.2 * time;
+      case (UINT) st::C395::ST_1:
+        if (eng->var[5] < 45.0) {
+          if (eng->UR < 5.2) {
+            float rate = (loco->MainResPressure - eng->UR) * 2.0;
+            if (rate < 0.0) {
+              rate = 0.0;
+            }
+            if (rate > BRAKE_UR_RATE_CHARGE) {
+              rate = BRAKE_UR_RATE_CHARGE;
+            }
+            eng->UR += rate * time;
+          }
+          else if (loco->BrakeCylinderPressure > 0.0 &&
+                   (eng->UR - loco->TrainPipePressure) < 0.1) {
+            eng->UR += 0.15 * time;
+          }
+          if (eng->UR > loco->MainResPressure) {
+            eng->UR = loco->MainResPressure;
+          }
+          if (eng->UR > loco->TrainPipePressure) {
+            eng->UR -= 0.003 * time;
+          }
+          if (loco->TrainPipePressure < eng->UR - 0.01) {
+            eng->TrainPipeRate =
+                (eng->UR - loco->TrainPipePressure) / BRAKE_PIPE_RATE_CHARGE;
+          }
+          else if (loco->TrainPipePressure > eng->UR) {
+            eng->TrainPipeRate = (eng->UR - loco->TrainPipePressure);
+            if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
+              eng->TrainPipeRate = -BRAKE_PIPE_RATE;
+            }
+          };
+        };
+        break;
+      case (UINT) st::C395::ST_2:
+        if (eng->UR > loco->MainResPressure) {
+          eng->UR = loco->MainResPressure;
+        }
+        if (loco->TrainPipePressure > eng->UR) {
+          eng->TrainPipeRate = eng->UR - loco->TrainPipePressure;
+        }
+        if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
+          eng->TrainPipeRate = -BRAKE_PIPE_RATE;
+        }
+        else if (eng->TrainPipeRate > PIPE_DISCHARGE_SLOW) {
+          eng->TrainPipeRate = PIPE_DISCHARGE_SLOW;
+        }
+        break;
+      case (UINT) st::C395::ST_3:
+        if (eng->UR > loco->MainResPressure) {
+          eng->UR = loco->MainResPressure;
+        }
+        if (loco->TrainPipePressure > eng->UR) {
+          eng->TrainPipeRate = eng->UR - loco->TrainPipePressure;
+        }
+        else if (eng->UR - loco->TrainPipePressure > 0.1) {
+          eng->TrainPipeRate = 0.05;
+        }
+        if (eng->TrainPipeRate < -BRAKE_PIPE_RATE) {
+          eng->TrainPipeRate = -BRAKE_PIPE_RATE;
+        }
+        break;
+      case (UINT) st::C395::ST_4:
+        if (cab->SwitchSet((UINT) sw::C395_4) < 4) {
+          break;
+        }
+        eng->UR += (BRAKE_TP_DISCHARGE_RATE * 1.2) * time;
+        if (eng->UR > loco->MainResPressure) {
+          eng->UR = loco->MainResPressure;
+        }
+        if (eng->UR < 0) {
+          eng->UR = 0;
+        }
+        eng->TrainPipeRate = BRAKE_TP_DISCHARGE_RATE;
+        if (loco->TrainPipePressure < 0.4 &&
+            loco->IsSMSTriggerOnCab(115) != 0) {
+          loco->PostTriggerCab(116);
+        }
+        break;
+      case (UINT) st::C395::ST_5:
+        eng->UR += BRAKE_PIPE_EMERGENCY * 1.2 * time;
 
-      if (eng->UR > loco->MainResPressure) {
-        eng->UR = loco->MainResPressure;
-      }
+        if (eng->UR > loco->MainResPressure) {
+          eng->UR = loco->MainResPressure;
+        }
 
-      if (eng->UR < 0) {
-        eng->UR = 0;
-      }
+        if (eng->UR < 0) {
+          eng->UR = 0;
+        }
 
-      eng->TrainPipeRate = BRAKE_PIPE_EMERGENCY;
+        eng->TrainPipeRate = BRAKE_PIPE_EMERGENCY;
 
-      if ((loco->TrainPipePressure < 0.4) &&
-          loco->IsSMSTriggerOnCab(115) != 0) {
-        loco->PostTriggerCab(116);
-      }
-      break;
+        if ((loco->TrainPipePressure < 0.4) &&
+            loco->IsSMSTriggerOnCab(115) != 0) {
+          loco->PostTriggerCab(116);
+        }
+        break;
     };
 
     // EPK
@@ -1135,18 +1136,19 @@ Run(DieselEngine *eng, const DieselLocomotive *loco, unsigned long State,
     cab->SetDisplayValue((UINT) disp::D_BCb_7, BC);
     cab->SetDisplayValue((UINT) disp::D_GGb_8, Current);
     switch (eng->DieselOn) {
-    case 1:
-      cab->SetDisplayValue((UINT) disp::D_POIL_9, 10.0);
-      cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 10.0);
-      break;
-    case 2:
-      cab->SetDisplayValue((UINT) disp::D_POIL_9, 10.0 * eng->RPM / 120.0);
-      cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 10.0 * eng->Power / 159.0);
-      break;
-    default:
-      cab->SetDisplayValue((UINT) disp::D_POIL_9, 0.0);
-      cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 0.0);
-      break;
+      case 1:
+        cab->SetDisplayValue((UINT) disp::D_POIL_9, 10.0);
+        cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 10.0);
+        break;
+      case 2:
+        cab->SetDisplayValue((UINT) disp::D_POIL_9, 10.0 * eng->RPM / 120.0);
+        cab->SetDisplayValue((UINT) disp::D_PFUEL_10,
+                             10.0 * eng->Power / 159.0);
+        break;
+      default:
+        cab->SetDisplayValue((UINT) disp::D_POIL_9, 0.0);
+        cab->SetDisplayValue((UINT) disp::D_PFUEL_10, 0.0);
+        break;
     };
     cab->SetDisplayValue((UINT) disp::D_TWAT_11, eng->var[9]);
     cab->SetDisplayState((UINT) disp::L_EPK_12, eng->var[5] > 30.0 ? 1 : 0);
