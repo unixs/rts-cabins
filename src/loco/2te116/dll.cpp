@@ -7,9 +7,6 @@
 using namespace model;
 using namespace cabin;
 
-
-#define C_WHITE 0x80ffffff
-
 EMPTY_ENTRYPOINT
 
 //-----{ STATE }----------------------------------------------------------------
