@@ -1,2 +1,2 @@
 # rts-cabins
-RTS кабины
+RTS cabins
