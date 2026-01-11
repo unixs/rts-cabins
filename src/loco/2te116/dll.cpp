@@ -7,7 +7,6 @@
 using namespace model;
 using namespace cabin;
 
-
 EMPTY_ENTRYPOINT
 
 //-----{ STATE }----------------------------------------------------------------
@@ -28,7 +27,6 @@ SWITCHED
   CALL_SW(aux_light_branch);
   CALL_SW(aux_dizel_start_branch);
 }
-
 
 //-----{ RUN }------------------------------------------------------------------
 

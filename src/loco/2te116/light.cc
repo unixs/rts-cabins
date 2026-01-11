@@ -7,6 +7,7 @@ using namespace model;
  * Корневые предусловия схемы освещения
  */
 #define LIGHT_PCOND MAIN_PCOND(SW(sw::AB_64) && SW(sw::AZVOS_77))
+#define C_WHITE 0x80ffffff
 
 static DEF_BRANCH(dizel_light)
 {
@@ -17,9 +18,42 @@ static DEF_BRANCH(dizel_light)
   SWITCH_BLOCK(sw::osdp_74,
                {
                    // Включаем что-то
+                   cab->SwitchLight((UINT)lights::LampP1_3, true);
+                   cab->SwitchLight((UINT)lights::LampP2_4, true);
+                   cab->SwitchLight((UINT)lights::LampP3_5, true);
+                   cab->SwitchLight((UINT)lights::LampP4_6, true);
+                   cab->SwitchLight((UINT)lights::_0, true);
+                   cab->SwitchLight((UINT)lights::_10, true);
+                   cab->SwitchLight((UINT)lights::_11, true);
+                   cab->SwitchLight((UINT)lights::_12, true);
+                   cab->SwitchLight((UINT)lights::_13, true);
+                   cab->SwitchLight((UINT)lights::_14, true);
+                   cab->SwitchLight((UINT)lights::_15, true);
+                   cab->SwitchLight((UINT)lights::_1, true);
+                   cab->SwitchLight((UINT)lights::_2, true);
+                   cab->SwitchLight((UINT)lights::_7, true);
+                   cab->SwitchLight((UINT)lights::_8, true);
+                   cab->SwitchLight((UINT)lights::_9, true);
+
                },
                {
                    // Выключаем что-то
+                   cab->SwitchLight((UINT)lights::LampP1_3, false);
+                   cab->SwitchLight((UINT)lights::LampP2_4, false);
+                   cab->SwitchLight((UINT)lights::LampP3_5, false);
+                   cab->SwitchLight((UINT)lights::LampP4_6, false);
+                   cab->SwitchLight((UINT)lights::_0, false);
+                   cab->SwitchLight((UINT)lights::_10, false);
+                   cab->SwitchLight((UINT)lights::_11, false);
+                   cab->SwitchLight((UINT)lights::_12, false);
+                   cab->SwitchLight((UINT)lights::_13, false);
+                   cab->SwitchLight((UINT)lights::_14, false);
+                   cab->SwitchLight((UINT)lights::_15, false);
+                   cab->SwitchLight((UINT)lights::_1, false);
+                   cab->SwitchLight((UINT)lights::_2, false);
+                   cab->SwitchLight((UINT)lights::_7, false);
+                   cab->SwitchLight((UINT)lights::_8, false);
+                   cab->SwitchLight((UINT)lights::_9, false);
                });
 
   // Нету дочерних веток
